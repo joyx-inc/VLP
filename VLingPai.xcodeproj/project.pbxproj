@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043DA67C198F3E4C000421B9 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043DA67A198F3E4C000421B9 /* StartViewController.m */; };
+		043DA67D198F3E4C000421B9 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043DA67B198F3E4C000421B9 /* StartViewController.xib */; };
+		043DA682198F693C000421B9 /* InputQuestionAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043DA680198F693C000421B9 /* InputQuestionAnswerViewController.m */; };
+		043DA683198F693C000421B9 /* InputQuestionAnswerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043DA681198F693C000421B9 /* InputQuestionAnswerViewController.xib */; };
 		04F02554198CC6600017665A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F02553198CC6600017665A /* Foundation.framework */; };
 		04F02556198CC6600017665A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F02555198CC6600017665A /* CoreGraphics.framework */; };
 		04F02558198CC6600017665A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F02557198CC6600017665A /* UIKit.framework */; };
@@ -23,14 +27,12 @@
 		04F0258D198CCE2C0017665A /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F0258B198CCE2C0017665A /* FirstViewController.xib */; };
 		04F025A5198CD5490017665A /* ImportPhoneNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F025A3198CD5490017665A /* ImportPhoneNumberViewController.m */; };
 		04F025A6198CD5490017665A /* ImportPhoneNumberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F025A4198CD5490017665A /* ImportPhoneNumberViewController.xib */; };
-		04F025AA198CD5770017665A /* VerificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F025A8198CD5770017665A /* VerificationViewController.m */; };
+		04F025AA198CD5770017665A /* VerificationViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 04F025A8198CD5770017665A /* VerificationViewController.mm */; };
 		04F025AB198CD5770017665A /* VerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F025A9198CD5770017665A /* VerificationViewController.xib */; };
 		04F025AF198CD58D0017665A /* DiscountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F025AD198CD58D0017665A /* DiscountViewController.m */; };
 		04F025B0198CD58D0017665A /* DiscountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F025AE198CD58D0017665A /* DiscountViewController.xib */; };
 		04F025B4198CD59F0017665A /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F025B2198CD59F0017665A /* SettingViewController.m */; };
 		04F025B5198CD59F0017665A /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F025B3198CD59F0017665A /* SettingViewController.xib */; };
-		04F025BF198CD65D0017665A /* ImportVericateCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F025BD198CD65D0017665A /* ImportVericateCodeViewController.m */; };
-		04F025C0198CD65D0017665A /* ImportVericateCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F025BE198CD65D0017665A /* ImportVericateCodeViewController.xib */; };
 		04F025C5198CD6F90017665A /* StartSetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F025C3198CD6F90017665A /* StartSetPasswordViewController.m */; };
 		04F025C6198CD6F90017665A /* StartSetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F025C4198CD6F90017665A /* StartSetPasswordViewController.xib */; };
 		04F025CA198CD7680017665A /* SetStartPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F025C8198CD7680017665A /* SetStartPasswordViewController.m */; };
@@ -38,6 +40,13 @@
 		04F025CF198CD7AB0017665A /* SetQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F025CD198CD7AB0017665A /* SetQuestionViewController.m */; };
 		04F025D0198CD7AB0017665A /* SetQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F025CE198CD7AB0017665A /* SetQuestionViewController.xib */; };
 		04F025D4198CDA5C0017665A /* setting_startsetpassword_img@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F025D3198CDA5C0017665A /* setting_startsetpassword_img@2x.png */; };
+		04FE1F51198F244900F41BE0 /* dot_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FE1F4B198F244900F41BE0 /* dot_off.png */; };
+		04FE1F52198F244900F41BE0 /* dot_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FE1F4C198F244900F41BE0 /* dot_on.png */; };
+		04FE1F53198F244900F41BE0 /* LockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE1F4E198F244900F41BE0 /* LockView.m */; };
+		04FE1F54198F244900F41BE0 /* LockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE1F50198F244900F41BE0 /* LockViewController.m */; };
+		04FE1F58198F2BF100F41BE0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE1F57198F2BF100F41BE0 /* MBProgressHUD.m */; };
+		04FE1F5B198F2CB500F41BE0 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FE1F59198F2CB500F41BE0 /* 37x-Checkmark.png */; };
+		04FE1F5C198F2CB500F41BE0 /* 37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FE1F5A198F2CB500F41BE0 /* 37x-Checkmark@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +60,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		043DA679198F3E4C000421B9 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartViewController.h; path = Controller/StartViewController.h; sourceTree = "<group>"; };
+		043DA67A198F3E4C000421B9 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StartViewController.m; path = Controller/StartViewController.m; sourceTree = "<group>"; };
+		043DA67B198F3E4C000421B9 /* StartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StartViewController.xib; path = Controller/StartViewController.xib; sourceTree = "<group>"; };
+		043DA67F198F693C000421B9 /* InputQuestionAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputQuestionAnswerViewController.h; path = Controller/InputQuestionAnswerViewController.h; sourceTree = "<group>"; };
+		043DA680198F693C000421B9 /* InputQuestionAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputQuestionAnswerViewController.m; path = Controller/InputQuestionAnswerViewController.m; sourceTree = "<group>"; };
+		043DA681198F693C000421B9 /* InputQuestionAnswerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InputQuestionAnswerViewController.xib; path = Controller/InputQuestionAnswerViewController.xib; sourceTree = "<group>"; };
 		04F02550198CC6600017665A /* VLingPai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VLingPai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F02553198CC6600017665A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		04F02555198CC6600017665A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,7 +89,7 @@
 		04F025A3198CD5490017665A /* ImportPhoneNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImportPhoneNumberViewController.m; path = Controller/ImportPhoneNumberViewController.m; sourceTree = "<group>"; };
 		04F025A4198CD5490017665A /* ImportPhoneNumberViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImportPhoneNumberViewController.xib; path = Controller/ImportPhoneNumberViewController.xib; sourceTree = "<group>"; };
 		04F025A7198CD5770017665A /* VerificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VerificationViewController.h; path = Controller/VerificationViewController.h; sourceTree = "<group>"; };
-		04F025A8198CD5770017665A /* VerificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VerificationViewController.m; path = Controller/VerificationViewController.m; sourceTree = "<group>"; };
+		04F025A8198CD5770017665A /* VerificationViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = VerificationViewController.mm; path = Controller/VerificationViewController.mm; sourceTree = "<group>"; };
 		04F025A9198CD5770017665A /* VerificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VerificationViewController.xib; path = Controller/VerificationViewController.xib; sourceTree = "<group>"; };
 		04F025AC198CD58D0017665A /* DiscountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscountViewController.h; path = Controller/DiscountViewController.h; sourceTree = "<group>"; };
 		04F025AD198CD58D0017665A /* DiscountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscountViewController.m; path = Controller/DiscountViewController.m; sourceTree = "<group>"; };
@@ -82,9 +97,6 @@
 		04F025B1198CD59F0017665A /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = Controller/SettingViewController.h; sourceTree = "<group>"; };
 		04F025B2198CD59F0017665A /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = Controller/SettingViewController.m; sourceTree = "<group>"; };
 		04F025B3198CD59F0017665A /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingViewController.xib; path = Controller/SettingViewController.xib; sourceTree = "<group>"; };
-		04F025BC198CD65D0017665A /* ImportVericateCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImportVericateCodeViewController.h; path = Controller/ImportVericateCodeViewController.h; sourceTree = "<group>"; };
-		04F025BD198CD65D0017665A /* ImportVericateCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImportVericateCodeViewController.m; path = Controller/ImportVericateCodeViewController.m; sourceTree = "<group>"; };
-		04F025BE198CD65D0017665A /* ImportVericateCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImportVericateCodeViewController.xib; path = Controller/ImportVericateCodeViewController.xib; sourceTree = "<group>"; };
 		04F025C2198CD6F90017665A /* StartSetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartSetPasswordViewController.h; path = Controller/StartSetPasswordViewController.h; sourceTree = "<group>"; };
 		04F025C3198CD6F90017665A /* StartSetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StartSetPasswordViewController.m; path = Controller/StartSetPasswordViewController.m; sourceTree = "<group>"; };
 		04F025C4198CD6F90017665A /* StartSetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StartSetPasswordViewController.xib; path = Controller/StartSetPasswordViewController.xib; sourceTree = "<group>"; };
@@ -95,6 +107,16 @@
 		04F025CD198CD7AB0017665A /* SetQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetQuestionViewController.m; path = Controller/SetQuestionViewController.m; sourceTree = "<group>"; };
 		04F025CE198CD7AB0017665A /* SetQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SetQuestionViewController.xib; path = Controller/SetQuestionViewController.xib; sourceTree = "<group>"; };
 		04F025D3198CDA5C0017665A /* setting_startsetpassword_img@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting_startsetpassword_img@2x.png"; sourceTree = "<group>"; };
+		04FE1F4B198F244900F41BE0 /* dot_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot_off.png; sourceTree = "<group>"; };
+		04FE1F4C198F244900F41BE0 /* dot_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot_on.png; sourceTree = "<group>"; };
+		04FE1F4D198F244900F41BE0 /* LockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockView.h; sourceTree = "<group>"; };
+		04FE1F4E198F244900F41BE0 /* LockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockView.m; sourceTree = "<group>"; };
+		04FE1F4F198F244900F41BE0 /* LockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockViewController.h; sourceTree = "<group>"; };
+		04FE1F50198F244900F41BE0 /* LockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockViewController.m; sourceTree = "<group>"; };
+		04FE1F56198F2BF100F41BE0 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		04FE1F57198F2BF100F41BE0 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		04FE1F59198F2CB500F41BE0 /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
+		04FE1F5A198F2CB500F41BE0 /* 37x-Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +143,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		043DA67E198F3E52000421B9 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				043DA67F198F693C000421B9 /* InputQuestionAnswerViewController.h */,
+				043DA680198F693C000421B9 /* InputQuestionAnswerViewController.m */,
+				043DA681198F693C000421B9 /* InputQuestionAnswerViewController.xib */,
+			);
+			name = Start;
+			sourceTree = "<group>";
+		};
 		04F02547198CC65F0017665A = {
 			isa = PBXGroup;
 			children = (
@@ -159,8 +191,12 @@
 				04F02589198CCE2C0017665A /* FirstViewController.h */,
 				04F0258A198CCE2C0017665A /* FirstViewController.m */,
 				04F0258B198CCE2C0017665A /* FirstViewController.xib */,
+				043DA679198F3E4C000421B9 /* StartViewController.h */,
+				043DA67A198F3E4C000421B9 /* StartViewController.m */,
+				043DA67B198F3E4C000421B9 /* StartViewController.xib */,
+				043DA67E198F3E52000421B9 /* Start */,
 				04F025A7198CD5770017665A /* VerificationViewController.h */,
-				04F025A8198CD5770017665A /* VerificationViewController.m */,
+				04F025A8198CD5770017665A /* VerificationViewController.mm */,
 				04F025A9198CD5770017665A /* VerificationViewController.xib */,
 				04F02593198CCEF60017665A /* Verification */,
 				04F025AC198CD58D0017665A /* DiscountViewController.h */,
@@ -234,6 +270,8 @@
 		04F025A0198CCF780017665A /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				04FE1F55198F2BF100F41BE0 /* MBProgressHUD */,
+				04FE1F4A198F244900F41BE0 /* LockView */,
 			);
 			name = Third;
 			sourceTree = "<group>";
@@ -244,9 +282,6 @@
 				04F025A2198CD5490017665A /* ImportPhoneNumberViewController.h */,
 				04F025A3198CD5490017665A /* ImportPhoneNumberViewController.m */,
 				04F025A4198CD5490017665A /* ImportPhoneNumberViewController.xib */,
-				04F025BC198CD65D0017665A /* ImportVericateCodeViewController.h */,
-				04F025BD198CD65D0017665A /* ImportVericateCodeViewController.m */,
-				04F025BE198CD65D0017665A /* ImportVericateCodeViewController.xib */,
 			);
 			name = BindPhone;
 			sourceTree = "<group>";
@@ -281,6 +316,32 @@
 				04F025D3198CDA5C0017665A /* setting_startsetpassword_img@2x.png */,
 			);
 			path = tempImage;
+			sourceTree = "<group>";
+		};
+		04FE1F4A198F244900F41BE0 /* LockView */ = {
+			isa = PBXGroup;
+			children = (
+				04FE1F4B198F244900F41BE0 /* dot_off.png */,
+				04FE1F4C198F244900F41BE0 /* dot_on.png */,
+				04FE1F4D198F244900F41BE0 /* LockView.h */,
+				04FE1F4E198F244900F41BE0 /* LockView.m */,
+				04FE1F4F198F244900F41BE0 /* LockViewController.h */,
+				04FE1F50198F244900F41BE0 /* LockViewController.m */,
+			);
+			name = LockView;
+			path = Third/LockView;
+			sourceTree = "<group>";
+		};
+		04FE1F55198F2BF100F41BE0 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				04FE1F59198F2CB500F41BE0 /* 37x-Checkmark.png */,
+				04FE1F5A198F2CB500F41BE0 /* 37x-Checkmark@2x.png */,
+				04FE1F56198F2BF100F41BE0 /* MBProgressHUD.h */,
+				04FE1F57198F2BF100F41BE0 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			path = Third/MBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,17 +420,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F025B5198CD59F0017665A /* SettingViewController.xib in Resources */,
+				043DA683198F693C000421B9 /* InputQuestionAnswerViewController.xib in Resources */,
+				04FE1F51198F244900F41BE0 /* dot_off.png in Resources */,
+				04FE1F52198F244900F41BE0 /* dot_on.png in Resources */,
 				04F025B0198CD58D0017665A /* DiscountViewController.xib in Resources */,
 				04F025D4198CDA5C0017665A /* setting_startsetpassword_img@2x.png in Resources */,
 				04F0255E198CC6600017665A /* InfoPlist.strings in Resources */,
 				04F025CB198CD7680017665A /* SetStartPasswordViewController.xib in Resources */,
 				04F025AB198CD5770017665A /* VerificationViewController.xib in Resources */,
+				043DA67D198F3E4C000421B9 /* StartViewController.xib in Resources */,
 				04F025C6198CD6F90017665A /* StartSetPasswordViewController.xib in Resources */,
+				04FE1F5C198F2CB500F41BE0 /* 37x-Checkmark@2x.png in Resources */,
 				04F0258D198CCE2C0017665A /* FirstViewController.xib in Resources */,
 				04F025D0198CD7AB0017665A /* SetQuestionViewController.xib in Resources */,
-				04F025C0198CD65D0017665A /* ImportVericateCodeViewController.xib in Resources */,
 				04F025A6198CD5490017665A /* ImportPhoneNumberViewController.xib in Resources */,
 				04F02566198CC6600017665A /* Images.xcassets in Resources */,
+				04FE1F5B198F2CB500F41BE0 /* 37x-Checkmark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,17 +454,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FE1F54198F244900F41BE0 /* LockViewController.m in Sources */,
 				04F025CF198CD7AB0017665A /* SetQuestionViewController.m in Sources */,
 				04F025AF198CD58D0017665A /* DiscountViewController.m in Sources */,
-				04F025BF198CD65D0017665A /* ImportVericateCodeViewController.m in Sources */,
 				04F02564198CC6600017665A /* AppDelegate.m in Sources */,
 				04F0258C198CCE2C0017665A /* FirstViewController.m in Sources */,
 				04F025B4198CD59F0017665A /* SettingViewController.m in Sources */,
 				04F025C5198CD6F90017665A /* StartSetPasswordViewController.m in Sources */,
 				04F025CA198CD7680017665A /* SetStartPasswordViewController.m in Sources */,
 				04F02560198CC6600017665A /* main.m in Sources */,
-				04F025AA198CD5770017665A /* VerificationViewController.m in Sources */,
+				04FE1F53198F244900F41BE0 /* LockView.m in Sources */,
+				04F025AA198CD5770017665A /* VerificationViewController.mm in Sources */,
+				043DA67C198F3E4C000421B9 /* StartViewController.m in Sources */,
+				043DA682198F693C000421B9 /* InputQuestionAnswerViewController.m in Sources */,
 				04F025A5198CD5490017665A /* ImportPhoneNumberViewController.m in Sources */,
+				04FE1F58198F2BF100F41BE0 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +667,7 @@
 				04F0257E198CC6600017665A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04F0257F198CC6600017665A /* Build configuration list for PBXNativeTarget "VLingPaiTests" */ = {
 			isa = XCConfigurationList;
@@ -605,6 +676,7 @@
 				04F02581198CC6600017665A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

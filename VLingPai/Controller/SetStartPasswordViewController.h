@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LockViewController.h"
 
 @interface SetStartPasswordViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *labAdvise;
+
 
 @end

@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetQuestionViewController">
             <connections>
+                <outlet property="btnChooeseQuestion" destination="jav-Ha-HvU" id="gse-JQ-5jG"/>
+                <outlet property="textFieldAnswer" destination="KYV-YR-XcD" id="jxs-JP-3QC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -51,12 +53,18 @@
                             <state key="normal" title="请选择问题">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="btnChooeseQuestionAction:" destination="-1" eventType="touchUpInside" id="Ekp-0w-IT5"/>
+                            </connections>
                         </button>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密保答案" minimumFontSize="17" id="KYV-YR-XcD">
                             <rect key="frame" x="20" y="73" width="280" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="CTP-s7-vLW"/>
+                            </connections>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>

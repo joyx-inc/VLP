@@ -11,20 +11,29 @@
 #import "VerificationViewController.h"
 #import "DiscountViewController.h"
 #import "SettingViewController.h"
+#import "StartViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isFirst"];
+    
     BOOL isFirst = [[NSUserDefaults standardUserDefaults] boolForKey:@"isFirst"];
     if (!isFirst) {
         FirstViewController *vc = [[FirstViewController alloc]initWithNibName:@"FirstViewController" bundle:nil];
         self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
         self.window.backgroundColor = [UIColor whiteColor];
-        self.window.rootViewController = vc;
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+        self.window.rootViewController = nav;
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isFirst"];
     }else{
-        [self initTabBarController];
+//        [self initTabBarController];
+        StartViewController *vc = [[StartViewController alloc]initWithNibName:@"StartViewController" bundle:nil];
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.window.backgroundColor = [UIColor whiteColor];
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+        self.window.rootViewController = nav;
     }
     
     [self.window makeKeyAndVisible];
@@ -66,6 +75,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = self.tabBarController;
+    [self.window makeKeyAndVisible];
 }
 
 

@@ -11,4 +11,6 @@
 @interface StartSetPasswordViewController : UIViewController
 - (IBAction)goSetStartPasswordAction:(UIButton *)sender;
 
+@property (assign, nonatomic) BOOL hidesBackButton;  //no 不隐藏  YES 隐藏
+
 @end

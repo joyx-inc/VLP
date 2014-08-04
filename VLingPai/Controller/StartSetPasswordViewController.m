@@ -7,6 +7,7 @@
 //
 
 #import "StartSetPasswordViewController.h"
+#import "SetStartPasswordViewController.h"
 
 @interface StartSetPasswordViewController ()
 
@@ -27,6 +28,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    if (self.hidesBackButton) {
+        self.navigationItem.hidesBackButton = YES;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,5 +41,7 @@
 }
 
 - (IBAction)goSetStartPasswordAction:(UIButton *)sender {
+    SetStartPasswordViewController *vc = [[SetStartPasswordViewController alloc]initWithNibName:@"SetStartPasswordViewController" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 @end

@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImportPhoneNumberViewController : UIViewController
+@interface ImportPhoneNumberViewController : UIViewController<UIAlertViewDelegate,UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *textFieldPhoneNumber;
+
+- (IBAction)btnGoNextAction:(UIButton *)sender;
+- (IBAction)btnGetVerificationCode:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldVericationCode;
+
+@property (weak, nonatomic) IBOutlet UIView *secondView;
 
 @end

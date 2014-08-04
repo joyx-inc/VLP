@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "AppDelegate.h"
+#import "ImportPhoneNumberViewController.h"
 
 @interface FirstViewController ()
 
@@ -37,10 +38,13 @@
 }
 
 - (IBAction)startAction:(UIButton *)sender {
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    [appDelegate initTabBarController];
+//    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+//    [appDelegate initTabBarController];
+//    
+////    UINavigationController *nav = (UINavigationController *)appDelegate.tabBarController.selectedViewController;
     
-    UINavigationController *nav = (UINavigationController *)appDelegate.tabBarController.selectedViewController;
+    ImportPhoneNumberViewController *vc = [[ImportPhoneNumberViewController alloc]initWithNibName:@"ImportPhoneNumberViewController" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 @end
