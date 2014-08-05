@@ -7,7 +7,7 @@
 //
 
 #import "SetStartPasswordViewController.h"
-//#import "SetQuestionViewController.h"
+#import "SetQuestionViewController.h"
 #import "MBProgressHUD.h"
 
 @interface SetStartPasswordViewController ()<MBProgressHUDDelegate>
@@ -80,8 +80,8 @@
     }
 }
 -(void)goNext{
-//    SetQuestionViewController *vc = [[SetQuestionViewController alloc]initWithNibName:@"SetQuestionViewController" bundle:nil];
-//    [self.navigationController pushViewController:vc animated:YES];
+    SetQuestionViewController *vc = [[SetQuestionViewController alloc]initWithNibName:@"SetQuestionViewController" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(void)loadLockView{

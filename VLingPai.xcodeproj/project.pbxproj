@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040E4F6C199075E20023FD80 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E4F6B199075E20023FD80 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		040E4F6E199076FA0023FD80 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 040E4F6D199076FA0023FD80 /* libicucore.dylib */; };
+		040E4FFF1990D6290023FD80 /* NTP_Component.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040E4FFE1990D6290023FD80 /* NTP_Component.framework */; };
+		040E50011990D6330023FD80 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040E50001990D6330023FD80 /* CFNetwork.framework */; };
+		040E500F1990F0B00023FD80 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E500D1990F0B00023FD80 /* AboutViewController.m */; };
+		040E50101990F0B00023FD80 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040E500E1990F0B00023FD80 /* AboutViewController.xib */; };
+		040E50141990F0C70023FD80 /* CalibrationTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E50121990F0C70023FD80 /* CalibrationTimeViewController.m */; };
+		040E50151990F0C70023FD80 /* CalibrationTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040E50131990F0C70023FD80 /* CalibrationTimeViewController.xib */; };
+		040E50191990F0EB0023FD80 /* NowBindPhoneStateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E50171990F0EB0023FD80 /* NowBindPhoneStateViewController.m */; };
+		040E501A1990F0EB0023FD80 /* NowBindPhoneStateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040E50181990F0EB0023FD80 /* NowBindPhoneStateViewController.xib */; };
 		043DA67C198F3E4C000421B9 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043DA67A198F3E4C000421B9 /* StartViewController.m */; };
 		043DA67D198F3E4C000421B9 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043DA67B198F3E4C000421B9 /* StartViewController.xib */; };
 		043DA682198F693C000421B9 /* InputQuestionAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043DA680198F693C000421B9 /* InputQuestionAnswerViewController.m */; };
@@ -60,6 +70,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040E4F6A199075E20023FD80 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		040E4F6B199075E20023FD80 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		040E4F6D199076FA0023FD80 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		040E4FFE1990D6290023FD80 /* NTP_Component.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NTP_Component.framework; sourceTree = "<group>"; };
+		040E50001990D6330023FD80 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		040E500C1990F0B00023FD80 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = Controller/AboutViewController.h; sourceTree = "<group>"; };
+		040E500D1990F0B00023FD80 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = Controller/AboutViewController.m; sourceTree = "<group>"; };
+		040E500E1990F0B00023FD80 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AboutViewController.xib; path = Controller/AboutViewController.xib; sourceTree = "<group>"; };
+		040E50111990F0C70023FD80 /* CalibrationTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalibrationTimeViewController.h; path = Controller/CalibrationTimeViewController.h; sourceTree = "<group>"; };
+		040E50121990F0C70023FD80 /* CalibrationTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalibrationTimeViewController.m; path = Controller/CalibrationTimeViewController.m; sourceTree = "<group>"; };
+		040E50131990F0C70023FD80 /* CalibrationTimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CalibrationTimeViewController.xib; path = Controller/CalibrationTimeViewController.xib; sourceTree = "<group>"; };
+		040E50161990F0EB0023FD80 /* NowBindPhoneStateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NowBindPhoneStateViewController.h; path = Controller/NowBindPhoneStateViewController.h; sourceTree = "<group>"; };
+		040E50171990F0EB0023FD80 /* NowBindPhoneStateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NowBindPhoneStateViewController.m; path = Controller/NowBindPhoneStateViewController.m; sourceTree = "<group>"; };
+		040E50181990F0EB0023FD80 /* NowBindPhoneStateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NowBindPhoneStateViewController.xib; path = Controller/NowBindPhoneStateViewController.xib; sourceTree = "<group>"; };
 		043DA679198F3E4C000421B9 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartViewController.h; path = Controller/StartViewController.h; sourceTree = "<group>"; };
 		043DA67A198F3E4C000421B9 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StartViewController.m; path = Controller/StartViewController.m; sourceTree = "<group>"; };
 		043DA67B198F3E4C000421B9 /* StartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StartViewController.xib; path = Controller/StartViewController.xib; sourceTree = "<group>"; };
@@ -124,7 +148,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040E50011990D6330023FD80 /* CFNetwork.framework in Frameworks */,
+				040E4F6E199076FA0023FD80 /* libicucore.dylib in Frameworks */,
 				04F02556198CC6600017665A /* CoreGraphics.framework in Frameworks */,
+				040E4FFF1990D6290023FD80 /* NTP_Component.framework in Frameworks */,
 				04F02558198CC6600017665A /* UIKit.framework in Frameworks */,
 				04F02554198CC6600017665A /* Foundation.framework in Frameworks */,
 			);
@@ -143,6 +170,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040E4F69199075E20023FD80 /* RegexKitLite */ = {
+			isa = PBXGroup;
+			children = (
+				040E4F6A199075E20023FD80 /* RegexKitLite.h */,
+				040E4F6B199075E20023FD80 /* RegexKitLite.m */,
+			);
+			name = RegexKitLite;
+			path = Third/RegexKitLite;
+			sourceTree = "<group>";
+		};
+		040E4FFD1990D6290023FD80 /* NTP */ = {
+			isa = PBXGroup;
+			children = (
+				040E4FFE1990D6290023FD80 /* NTP_Component.framework */,
+			);
+			name = NTP;
+			path = Third/NTP;
+			sourceTree = "<group>";
+		};
 		043DA67E198F3E52000421B9 /* Start */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +221,8 @@
 		04F02552198CC6600017665A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				040E50001990D6330023FD80 /* CFNetwork.framework */,
+				040E4F6D199076FA0023FD80 /* libicucore.dylib */,
 				04F02553198CC6600017665A /* Foundation.framework */,
 				04F02555198CC6600017665A /* CoreGraphics.framework */,
 				04F02557198CC6600017665A /* UIKit.framework */,
@@ -263,6 +311,12 @@
 			children = (
 				04F025C1198CD6A30017665A /* SetStartPassword */,
 				04F025A1198CD4EE0017665A /* BindPhone */,
+				040E50111990F0C70023FD80 /* CalibrationTimeViewController.h */,
+				040E50121990F0C70023FD80 /* CalibrationTimeViewController.m */,
+				040E50131990F0C70023FD80 /* CalibrationTimeViewController.xib */,
+				040E500C1990F0B00023FD80 /* AboutViewController.h */,
+				040E500D1990F0B00023FD80 /* AboutViewController.m */,
+				040E500E1990F0B00023FD80 /* AboutViewController.xib */,
 			);
 			name = Setting;
 			sourceTree = "<group>";
@@ -270,6 +324,8 @@
 		04F025A0198CCF780017665A /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				040E4FFD1990D6290023FD80 /* NTP */,
+				040E4F69199075E20023FD80 /* RegexKitLite */,
 				04FE1F55198F2BF100F41BE0 /* MBProgressHUD */,
 				04FE1F4A198F244900F41BE0 /* LockView */,
 			);
@@ -279,6 +335,9 @@
 		04F025A1198CD4EE0017665A /* BindPhone */ = {
 			isa = PBXGroup;
 			children = (
+				040E50161990F0EB0023FD80 /* NowBindPhoneStateViewController.h */,
+				040E50171990F0EB0023FD80 /* NowBindPhoneStateViewController.m */,
+				040E50181990F0EB0023FD80 /* NowBindPhoneStateViewController.xib */,
 				04F025A2198CD5490017665A /* ImportPhoneNumberViewController.h */,
 				04F025A3198CD5490017665A /* ImportPhoneNumberViewController.m */,
 				04F025A4198CD5490017665A /* ImportPhoneNumberViewController.xib */,
@@ -420,6 +479,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F025B5198CD59F0017665A /* SettingViewController.xib in Resources */,
+				040E50101990F0B00023FD80 /* AboutViewController.xib in Resources */,
+				040E50151990F0C70023FD80 /* CalibrationTimeViewController.xib in Resources */,
 				043DA683198F693C000421B9 /* InputQuestionAnswerViewController.xib in Resources */,
 				04FE1F51198F244900F41BE0 /* dot_off.png in Resources */,
 				04FE1F52198F244900F41BE0 /* dot_on.png in Resources */,
@@ -431,6 +492,7 @@
 				043DA67D198F3E4C000421B9 /* StartViewController.xib in Resources */,
 				04F025C6198CD6F90017665A /* StartSetPasswordViewController.xib in Resources */,
 				04FE1F5C198F2CB500F41BE0 /* 37x-Checkmark@2x.png in Resources */,
+				040E501A1990F0EB0023FD80 /* NowBindPhoneStateViewController.xib in Resources */,
 				04F0258D198CCE2C0017665A /* FirstViewController.xib in Resources */,
 				04F025D0198CD7AB0017665A /* SetQuestionViewController.xib in Resources */,
 				04F025A6198CD5490017665A /* ImportPhoneNumberViewController.xib in Resources */,
@@ -457,16 +519,20 @@
 				04FE1F54198F244900F41BE0 /* LockViewController.m in Sources */,
 				04F025CF198CD7AB0017665A /* SetQuestionViewController.m in Sources */,
 				04F025AF198CD58D0017665A /* DiscountViewController.m in Sources */,
+				040E50141990F0C70023FD80 /* CalibrationTimeViewController.m in Sources */,
 				04F02564198CC6600017665A /* AppDelegate.m in Sources */,
+				040E500F1990F0B00023FD80 /* AboutViewController.m in Sources */,
 				04F0258C198CCE2C0017665A /* FirstViewController.m in Sources */,
 				04F025B4198CD59F0017665A /* SettingViewController.m in Sources */,
 				04F025C5198CD6F90017665A /* StartSetPasswordViewController.m in Sources */,
 				04F025CA198CD7680017665A /* SetStartPasswordViewController.m in Sources */,
 				04F02560198CC6600017665A /* main.m in Sources */,
 				04FE1F53198F244900F41BE0 /* LockView.m in Sources */,
+				040E4F6C199075E20023FD80 /* RegexKitLite.m in Sources */,
 				04F025AA198CD5770017665A /* VerificationViewController.mm in Sources */,
 				043DA67C198F3E4C000421B9 /* StartViewController.m in Sources */,
 				043DA682198F693C000421B9 /* InputQuestionAnswerViewController.m in Sources */,
+				040E50191990F0EB0023FD80 /* NowBindPhoneStateViewController.m in Sources */,
 				04F025A5198CD5490017665A /* ImportPhoneNumberViewController.m in Sources */,
 				04FE1F58198F2BF100F41BE0 /* MBProgressHUD.m in Sources */,
 			);
@@ -585,6 +651,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VLingPai/Third/NTP",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VLingPai/VLingPai-Prefix.pch";
 				INFOPLIST_FILE = "VLingPai/VLingPai-Info.plist";
@@ -599,6 +669,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VLingPai/Third/NTP",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VLingPai/VLingPai-Prefix.pch";
 				INFOPLIST_FILE = "VLingPai/VLingPai-Info.plist";

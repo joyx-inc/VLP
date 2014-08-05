@@ -8,12 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SetQuestionViewController : UIViewController<UIAlertViewDelegate,UITextFieldDelegate>
+@interface SetQuestionViewController : UIViewController<UIAlertViewDelegate,UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UIButton *btnChooeseQuestion;
 - (IBAction)btnChooeseQuestionAction:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldAnswer;
 
-
 - (IBAction)btnSaveAction:(UIButton *)sender;
 - (IBAction)btnCancelAction:(UIButton *)sender;
+
+- (IBAction)btnHiddenPickerView:(UIButton *)sender;
+- (IBAction)btnChooesePickerData:(UIButton *)sender;
+
+@property (weak, nonatomic) IBOutlet UIPickerView *myPickerView;
+@property (weak, nonatomic) IBOutlet UIView *myPickerContentView;
+
+@property (strong, nonatomic) NSArray *pickDataList;
+
+
 @end

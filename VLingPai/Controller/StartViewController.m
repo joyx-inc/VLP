@@ -9,6 +9,7 @@
 #import "StartViewController.h"
 //#import "VerificationViewController.h"
 #import "AppDelegate.h"
+#import "InputQuestionAnswerViewController.h"
 
 @interface StartViewController ()
 
@@ -32,9 +33,21 @@
     // Do any additional setup after loading the view from its nib.
     
     self.inputCount = 0;
-    self.title = @"请输入启动密码";
     
-    [self loadLockView];
+    NSString *password = [[NSUserDefaults standardUserDefaults]objectForKey:StartPassword];
+    NSString *theQuestion = [[NSUserDefaults standardUserDefaults] objectForKey:TheQuestion];
+    NSString *theAnwser = [[NSUserDefaults standardUserDefaults] objectForKey:TheQuestionAnswer];
+    if (password.length > 0 && theQuestion.length > 0 && theAnwser.length > 0) {
+        //已经设置启动密码、密保
+        self.title = @"请输入启动密码";
+        
+        [self loadLockView];
+    }else{
+        //没有启动密码，直接到令牌界面
+        AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        [appDelegate initTabBarController];
+    }
+    
 }
 
 -(void)lockEntered:(NSString *)key{
@@ -48,15 +61,25 @@
         //启动失败
         if (self.inputCount < 3) {
             self.labOutput.text = [NSString stringWithFormat:@"启动失败，还有%d次机会", 3-self.inputCount];
-//            [self loadLockView];
         }else if(self.inputCount < 6){
             self.viewBtnForget.hidden = NO;
-            self.labOutput.text = [NSString stringWithFormat:@"休息一会，%d秒后再重新输入",(self.inputCount - 3) * 60];
+            self.watingCount = 60;
+            self.labOutput.text = [NSString stringWithFormat:@"休息一会，%d秒后再重新输入",60];
             self.lockVC.view.userInteractionEnabled = NO;
-            [self performSelector:@selector(lockViewIsEnabled) withObject:nil afterDelay:(self.inputCount - 3) * 60];
-            
+            [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(setLabelText:) userInfo:nil repeats:YES];
         }
     }
+}
+
+-(void)setLabelText:(NSTimer *)timer{
+    self.watingCount--;
+    if (self.watingCount < 0) {
+        self.lockVC.view.userInteractionEnabled = YES;
+        self.labOutput.text = @"请输入密码";
+        [timer invalidate];
+        return;
+    }
+    self.labOutput.text = [NSString stringWithFormat:@"休息一会，%d秒后再重新输入",self.watingCount];
 }
 -(void)loadLockView{
     if (!lockVC) {
@@ -66,9 +89,6 @@
         lockVC.view.frame = CGRectMake(0, 120, 320, 320);
     }
 }
--(void)lockViewIsEnabled{
-    lockVC.view.userInteractionEnabled = YES;
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -77,5 +97,7 @@
 }
 
 - (IBAction)btnForgetPasswordAction:(UIButton *)sender {
+    InputQuestionAnswerViewController *vc = [[InputQuestionAnswerViewController alloc]initWithNibName:@"InputQuestionAnswerViewController" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 @end

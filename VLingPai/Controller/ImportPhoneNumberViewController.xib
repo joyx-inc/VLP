@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImportPhoneNumberViewController">
             <connections>
+                <outlet property="btnGetVerificationCode" destination="ylu-3N-oX4" id="Ieq-sL-mqB"/>
                 <outlet property="secondView" destination="Bdc-QG-0P2" id="CA0-wo-OFM"/>
                 <outlet property="textFieldPhoneNumber" destination="7uQ-Sz-YTk" id="NnQ-Zw-nj9"/>
                 <outlet property="textFieldVericationCode" destination="75C-kK-lAB" id="R9a-Py-cEC"/>
@@ -19,13 +20,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ylu-3N-oX4">
-                    <rect key="frame" x="37" y="168" width="246" height="39"/>
+                    <rect key="frame" x="37" y="168" width="246" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.0" green="0.67130474452554745" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="获取短信验证码">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
+                    <color key="backgroundColor" red="0.0" green="0.67130474449999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                    <state key="normal" title="获取短信验证码"/>
                     <connections>
                         <action selector="btnGetVerificationCode:" destination="-1" eventType="touchUpInside" id="mjR-kC-TaU"/>
                     </connections>
@@ -44,9 +43,10 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g7n-Wo-9ag">
-                            <rect key="frame" x="37" y="57" width="246" height="39"/>
+                            <rect key="frame" x="37" y="57" width="246" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.0" green="0.67130474449999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <state key="normal" title="下一步">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -62,7 +62,7 @@
                             <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                         </textField>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>

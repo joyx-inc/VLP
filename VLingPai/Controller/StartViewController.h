@@ -17,4 +17,6 @@
 
 - (IBAction)btnForgetPasswordAction:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIView *viewBtnForget;
+
+@property (assign, nonatomic) int watingCount;
 @end

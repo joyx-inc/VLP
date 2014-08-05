@@ -14,8 +14,12 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 
+#define DeviceHeight [UIScreen mainScreen].bounds.size.height
+#define DeviceWidth [UIScreen mainScreen].bounds.size.width
+
 #define StartPassword @"StartPassword"
 #define TheQuestion @"TheQuestion"
 #define TheQuestionAnswer @"TheQuestionAnswer"
+#define UserBindPhoneNumber @"UserBindPhoneNumber"
 
 #endif

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InputQuestionAnswerViewController : UIViewController<UITextFieldDelegate>
+@interface InputQuestionAnswerViewController : UIViewController<UITextFieldDelegate,UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *labQuestion;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldAnswer;
 - (IBAction)goNextAction:(UIButton *)sender;

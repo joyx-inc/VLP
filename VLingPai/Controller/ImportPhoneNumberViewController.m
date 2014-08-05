@@ -9,11 +9,11 @@
 #import "ImportPhoneNumberViewController.h"
 #import "MBProgressHUD.h"
 #import "StartSetPasswordViewController.h"
-//#import "VerificationViewController.h"
+#import "RegexKitLite.h"
+#import "AppDelegate.h"
+
 
 @interface ImportPhoneNumberViewController ()<MBProgressHUDDelegate>
-
-
 
 @end
 
@@ -42,9 +42,11 @@
 
 - (IBAction)btnGoNextAction:(UIButton *)sender {
     if ([self.textFieldVericationCode.text isEqualToString:@"123456"]) {
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"绑定成功" message:@"是否设置启动密码" delegate:self cancelButtonTitle:@"跳过" otherButtonTitles:@"去设置", nil ];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"绑定成功" message:@"是否设置启动密码" delegate:self cancelButtonTitle:@"直接使用" otherButtonTitles:@"去设置", nil];
         [alert show];
         alert.tag = 100;
+        
+        [[NSUserDefaults standardUserDefaults] setObject:self.textFieldPhoneNumber.text forKey:UserBindPhoneNumber];
     }else{
         [self.textFieldVericationCode resignFirstResponder];
         MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
@@ -65,23 +67,51 @@
 }
 
 - (IBAction)btnGetVerificationCode:(UIButton *)sender {
+    if (self.isTimeing) {
+        return;
+    }
+    
     [self.textFieldPhoneNumber resignFirstResponder];
+    
     if (self.textFieldPhoneNumber.text.length > 0) {
-        MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
-        [self.navigationController.view addSubview:HUD];
         
-        HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
-        
-        HUD.mode = MBProgressHUDModeCustomView;
-        
-        HUD.delegate = self;
-        HUD.labelText = @"发送成功";
-        
-        [HUD show:YES];
-        [HUD hide:YES afterDelay:2];
-        
-        self.secondView.hidden = NO;
-        
+        NSString *phoneRegular = @"(1[345]\\d{9})|(18\\d{9})|(0\\d{9,10})";
+        NSArray *result = [self.textFieldPhoneNumber.text componentsMatchedByRegex:phoneRegular];
+        if (result.count > 0) {
+            MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+            [self.navigationController.view addSubview:HUD];
+            
+            HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+            
+            HUD.mode = MBProgressHUDModeCustomView;
+            
+            HUD.delegate = self;
+            HUD.labelText = @"发送成功";
+            
+            [HUD show:YES];
+            [HUD hide:YES afterDelay:2];
+            
+            self.secondView.hidden = NO;
+            
+            self.isTimeing = YES;
+            [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(setBtnGetVerificationCodeTitle:) userInfo:nil repeats:YES];
+            self.timeCount = 60;
+        }else{
+            MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+            [self.navigationController.view addSubview:HUD];
+            
+            HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+            
+            HUD.mode = MBProgressHUDModeCustomView;
+            
+            HUD.delegate = self;
+            HUD.labelText = @"请输入正确的手机号";
+            
+            [HUD show:YES];
+            [HUD hide:YES afterDelay:2];
+            
+            [self performSelector:@selector(textFieldBecomeFirstResponder) withObject:nil afterDelay:2];
+        }
     }else{
         MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
         [self.navigationController.view addSubview:HUD];
@@ -91,13 +121,34 @@
         HUD.mode = MBProgressHUDModeCustomView;
         
         HUD.delegate = self;
-        HUD.labelText = @"请输入正确的手机号";
+        HUD.labelText = @"手机号不能为空";
         
         [HUD show:YES];
         [HUD hide:YES afterDelay:2];
         
         [self performSelector:@selector(textFieldBecomeFirstResponder) withObject:nil afterDelay:2];
     }
+}
+
+//-(void)setBtnTitleOnMainThread:(NSTimer *)timer{
+//    [self performSelectorOnMainThread:@selector(setBtnGetVerificationCodeTitle:) withObject:timer waitUntilDone:NO];
+//}
+
+-(void)setBtnGetVerificationCodeTitle:(NSTimer *)timer{
+    [self.btnGetVerificationCode setTitle:[NSString stringWithFormat:@"%d秒后重新发送",self.timeCount] forState:UIControlStateNormal];
+    self.timeCount--;
+    if (self.timeCount < 0) {
+        [timer invalidate];
+        [self.btnGetVerificationCode setTitle:@"重新发送验证码到手机" forState:UIControlStateNormal];
+        self.isTimeing = NO;
+//        self.btnGetVerificationCode.backgroundColor = [UIColor colorWithRed:0 green:171/255.0 blue:1 alpha:1];
+    }
+}
+
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.textFieldPhoneNumber resignFirstResponder];
+    [self.textFieldVericationCode resignFirstResponder];
 }
 
 -(void)textFieldBecomeFirstResponder{
@@ -110,10 +161,17 @@
     return YES;
 }
 
+-(void)goSetQuestionVC{
+    StartSetPasswordViewController *vc = [[StartSetPasswordViewController alloc]initWithNibName:@"StartSetPasswordViewController" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
+    vc.hidesBackButton = YES;
+}
+
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (alertView.tag == 100) {
         if (buttonIndex == 0) {
-            //TODO:goV
+            AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+            [appDelegate initTabBarController];
         }else{
             StartSetPasswordViewController *vc = [[StartSetPasswordViewController alloc]initWithNibName:@"StartSetPasswordViewController" bundle:nil];
             [self.navigationController pushViewController:vc animated:YES];

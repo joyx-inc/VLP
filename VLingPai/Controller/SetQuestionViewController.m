@@ -8,6 +8,7 @@
 
 #import "SetQuestionViewController.h"
 #import "MBProgressHUD.h"
+#import "AppDelegate.h"
 
 @interface SetQuestionViewController ()<MBProgressHUDDelegate>
 
@@ -31,6 +32,21 @@
     
     self.title = @"设置密保";
     self.navigationItem.hidesBackButton = YES;
+    
+    self.myPickerContentView.frame = CGRectMake(0, DeviceHeight, 320, 192);
+    
+    self.pickDataList = @[@"你父亲叫什么名字？",@"你爱人叫什么名字？",@"你高中班主任叫什么名字？",@"你最喜欢的电影叫什么？",@"你最喜欢的歌曲叫什么？"];
+    
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    return self.pickDataList.count;
+}
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    return [self.pickDataList objectAtIndex:row];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,7 +56,7 @@
 }
 
 - (IBAction)btnChooeseQuestionAction:(UIButton *)sender {
-    
+    [self showPickContentView];
 }
 
 - (IBAction)btnSaveAction:(UIButton *)sender {
@@ -59,21 +75,59 @@
         [HUD hide:YES afterDelay:2];
         
         [[NSUserDefaults standardUserDefaults] setObject:self.btnChooeseQuestion.titleLabel.text forKey:TheQuestion];
-        [[NSUserDefaults standardUserDefaults] setObject:self.textFieldAnswer forKey:TheQuestionAnswer];
+        [[NSUserDefaults standardUserDefaults] setObject:self.textFieldAnswer.text forKey:TheQuestionAnswer];
+        
         
         [self performSelector:@selector(goVericationView) withObject:nil afterDelay:2];
+        
+        
+        
     }
 }
 
 - (IBAction)btnCancelAction:(UIButton *)sender {
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"警告" message:@"放弃密保问题您将无法恢复密码，请谨慎操作" delegate:self cancelButtonTitle:@"继续设置" otherButtonTitles:@"我知道了", nil];
-    [alert show];
+//    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"警告" message:@"放弃密保问题您将无法恢复密码，请谨慎操作" delegate:self cancelButtonTitle:@"继续设置" otherButtonTitles:@"我知道了", nil];
+//    [alert show];
+}
+
+- (IBAction)btnHiddenPickerView:(UIButton *)sender {
+    [self hiddenPickContentView];
+}
+
+- (IBAction)btnChooesePickerData:(UIButton *)sender {
+    NSInteger row = [self.myPickerView selectedRowInComponent:0];
+    [self.btnChooeseQuestion setTitle:[self.pickDataList objectAtIndex:row] forState:UIControlStateNormal];
+    
+    [self hiddenPickContentView];
 }
 
 -(void)goVericationView{
     //TODO:去扫码/令牌界面
-    
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [appDelegate initTabBarController];
 }
+
+-(void)showPickContentView{
+    if (self.myPickerContentView.frame.origin.y < DeviceHeight) {
+        return;
+    }
+    [UIView animateWithDuration:0.6 animations:^(void){
+        CGRect frame = self.myPickerContentView.frame;
+        frame.origin.y -= 192;
+        self.myPickerContentView.frame = frame;
+    }];
+}
+-(void)hiddenPickContentView{
+    if (self.myPickerContentView.frame.origin.y >= DeviceHeight) {
+        return;
+    }
+    [UIView animateWithDuration:0.6 animations:^(void){
+        CGRect frame = self.myPickerContentView.frame;
+        frame.origin.y += 192;
+        self.myPickerContentView.frame = frame;
+    }];
+}
+
 
 #pragma mark - UIAlertViewDelegate <NSObject>
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
