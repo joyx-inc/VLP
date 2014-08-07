@@ -17,6 +17,20 @@
 		040E50151990F0C70023FD80 /* CalibrationTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040E50131990F0C70023FD80 /* CalibrationTimeViewController.xib */; };
 		040E50191990F0EB0023FD80 /* NowBindPhoneStateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E50171990F0EB0023FD80 /* NowBindPhoneStateViewController.m */; };
 		040E501A1990F0EB0023FD80 /* NowBindPhoneStateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040E50181990F0EB0023FD80 /* NowBindPhoneStateViewController.xib */; };
+		042D44001991CE2D00AA0A0A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D43FF1991CE2D00AA0A0A /* AVFoundation.framework */; };
+		042D44021991CE3500AA0A0A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D44011991CE3500AA0A0A /* AudioToolbox.framework */; };
+		042D44041991CE3C00AA0A0A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D44031991CE3C00AA0A0A /* CoreVideo.framework */; };
+		042D44061991CE4400AA0A0A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D44051991CE4400AA0A0A /* CoreMedia.framework */; };
+		042D44081991CE5400AA0A0A /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D44071991CE5400AA0A0A /* libiconv.dylib */; };
+		042D44151991D26000AA0A0A /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D44111991D0DF00AA0A0A /* libZXingWidget.a */; };
+		042D441F1991DE5800AA0A0A /* ResetStartPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D441D1991DE5800AA0A0A /* ResetStartPasswordViewController.m */; };
+		042D44201991DE5800AA0A0A /* ResetStartPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042D441E1991DE5800AA0A0A /* ResetStartPasswordViewController.xib */; };
+		042D44371992023D00AA0A0A /* ConnecteDiscountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D44351992023D00AA0A0A /* ConnecteDiscountViewController.m */; };
+		042D44381992023D00AA0A0A /* ConnecteDiscountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042D44361992023D00AA0A0A /* ConnecteDiscountViewController.xib */; };
+		042D443C1992044900AA0A0A /* ConnecteSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D443A1992044900AA0A0A /* ConnecteSuccessViewController.m */; };
+		042D443D1992044900AA0A0A /* ConnecteSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042D443B1992044900AA0A0A /* ConnecteSuccessViewController.xib */; };
+		042D4441199211AD00AA0A0A /* LogInSystemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D443F199211AD00AA0A0A /* LogInSystemViewController.m */; };
+		042D4442199211AD00AA0A0A /* LogInSystemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042D4440199211AD00AA0A0A /* LogInSystemViewController.xib */; };
 		043DA67C198F3E4C000421B9 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043DA67A198F3E4C000421B9 /* StartViewController.m */; };
 		043DA67D198F3E4C000421B9 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043DA67B198F3E4C000421B9 /* StartViewController.xib */; };
 		043DA682198F693C000421B9 /* InputQuestionAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043DA680198F693C000421B9 /* InputQuestionAnswerViewController.m */; };
@@ -25,7 +39,7 @@
 		04F02556198CC6600017665A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F02555198CC6600017665A /* CoreGraphics.framework */; };
 		04F02558198CC6600017665A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F02557198CC6600017665A /* UIKit.framework */; };
 		04F0255E198CC6600017665A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04F0255C198CC6600017665A /* InfoPlist.strings */; };
-		04F02560198CC6600017665A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F0255F198CC6600017665A /* main.m */; };
+		04F02560198CC6600017665A /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 04F0255F198CC6600017665A /* main.mm */; };
 		04F02564198CC6600017665A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F02563198CC6600017665A /* AppDelegate.m */; };
 		04F02566198CC6600017665A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F02565198CC6600017665A /* Images.xcassets */; };
 		04F0256D198CC6600017665A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F0256C198CC6600017665A /* XCTest.framework */; };
@@ -60,6 +74,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		042D44101991D0DF00AA0A0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 042D440B1991D0DF00AA0A0A /* ZXingWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = ZXingWidget;
+		};
+		042D44121991D0DF00AA0A0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 042D440B1991D0DF00AA0A0A /* ZXingWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D60398D13DF7CAD006F4B51;
+			remoteInfo = ZXingTests;
+		};
 		04F02570198CC6600017665A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 04F02548198CC65F0017665A /* Project object */;
@@ -84,6 +112,24 @@
 		040E50161990F0EB0023FD80 /* NowBindPhoneStateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NowBindPhoneStateViewController.h; path = Controller/NowBindPhoneStateViewController.h; sourceTree = "<group>"; };
 		040E50171990F0EB0023FD80 /* NowBindPhoneStateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NowBindPhoneStateViewController.m; path = Controller/NowBindPhoneStateViewController.m; sourceTree = "<group>"; };
 		040E50181990F0EB0023FD80 /* NowBindPhoneStateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NowBindPhoneStateViewController.xib; path = Controller/NowBindPhoneStateViewController.xib; sourceTree = "<group>"; };
+		042D43FF1991CE2D00AA0A0A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		042D44011991CE3500AA0A0A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		042D44031991CE3C00AA0A0A /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		042D44051991CE4400AA0A0A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		042D44071991CE5400AA0A0A /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		042D440B1991D0DF00AA0A0A /* ZXingWidget.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZXingWidget.xcodeproj; path = zxing/iphone/ZXingWidget/ZXingWidget.xcodeproj; sourceTree = SOURCE_ROOT; };
+		042D441C1991DE5800AA0A0A /* ResetStartPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResetStartPasswordViewController.h; path = Controller/ResetStartPasswordViewController.h; sourceTree = "<group>"; };
+		042D441D1991DE5800AA0A0A /* ResetStartPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResetStartPasswordViewController.m; path = Controller/ResetStartPasswordViewController.m; sourceTree = "<group>"; };
+		042D441E1991DE5800AA0A0A /* ResetStartPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResetStartPasswordViewController.xib; path = Controller/ResetStartPasswordViewController.xib; sourceTree = "<group>"; };
+		042D44341992023D00AA0A0A /* ConnecteDiscountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnecteDiscountViewController.h; path = Controller/ConnecteDiscountViewController.h; sourceTree = "<group>"; };
+		042D44351992023D00AA0A0A /* ConnecteDiscountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnecteDiscountViewController.m; path = Controller/ConnecteDiscountViewController.m; sourceTree = "<group>"; };
+		042D44361992023D00AA0A0A /* ConnecteDiscountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ConnecteDiscountViewController.xib; path = Controller/ConnecteDiscountViewController.xib; sourceTree = "<group>"; };
+		042D44391992044900AA0A0A /* ConnecteSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnecteSuccessViewController.h; sourceTree = "<group>"; };
+		042D443A1992044900AA0A0A /* ConnecteSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnecteSuccessViewController.m; sourceTree = "<group>"; };
+		042D443B1992044900AA0A0A /* ConnecteSuccessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnecteSuccessViewController.xib; sourceTree = "<group>"; };
+		042D443E199211AD00AA0A0A /* LogInSystemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogInSystemViewController.h; path = Controller/LogInSystemViewController.h; sourceTree = "<group>"; };
+		042D443F199211AD00AA0A0A /* LogInSystemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogInSystemViewController.m; path = Controller/LogInSystemViewController.m; sourceTree = "<group>"; };
+		042D4440199211AD00AA0A0A /* LogInSystemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LogInSystemViewController.xib; path = Controller/LogInSystemViewController.xib; sourceTree = "<group>"; };
 		043DA679198F3E4C000421B9 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartViewController.h; path = Controller/StartViewController.h; sourceTree = "<group>"; };
 		043DA67A198F3E4C000421B9 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StartViewController.m; path = Controller/StartViewController.m; sourceTree = "<group>"; };
 		043DA67B198F3E4C000421B9 /* StartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StartViewController.xib; path = Controller/StartViewController.xib; sourceTree = "<group>"; };
@@ -96,7 +142,7 @@
 		04F02557198CC6600017665A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		04F0255B198CC6600017665A /* VLingPai-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VLingPai-Info.plist"; sourceTree = "<group>"; };
 		04F0255D198CC6600017665A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		04F0255F198CC6600017665A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04F0255F198CC6600017665A /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		04F02561198CC6600017665A /* VLingPai-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VLingPai-Prefix.pch"; sourceTree = "<group>"; };
 		04F02562198CC6600017665A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04F02563198CC6600017665A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -148,6 +194,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042D44151991D26000AA0A0A /* libZXingWidget.a in Frameworks */,
+				042D44081991CE5400AA0A0A /* libiconv.dylib in Frameworks */,
+				042D44061991CE4400AA0A0A /* CoreMedia.framework in Frameworks */,
+				042D44041991CE3C00AA0A0A /* CoreVideo.framework in Frameworks */,
+				042D44021991CE3500AA0A0A /* AudioToolbox.framework in Frameworks */,
+				042D44001991CE2D00AA0A0A /* AVFoundation.framework in Frameworks */,
 				040E50011990D6330023FD80 /* CFNetwork.framework in Frameworks */,
 				040E4F6E199076FA0023FD80 /* libicucore.dylib in Frameworks */,
 				04F02556198CC6600017665A /* CoreGraphics.framework in Frameworks */,
@@ -189,6 +241,24 @@
 			path = Third/NTP;
 			sourceTree = "<group>";
 		};
+		042D41DE1991CDE000AA0A0A /* Zxing */ = {
+			isa = PBXGroup;
+			children = (
+				042D440B1991D0DF00AA0A0A /* ZXingWidget.xcodeproj */,
+			);
+			name = Zxing;
+			path = Third/Zxing;
+			sourceTree = "<group>";
+		};
+		042D440C1991D0DF00AA0A0A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				042D44111991D0DF00AA0A0A /* libZXingWidget.a */,
+				042D44131991D0DF00AA0A0A /* ZXingTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		043DA67E198F3E52000421B9 /* Start */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +291,11 @@
 		04F02552198CC6600017665A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				042D44071991CE5400AA0A0A /* libiconv.dylib */,
+				042D44051991CE4400AA0A0A /* CoreMedia.framework */,
+				042D44031991CE3C00AA0A0A /* CoreVideo.framework */,
+				042D44011991CE3500AA0A0A /* AudioToolbox.framework */,
+				042D43FF1991CE2D00AA0A0A /* AVFoundation.framework */,
 				040E50001990D6330023FD80 /* CFNetwork.framework */,
 				040E4F6D199076FA0023FD80 /* libicucore.dylib */,
 				04F02553198CC6600017665A /* Foundation.framework */,
@@ -268,7 +343,7 @@
 				04F025D1198CD9D10017665A /* Image */,
 				04F0255B198CC6600017665A /* VLingPai-Info.plist */,
 				04F0255C198CC6600017665A /* InfoPlist.strings */,
-				04F0255F198CC6600017665A /* main.m */,
+				04F0255F198CC6600017665A /* main.mm */,
 				04F02561198CC6600017665A /* VLingPai-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -295,6 +370,15 @@
 		04F02593198CCEF60017665A /* Verification */ = {
 			isa = PBXGroup;
 			children = (
+				042D44341992023D00AA0A0A /* ConnecteDiscountViewController.h */,
+				042D44351992023D00AA0A0A /* ConnecteDiscountViewController.m */,
+				042D44361992023D00AA0A0A /* ConnecteDiscountViewController.xib */,
+				042D44391992044900AA0A0A /* ConnecteSuccessViewController.h */,
+				042D443A1992044900AA0A0A /* ConnecteSuccessViewController.m */,
+				042D443B1992044900AA0A0A /* ConnecteSuccessViewController.xib */,
+				042D443E199211AD00AA0A0A /* LogInSystemViewController.h */,
+				042D443F199211AD00AA0A0A /* LogInSystemViewController.m */,
+				042D4440199211AD00AA0A0A /* LogInSystemViewController.xib */,
 			);
 			name = Verification;
 			sourceTree = "<group>";
@@ -324,6 +408,7 @@
 		04F025A0198CCF780017665A /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				042D41DE1991CDE000AA0A0A /* Zxing */,
 				040E4FFD1990D6290023FD80 /* NTP */,
 				040E4F69199075E20023FD80 /* RegexKitLite */,
 				04FE1F55198F2BF100F41BE0 /* MBProgressHUD */,
@@ -357,6 +442,9 @@
 				04F025CC198CD7AB0017665A /* SetQuestionViewController.h */,
 				04F025CD198CD7AB0017665A /* SetQuestionViewController.m */,
 				04F025CE198CD7AB0017665A /* SetQuestionViewController.xib */,
+				042D441C1991DE5800AA0A0A /* ResetStartPasswordViewController.h */,
+				042D441D1991DE5800AA0A0A /* ResetStartPasswordViewController.m */,
+				042D441E1991DE5800AA0A0A /* ResetStartPasswordViewController.xib */,
 			);
 			name = SetStartPassword;
 			sourceTree = "<group>";
@@ -465,6 +553,12 @@
 			mainGroup = 04F02547198CC65F0017665A;
 			productRefGroup = 04F02551198CC6600017665A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 042D440C1991D0DF00AA0A0A /* Products */;
+					ProjectRef = 042D440B1991D0DF00AA0A0A /* ZXingWidget.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				04F0254F198CC6600017665A /* VLingPai */,
@@ -472,6 +566,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		042D44111991D0DF00AA0A0A /* libZXingWidget.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libZXingWidget.a;
+			remoteRef = 042D44101991D0DF00AA0A0A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		042D44131991D0DF00AA0A0A /* ZXingTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ZXingTests.octest;
+			remoteRef = 042D44121991D0DF00AA0A0A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		04F0254E198CC6600017665A /* Resources */ = {
@@ -482,19 +593,23 @@
 				040E50101990F0B00023FD80 /* AboutViewController.xib in Resources */,
 				040E50151990F0C70023FD80 /* CalibrationTimeViewController.xib in Resources */,
 				043DA683198F693C000421B9 /* InputQuestionAnswerViewController.xib in Resources */,
+				042D44201991DE5800AA0A0A /* ResetStartPasswordViewController.xib in Resources */,
 				04FE1F51198F244900F41BE0 /* dot_off.png in Resources */,
 				04FE1F52198F244900F41BE0 /* dot_on.png in Resources */,
 				04F025B0198CD58D0017665A /* DiscountViewController.xib in Resources */,
 				04F025D4198CDA5C0017665A /* setting_startsetpassword_img@2x.png in Resources */,
 				04F0255E198CC6600017665A /* InfoPlist.strings in Resources */,
 				04F025CB198CD7680017665A /* SetStartPasswordViewController.xib in Resources */,
+				042D4442199211AD00AA0A0A /* LogInSystemViewController.xib in Resources */,
 				04F025AB198CD5770017665A /* VerificationViewController.xib in Resources */,
 				043DA67D198F3E4C000421B9 /* StartViewController.xib in Resources */,
 				04F025C6198CD6F90017665A /* StartSetPasswordViewController.xib in Resources */,
 				04FE1F5C198F2CB500F41BE0 /* 37x-Checkmark@2x.png in Resources */,
 				040E501A1990F0EB0023FD80 /* NowBindPhoneStateViewController.xib in Resources */,
+				042D44381992023D00AA0A0A /* ConnecteDiscountViewController.xib in Resources */,
 				04F0258D198CCE2C0017665A /* FirstViewController.xib in Resources */,
 				04F025D0198CD7AB0017665A /* SetQuestionViewController.xib in Resources */,
+				042D443D1992044900AA0A0A /* ConnecteSuccessViewController.xib in Resources */,
 				04F025A6198CD5490017665A /* ImportPhoneNumberViewController.xib in Resources */,
 				04F02566198CC6600017665A /* Images.xcassets in Resources */,
 				04FE1F5B198F2CB500F41BE0 /* 37x-Checkmark.png in Resources */,
@@ -519,19 +634,23 @@
 				04FE1F54198F244900F41BE0 /* LockViewController.m in Sources */,
 				04F025CF198CD7AB0017665A /* SetQuestionViewController.m in Sources */,
 				04F025AF198CD58D0017665A /* DiscountViewController.m in Sources */,
+				042D443C1992044900AA0A0A /* ConnecteSuccessViewController.m in Sources */,
 				040E50141990F0C70023FD80 /* CalibrationTimeViewController.m in Sources */,
 				04F02564198CC6600017665A /* AppDelegate.m in Sources */,
 				040E500F1990F0B00023FD80 /* AboutViewController.m in Sources */,
 				04F0258C198CCE2C0017665A /* FirstViewController.m in Sources */,
 				04F025B4198CD59F0017665A /* SettingViewController.m in Sources */,
+				042D441F1991DE5800AA0A0A /* ResetStartPasswordViewController.m in Sources */,
 				04F025C5198CD6F90017665A /* StartSetPasswordViewController.m in Sources */,
 				04F025CA198CD7680017665A /* SetStartPasswordViewController.m in Sources */,
-				04F02560198CC6600017665A /* main.m in Sources */,
+				04F02560198CC6600017665A /* main.mm in Sources */,
 				04FE1F53198F244900F41BE0 /* LockView.m in Sources */,
 				040E4F6C199075E20023FD80 /* RegexKitLite.m in Sources */,
 				04F025AA198CD5770017665A /* VerificationViewController.mm in Sources */,
 				043DA67C198F3E4C000421B9 /* StartViewController.m in Sources */,
 				043DA682198F693C000421B9 /* InputQuestionAnswerViewController.m in Sources */,
+				042D4441199211AD00AA0A0A /* LogInSystemViewController.m in Sources */,
+				042D44371992023D00AA0A0A /* ConnecteDiscountViewController.m in Sources */,
 				040E50191990F0EB0023FD80 /* NowBindPhoneStateViewController.m in Sources */,
 				04F025A5198CD5490017665A /* ImportPhoneNumberViewController.m in Sources */,
 				04FE1F58198F2BF100F41BE0 /* MBProgressHUD.m in Sources */,
@@ -651,12 +770,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VLingPai/Third/NTP",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VLingPai/VLingPai-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					./zxing/cpp/core/src,
+					"./zxing/iphone/ZXingWidget/Classes/**",
+				);
 				INFOPLIST_FILE = "VLingPai/VLingPai-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -669,12 +796,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VLingPai/Third/NTP",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VLingPai/VLingPai-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					./zxing/cpp/core/src,
+					"./zxing/iphone/ZXingWidget/Classes/**",
+				);
 				INFOPLIST_FILE = "VLingPai/VLingPai-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";

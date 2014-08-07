@@ -12,6 +12,8 @@
 #import "CalibrationTimeViewController.h"
 #import "AboutViewController.h"
 
+#import "StartViewController.h"
+
 @interface SettingViewController ()
 
 @end
@@ -58,8 +60,10 @@
             NSString *theAnwser = [[NSUserDefaults standardUserDefaults] objectForKey:TheQuestionAnswer];
             if (password.length > 0 && theQuestion.length > 0 && theAnwser.length > 0) {
                 //TODO:已经设置启动密码、密保
-               
-                
+                StartViewController *vc = [[StartViewController alloc]initWithNibName:@"StartViewController" bundle:nil];
+                vc.isStart = YES;
+                vc.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:vc animated:YES];                
             }else{
                 //没有启动密码，直接设置密码
                 StartSetPasswordViewController *vc = [[StartSetPasswordViewController alloc]initWithNibName:@"StartSetPasswordViewController" bundle:nil];

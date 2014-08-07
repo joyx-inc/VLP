@@ -60,6 +60,23 @@
 }
 
 - (IBAction)btnSaveAction:(UIButton *)sender {
+    if (self.haveChooeseQuestion == NO) {
+        MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+        [self.navigationController.view addSubview:HUD];
+        
+        HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+        
+        HUD.mode = MBProgressHUDModeCustomView;
+        
+        HUD.delegate = self;
+        HUD.labelText = @"请选择密保问题";
+        
+        [HUD show:YES];
+        [HUD hide:YES afterDelay:2];
+        
+        return;
+    }
+    
     if (self.textFieldAnswer.text.length > 0) {
         MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
         [self.navigationController.view addSubview:HUD];
@@ -79,9 +96,20 @@
         
         
         [self performSelector:@selector(goVericationView) withObject:nil afterDelay:2];
+      
+    }else{
+        MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+        [self.navigationController.view addSubview:HUD];
         
+        HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
         
+        HUD.mode = MBProgressHUDModeCustomView;
         
+        HUD.delegate = self;
+        HUD.labelText = @"请输入密保答案";
+        
+        [HUD show:YES];
+        [HUD hide:YES afterDelay:2];
     }
 }
 
@@ -97,14 +125,14 @@
 - (IBAction)btnChooesePickerData:(UIButton *)sender {
     NSInteger row = [self.myPickerView selectedRowInComponent:0];
     [self.btnChooeseQuestion setTitle:[self.pickDataList objectAtIndex:row] forState:UIControlStateNormal];
-    
+    self.haveChooeseQuestion = YES;
     [self hiddenPickContentView];
 }
 
 -(void)goVericationView{
-    //TODO:去扫码/令牌界面
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     [appDelegate initTabBarController];
+    appDelegate.tabBarController.selectedIndex = 0;
 }
 
 -(void)showPickContentView{

@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIView *myPickerContentView;
 
 @property (strong, nonatomic) NSArray *pickDataList;
+@property (assign, nonatomic) BOOL haveChooeseQuestion;
 
 
 @end

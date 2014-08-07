@@ -11,6 +11,9 @@
 #import "AppDelegate.h"
 #import "InputQuestionAnswerViewController.h"
 
+//#import "StartSetPasswordViewController.h"  //设置-设置密码-如果有密码进行解锁验证
+#import "ResetStartPasswordViewController.h"
+
 @interface StartViewController ()
 
 @end
@@ -39,15 +42,14 @@
     NSString *theAnwser = [[NSUserDefaults standardUserDefaults] objectForKey:TheQuestionAnswer];
     if (password.length > 0 && theQuestion.length > 0 && theAnwser.length > 0) {
         //已经设置启动密码、密保
-        self.title = @"请输入启动密码";
+        self.title = @"请输入密码";
         
         [self loadLockView];
     }else{
-        //没有启动密码，直接到令牌界面
-        AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-        [appDelegate initTabBarController];
+            //没有启动密码，直接到令牌界面
+            AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+            [appDelegate initTabBarController];
     }
-    
 }
 
 -(void)lockEntered:(NSString *)key{
@@ -55,12 +57,18 @@
     NSLog(@"密码为：%@",key);
     NSString *password = [[NSUserDefaults standardUserDefaults] objectForKey:StartPassword];
     if ([key isEqualToString:password]) {
-        AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-        [appDelegate initTabBarController];
+        if (self.isStart) {
+//            StartSetPasswordViewController *vc = [[StartSetPasswordViewController alloc]initWithNibName:@"StartSetPasswordViewController" bundle:nil];
+            ResetStartPasswordViewController *vc = [[ResetStartPasswordViewController alloc]initWithNibName:@"ResetStartPasswordViewController" bundle:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else{
+            AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+            [appDelegate initTabBarController];
+        }
     }else{
         //启动失败
         if (self.inputCount < 3) {
-            self.labOutput.text = [NSString stringWithFormat:@"启动失败，还有%d次机会", 3-self.inputCount];
+            self.labOutput.text = [NSString stringWithFormat:@"启动失败，还有%ld次机会", 3-self.inputCount];
         }else if(self.inputCount < 6){
             self.viewBtnForget.hidden = NO;
             self.watingCount = 60;

@@ -19,4 +19,6 @@
 @property (weak, nonatomic) IBOutlet UIView *viewBtnForget;
 
 @property (assign, nonatomic) int watingCount;
+
+@property (assign, nonatomic) BOOL isStart;  // NO 为是锁屏界面， YES 不是！！
 @end

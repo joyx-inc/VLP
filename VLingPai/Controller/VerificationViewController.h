@@ -12,4 +12,6 @@
 
 @interface VerificationViewController : UIViewController
 
+@property (assign, nonatomic) BOOL isScanView;
+
 @end
