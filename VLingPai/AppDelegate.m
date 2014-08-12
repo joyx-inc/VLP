@@ -20,6 +20,14 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
+    //设备ID，重装应用不重置
+    NSString *idfvStr = [[NSUserDefaults standardUserDefaults] objectForKey:IDFV];
+    if (idfvStr.length == 0) {
+        NSString *idfv = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+        [[NSUserDefaults standardUserDefaults] setObject:idfv forKey:IDFV];
+    }
+
+    
     StartViewController *vc = [[StartViewController alloc]initWithNibName:@"StartViewController" bundle:nil];
     self.startViewNav = [[UINavigationController alloc]initWithRootViewController:vc];
     

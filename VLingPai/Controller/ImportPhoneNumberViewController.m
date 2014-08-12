@@ -32,6 +32,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.title = @"绑定手机";
 }
 
 - (void)didReceiveMemoryWarning
@@ -96,6 +98,7 @@
             self.isTimeing = YES;
             [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(setBtnGetVerificationCodeTitle:) userInfo:nil repeats:YES];
             self.timeCount = 60;
+
         }else{
             MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
             [self.navigationController.view addSubview:HUD];
@@ -129,10 +132,6 @@
         [self performSelector:@selector(textFieldBecomeFirstResponder) withObject:nil afterDelay:2];
     }
 }
-
-//-(void)setBtnTitleOnMainThread:(NSTimer *)timer{
-//    [self performSelectorOnMainThread:@selector(setBtnGetVerificationCodeTitle:) withObject:timer waitUntilDone:NO];
-//}
 
 -(void)setBtnGetVerificationCodeTitle:(NSTimer *)timer{
     [self.btnGetVerificationCode setTitle:[NSString stringWithFormat:@"%d秒后重新发送",self.timeCount] forState:UIControlStateNormal];
@@ -172,6 +171,9 @@
         if (buttonIndex == 0) {
             AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
             [appDelegate initTabBarController];
+            appDelegate.tabBarController.selectedIndex = 0;
+            UINavigationController *nav = (UINavigationController *)appDelegate.tabBarController.selectedViewController;
+            [nav popToRootViewControllerAnimated:YES];
         }else{
             StartSetPasswordViewController *vc = [[StartSetPasswordViewController alloc]initWithNibName:@"StartSetPasswordViewController" bundle:nil];
             [self.navigationController pushViewController:vc animated:YES];

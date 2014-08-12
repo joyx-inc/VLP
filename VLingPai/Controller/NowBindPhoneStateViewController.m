@@ -38,7 +38,7 @@
     NSString *str2 = [phoneNumber substringWithRange:range2];
     
     NSString *text = [NSString stringWithFormat:@"%@****%@",str1,str2];
-    NSLog(@"%@",text);
+//    NSLog(@"%@",text);
     self.labPhoneNumber.text = text;
     
 }

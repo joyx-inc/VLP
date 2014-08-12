@@ -34,17 +34,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-//    [self performSelector:@selector(loadZxingViewController) withObject:nil afterDelay:2];
+    self.title = @"微令牌";
     
-    self.isScanView = YES;
+    
+//    self.isScanView = YES;
 }
-
--(void)viewWillAppear:(BOOL)animated{
-    if (self.isScanView) {
-        [self loadZxingViewController];
-    }
-}
-
 
 #pragma mark - ZXingDelegate
 - (void)zxingController:(ZXingWidgetController*)controller didScanResult:(NSString *)result{
@@ -82,4 +76,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnScanQRCodeAction:(UIButton *)sender {
+    [self loadZxingViewController];
+}
 @end

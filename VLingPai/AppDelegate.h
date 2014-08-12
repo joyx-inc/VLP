@@ -11,9 +11,10 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) UITabBarController *tabBarController;
 
-@property (strong, nonatomic) UINavigationController *startViewNav;
+@property (strong, nonatomic) UITabBarController *tabBarController;  //主界面的rootViewController
+
+@property (strong, nonatomic) UINavigationController *startViewNav;  //如果开启了启动密码，这是验证密码的rootViewController
 
 -(void)initTabBarController;
 

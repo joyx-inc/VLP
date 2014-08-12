@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DiscountViewController : UIViewController
+@interface DiscountViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property (strong, nonatomic) NSArray *list;
 
 @end

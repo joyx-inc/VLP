@@ -6,6 +6,8 @@
 //  Copyright (c) 2014年 zhcpeng. All rights reserved.
 //
 
+
+//首次使用关联账号界面
 #import <UIKit/UIKit.h>
 
 @interface ConnecteDiscountViewController : UIViewController<UIAlertViewDelegate>

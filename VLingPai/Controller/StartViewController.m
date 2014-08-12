@@ -14,7 +14,10 @@
 //#import "StartSetPasswordViewController.h"  //设置-设置密码-如果有密码进行解锁验证
 #import "ResetStartPasswordViewController.h"
 
-@interface StartViewController ()
+#import "ImportPhoneNumberViewController.h"     //如果用户第一次运行没有绑定手机就停止应用，再次启动时要求绑定手机
+#import "MBProgressHUD.h"
+
+@interface StartViewController ()<MBProgressHUDDelegate>
 
 @end
 
@@ -36,6 +39,17 @@
     // Do any additional setup after loading the view from its nib.
     
     self.inputCount = 0;
+    
+    NSString *userBindPhone = [[NSUserDefaults standardUserDefaults] objectForKey:UserBindPhoneNumber];
+    if (!(userBindPhone.length > 0)) {
+        //没有绑定手机
+        ImportPhoneNumberViewController *vc = [[ImportPhoneNumberViewController alloc]initWithNibName:@"ImportPhoneNumberViewController" bundle:nil];
+        
+        [self.navigationController pushViewController:vc animated:NO];
+//        vc.navigationController.navigationBarHidden = YES;
+        vc.navigationItem.hidesBackButton = YES;
+        return;
+    }
     
     NSString *password = [[NSUserDefaults standardUserDefaults]objectForKey:StartPassword];
     NSString *theQuestion = [[NSUserDefaults standardUserDefaults] objectForKey:TheQuestion];
@@ -68,7 +82,7 @@
     }else{
         //启动失败
         if (self.inputCount < 3) {
-            self.labOutput.text = [NSString stringWithFormat:@"启动失败，还有%ld次机会", 3-self.inputCount];
+            self.labOutput.text = [NSString stringWithFormat:@"启动失败，还有%d次机会", 3-self.inputCount];
         }else if(self.inputCount < 6){
             self.viewBtnForget.hidden = NO;
             self.watingCount = 60;

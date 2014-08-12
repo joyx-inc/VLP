@@ -17,9 +17,25 @@
 #define DeviceHeight [UIScreen mainScreen].bounds.size.height
 #define DeviceWidth [UIScreen mainScreen].bounds.size.width
 
-#define StartPassword @"StartPassword"
-#define TheQuestion @"TheQuestion"
-#define TheQuestionAnswer @"TheQuestionAnswer"
-#define UserBindPhoneNumber @"UserBindPhoneNumber"
+#define StartPassword               @"StartPassword"                //启动解锁密码
+#define TheQuestion                 @"TheQuestion"                  //密保问题
+#define TheQuestionAnswer           @"TheQuestionAnswer"            //密保答案
+#define UserBindPhoneNumber         @"UserBindPhoneNumber"          //用户绑定的手机号
+
+#define isOpenOTP                   @"isOpenOTP"                    //是否开启数字令牌
+#define Vid                         @"vid"
+
+
+//数字令牌需要
+#define ISSuer @"abc@123.com"
+#define ID @"0123456789abc"
+#define Secret @"ABCDEFGH"
+
+
+#define IDFV                        @"IdentifierForVendor"          //设备id
+
+#define BASE_INTERFACE_DOMAIN       @"http://www.wise-mall.com/"    //URL开始地址
+
+
 
 #endif

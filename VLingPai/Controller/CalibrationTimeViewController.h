@@ -12,5 +12,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *labDate;
 @property (weak, nonatomic) IBOutlet UILabel *labTime;
 - (IBAction)bntClibrateTimeAction:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UISwitch *mySwitch;
+
+- (IBAction)switchAction:(UISwitch *)sender;
+
+@property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (weak, nonatomic) IBOutlet UILabel *labVid;
 
 @end

@@ -91,6 +91,9 @@
             //直接使用
             AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
             [appDelegate initTabBarController];
+            appDelegate.tabBarController.selectedIndex = 0;
+            UINavigationController *nav = (UINavigationController *)appDelegate.tabBarController.selectedViewController;
+            [nav popToRootViewControllerAnimated:YES];
         }else{
             //更新密码
 //            SetStartPasswordViewController *vc = [[SetStartPasswordViewController alloc]initWithNibName:@"SetStartPasswordViewController" bundle:nil];

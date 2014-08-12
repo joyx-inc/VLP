@@ -35,7 +35,7 @@
     // Do any additional setup after loading the view from its nib.
     
     self.title = @"设置";
-    self.list = @[@"启动密码",@"手机绑定",@"校准时间",@"关于"];
+    self.list = @[@"启动密码",@"手机绑定",@"数字令牌",@"关于"];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -80,6 +80,7 @@
         }
             break;
         case 2:{
+            //校准时间 改为 数字令牌
             CalibrationTimeViewController *vc = [[CalibrationTimeViewController alloc]initWithNibName:@"CalibrationTimeViewController" bundle:nil];
             vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
