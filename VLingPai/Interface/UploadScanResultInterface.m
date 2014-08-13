@@ -7,7 +7,7 @@
 //
 
 #import "UploadScanResultInterface.h"
-#import "JSONKit.h"
+//#import "JSONKit.h"
 
 
 @implementation UploadScanResultInterface

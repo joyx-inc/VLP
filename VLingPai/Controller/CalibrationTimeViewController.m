@@ -7,7 +7,8 @@
 //
 
 #import "CalibrationTimeViewController.h"
-#import <NTP_Component/ios-ntp.h>
+//#import <NTP_Component/ios-ntp.h>
+#import "ios-ntp.h"
 #import "MBProgressHUD.h"
 
 #import "TokenStore.h"

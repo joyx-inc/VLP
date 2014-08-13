@@ -7,15 +7,15 @@
 //
 
 #import "BindPhoneInterface.h"
-#import "JSONKit.h"
+//#import "JSONKit.h"
 
 
 @implementation BindPhoneInterface
 
--(void)bindPhoneNum:(NSString *)mobile deviceId:(NSString *)deviceId{
-    self.interfaceUrl = [NSString stringWithFormat:@"%@/vlp/api/bind_mobile?mobile=%@&deviceId=%@",BASE_INTERFACE_DOMAIN,mobile,deviceId];
-    //    self.args = @{@"result": result};
+-(void)bindPhoneNum:(NSString *)mobile{
+    self.interfaceUrl = [NSString stringWithFormat:@"%@/vlp/api/bind_mobile?mobile=%@&deviceId=%@",BASE_INTERFACE_DOMAIN,mobile,[[NSUserDefaults standardUserDefaults] objectForKey:IDFV]];
     self.baseDelegate = self;
+    self.requestMethod = @"POST";
     [self connect];
 }
 

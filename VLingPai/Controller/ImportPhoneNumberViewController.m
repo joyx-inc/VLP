@@ -12,8 +12,12 @@
 #import "RegexKitLite.h"
 #import "AppDelegate.h"
 
+#import "BindPhoneInterface.h"
 
-@interface ImportPhoneNumberViewController ()<MBProgressHUDDelegate>
+
+@interface ImportPhoneNumberViewController ()<MBProgressHUDDelegate,BindPhoneInterfaceDelegate>
+
+@property (strong, nonatomic) BindPhoneInterface *bindPhoneInterface;
 
 @end
 
@@ -34,6 +38,11 @@
     // Do any additional setup after loading the view from its nib.
     
     self.title = @"绑定手机";
+    
+    self.bindPhoneInterface = [[BindPhoneInterface alloc]init];
+    self.bindPhoneInterface.delegate = self;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,23 +53,15 @@
 
 - (IBAction)btnGoNextAction:(UIButton *)sender {
     if ([self.textFieldVericationCode.text isEqualToString:@"123456"]) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"绑定成功" message:@"是否设置启动密码" delegate:self cancelButtonTitle:@"跳过" otherButtonTitles:@"去设置", nil];
-        [alert show];
-        alert.tag = 100;
-        
-        [[NSUserDefaults standardUserDefaults] setObject:self.textFieldPhoneNumber.text forKey:UserBindPhoneNumber];
+        [self.bindPhoneInterface bindPhoneNum:self.textFieldPhoneNumber.text];
     }else{
         [self.textFieldVericationCode resignFirstResponder];
         MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
         [self.navigationController.view addSubview:HUD];
-        
         HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark_wrong.png"]];
-        
         HUD.mode = MBProgressHUDModeCustomView;
-        
         HUD.delegate = self;
         HUD.labelText = @"您输入的验证码不正确";
-        
         [HUD show:YES];
         [HUD hide:YES afterDelay:2];
         
@@ -181,4 +182,30 @@
         }
     }
 }
+
+#pragma mark - BindPhoneInterfaceDelegate <NSObject>
+-(void)getFinishedBindPhoneInterface:(NSString *)status secrect:(NSString *)secrect{
+    if ([status isEqualToString:@"ok"]) {
+        //成功
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"绑定成功" message:@"是否设置启动密码" delegate:self cancelButtonTitle:@"跳过" otherButtonTitles:@"去设置", nil];
+        [alert show];
+        alert.tag = 100;
+        
+        [[NSUserDefaults standardUserDefaults] setObject:self.textFieldPhoneNumber.text forKey:UserBindPhoneNumber];
+    }else if ([status isEqualToString:@"exist"]){
+        //手机号已绑定其它设备
+        MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+        [self.navigationController.view addSubview:HUD];
+        HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark_wrong.png"]];
+        HUD.mode = MBProgressHUDModeCustomView;
+        HUD.delegate = self;
+        HUD.labelText = @"手机号已绑定其它设备";
+        [HUD show:YES];
+        [HUD hide:YES afterDelay:2];
+    }
+}
+-(void)getFailedBindPhoneInterface:(NSString *)error{
+    DebugLog(@"%@",error);
+}
+
 @end

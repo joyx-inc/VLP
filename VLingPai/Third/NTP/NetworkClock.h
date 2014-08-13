@@ -9,7 +9,6 @@
 #import <CFNetwork/CFNetwork.h>
 #import "AsyncUdpSocket.h"
 #import "NetAssociation.h"
-#import <UIKit/UIApplication.h>
 
 /*┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
   ┃ The NetworkClock sends notifications of the network time.  It will attempt to provide a very     ┃
@@ -41,7 +40,7 @@
 - (void) reportAssociations;
 - (void) finishAssociations;
 
-//- (NSDate *) networkTime;
+- (NSDate *) networkTime;
 //用于访问网络,返回日期
 -(void)updateDate;
 @end

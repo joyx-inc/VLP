@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		040E4F6C199075E20023FD80 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E4F6B199075E20023FD80 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		040E4F6E199076FA0023FD80 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 040E4F6D199076FA0023FD80 /* libicucore.dylib */; };
-		040E4FFF1990D6290023FD80 /* NTP_Component.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040E4FFE1990D6290023FD80 /* NTP_Component.framework */; };
 		040E50011990D6330023FD80 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040E50001990D6330023FD80 /* CFNetwork.framework */; };
 		040E500F1990F0B00023FD80 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E500D1990F0B00023FD80 /* AboutViewController.m */; };
 		040E50101990F0B00023FD80 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040E500E1990F0B00023FD80 /* AboutViewController.xib */; };
@@ -91,6 +90,10 @@
 		04F025D4198CDA5C0017665A /* setting_startsetpassword_img@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F025D3198CDA5C0017665A /* setting_startsetpassword_img@2x.png */; };
 		04F4C3DB199B048300FCBC6F /* 37x-Checkmark_wrong@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F4C3DA199B048300FCBC6F /* 37x-Checkmark_wrong@2x.png */; };
 		04F4C3E0199B16BC00FCBC6F /* ScanLoginInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4C3DF199B16BC00FCBC6F /* ScanLoginInterface.m */; };
+		04F4C3E3199B45B300FCBC6F /* ScanBindAccountInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4C3E2199B45B300FCBC6F /* ScanBindAccountInterface.m */; };
+		04F4C441199B5A1A00FCBC6F /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4C43A199B5A1A00FCBC6F /* AsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		04F4C442199B5A1A00FCBC6F /* NetAssociation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4C43D199B5A1A00FCBC6F /* NetAssociation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		04F4C443199B5A1A00FCBC6F /* NetworkClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4C43F199B5A1A00FCBC6F /* NetworkClock.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		04FAE31C1993970100EAFFFF /* base32.c in Sources */ = {isa = PBXBuildFile; fileRef = 04FAE3131993970100EAFFFF /* base32.c */; };
 		04FAE31D1993970100EAFFFF /* tempOTPImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FAE3151993970100EAFFFF /* tempOTPImage.png */; };
 		04FAE31E1993970100EAFFFF /* Token.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FAE3171993970100EAFFFF /* Token.m */; };
@@ -133,7 +136,6 @@
 		040E4F6A199075E20023FD80 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		040E4F6B199075E20023FD80 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		040E4F6D199076FA0023FD80 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
-		040E4FFE1990D6290023FD80 /* NTP_Component.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NTP_Component.framework; sourceTree = "<group>"; };
 		040E50001990D6330023FD80 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		040E500C1990F0B00023FD80 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = Controller/AboutViewController.h; sourceTree = "<group>"; };
 		040E500D1990F0B00023FD80 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = Controller/AboutViewController.m; sourceTree = "<group>"; };
@@ -262,6 +264,16 @@
 		04F4C3DA199B048300FCBC6F /* 37x-Checkmark_wrong@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark_wrong@2x.png"; sourceTree = "<group>"; };
 		04F4C3DE199B16BC00FCBC6F /* ScanLoginInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanLoginInterface.h; sourceTree = "<group>"; };
 		04F4C3DF199B16BC00FCBC6F /* ScanLoginInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanLoginInterface.m; sourceTree = "<group>"; };
+		04F4C3E1199B45B300FCBC6F /* ScanBindAccountInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanBindAccountInterface.h; sourceTree = "<group>"; };
+		04F4C3E2199B45B300FCBC6F /* ScanBindAccountInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanBindAccountInterface.m; sourceTree = "<group>"; };
+		04F4C439199B5A1A00FCBC6F /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		04F4C43A199B5A1A00FCBC6F /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
+		04F4C43B199B5A1A00FCBC6F /* ios-ntp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ios-ntp.h"; sourceTree = "<group>"; };
+		04F4C43C199B5A1A00FCBC6F /* NetAssociation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetAssociation.h; sourceTree = "<group>"; };
+		04F4C43D199B5A1A00FCBC6F /* NetAssociation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetAssociation.m; sourceTree = "<group>"; };
+		04F4C43E199B5A1A00FCBC6F /* NetworkClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkClock.h; sourceTree = "<group>"; };
+		04F4C43F199B5A1A00FCBC6F /* NetworkClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkClock.m; sourceTree = "<group>"; };
+		04F4C440199B5A1A00FCBC6F /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		04FAE3131993970100EAFFFF /* base32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base32.c; sourceTree = "<group>"; };
 		04FAE3141993970100EAFFFF /* base32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base32.h; sourceTree = "<group>"; };
 		04FAE3151993970100EAFFFF /* tempOTPImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tempOTPImage.png; sourceTree = "<group>"; };
@@ -300,7 +312,6 @@
 				042D44001991CE2D00AA0A0A /* AVFoundation.framework in Frameworks */,
 				040E50011990D6330023FD80 /* CFNetwork.framework in Frameworks */,
 				040E4F6E199076FA0023FD80 /* libicucore.dylib in Frameworks */,
-				040E4FFF1990D6290023FD80 /* NTP_Component.framework in Frameworks */,
 				04F02558198CC6600017665A /* UIKit.framework in Frameworks */,
 				04F02554198CC6600017665A /* Foundation.framework in Frameworks */,
 			);
@@ -332,7 +343,14 @@
 		040E4FFD1990D6290023FD80 /* NTP */ = {
 			isa = PBXGroup;
 			children = (
-				040E4FFE1990D6290023FD80 /* NTP_Component.framework */,
+				04F4C439199B5A1A00FCBC6F /* AsyncUdpSocket.h */,
+				04F4C43A199B5A1A00FCBC6F /* AsyncUdpSocket.m */,
+				04F4C43B199B5A1A00FCBC6F /* ios-ntp.h */,
+				04F4C43C199B5A1A00FCBC6F /* NetAssociation.h */,
+				04F4C43D199B5A1A00FCBC6F /* NetAssociation.m */,
+				04F4C43E199B5A1A00FCBC6F /* NetworkClock.h */,
+				04F4C43F199B5A1A00FCBC6F /* NetworkClock.m */,
+				04F4C440199B5A1A00FCBC6F /* SynthesizeSingleton.h */,
 			);
 			name = NTP;
 			path = Third/NTP;
@@ -400,10 +418,12 @@
 			children = (
 				04EE0F0C199A07CF00ADC63D /* BaseInterface.h */,
 				04EE0F0D199A07CF00ADC63D /* BaseInterface.m */,
-				04EE0F32199A0ABB00ADC63D /* UploadScanResultInterface.h */,
-				04EE0F33199A0ABB00ADC63D /* UploadScanResultInterface.m */,
 				04EE0FB5199A233300ADC63D /* BindPhoneInterface.h */,
 				04EE0FB6199A233300ADC63D /* BindPhoneInterface.m */,
+				04EE0F32199A0ABB00ADC63D /* UploadScanResultInterface.h */,
+				04EE0F33199A0ABB00ADC63D /* UploadScanResultInterface.m */,
+				04F4C3E1199B45B300FCBC6F /* ScanBindAccountInterface.h */,
+				04F4C3E2199B45B300FCBC6F /* ScanBindAccountInterface.m */,
 				04F4C3DE199B16BC00FCBC6F /* ScanLoginInterface.h */,
 				04F4C3DF199B16BC00FCBC6F /* ScanLoginInterface.m */,
 			);
@@ -857,6 +877,7 @@
 				04EE0EFE1999C08F00ADC63D /* EGOImageLoader.m in Sources */,
 				04EE0FC7199A2F0B00ADC63D /* ConnecteSuccessViewController.m in Sources */,
 				04FAE3201993970100EAFFFF /* TokenStore.m in Sources */,
+				04F4C3E3199B45B300FCBC6F /* ScanBindAccountInterface.m in Sources */,
 				04EE0F2A199A07E200ADC63D /* ASIInputStream.m in Sources */,
 				04EE0EF21999BE8800ADC63D /* DiscountModel.m in Sources */,
 				04FE1F54198F244900F41BE0 /* LockViewController.m in Sources */,
@@ -868,6 +889,7 @@
 				040E50141990F0C70023FD80 /* CalibrationTimeViewController.m in Sources */,
 				04F02564198CC6600017665A /* AppDelegate.m in Sources */,
 				040E500F1990F0B00023FD80 /* AboutViewController.m in Sources */,
+				04F4C441199B5A1A00FCBC6F /* AsyncUdpSocket.m in Sources */,
 				04EE0F27199A07E200ADC63D /* ASIDownloadCache.m in Sources */,
 				04EE0F24199A07E200ADC63D /* ASIAuthenticationDialog.m in Sources */,
 				04EE0F26199A07E200ADC63D /* ASIDataDecompressor.m in Sources */,
@@ -900,9 +922,11 @@
 				042D44371992023D00AA0A0A /* ConnecteDiscountViewController.m in Sources */,
 				040E50191990F0EB0023FD80 /* NowBindPhoneStateViewController.m in Sources */,
 				04EE0F2B199A07E200ADC63D /* ASINetworkQueue.m in Sources */,
+				04F4C443199B5A1A00FCBC6F /* NetworkClock.m in Sources */,
 				04F025A5198CD5490017665A /* ImportPhoneNumberViewController.m in Sources */,
 				04FE1F58198F2BF100F41BE0 /* MBProgressHUD.m in Sources */,
 				04EE0EFD1999C08F00ADC63D /* EGOImageLoadConnection.m in Sources */,
+				04F4C442199B5A1A00FCBC6F /* NetAssociation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1017,6 +1041,10 @@
 		04F0257D198CC6600017665A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1036,6 +1064,7 @@
 				INFOPLIST_FILE = "VLingPai/VLingPai-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1043,6 +1072,10 @@
 		04F0257E198CC6600017665A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1062,6 +1095,7 @@
 				INFOPLIST_FILE = "VLingPai/VLingPai-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -14,8 +14,13 @@
 #import "SystemModel.h"
 
 @interface ConnecteDiscountViewController : UIViewController<UIAlertViewDelegate>
+
+@property (strong ,nonatomic) NSString *scanResult;
+@property (strong, nonatomic) NSString *method;
+
 - (IBAction)btnConnectDiscountAction:(UIButton *)sender;
 - (IBAction)btnCancelAction:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *btnConnecteAccount;
 
 @property (strong, nonatomic) SystemModel *systemModel;
 @property (weak, nonatomic) IBOutlet UILabel *labSystemName;

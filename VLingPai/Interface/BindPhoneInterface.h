@@ -19,6 +19,6 @@
 
 @property (assign, nonatomic) id<BindPhoneInterfaceDelegate>delegate;
 
--(void)bindPhoneNum:(NSString *)mobile deviceId:(NSString *)deviceId;
+-(void)bindPhoneNum:(NSString *)mobile;
 
 @end

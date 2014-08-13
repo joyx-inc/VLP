@@ -63,10 +63,7 @@
 }
 
 - (IBAction)btnLogInAction:(UIButton *)sender {
-    //TODO:联网登录确认
-    
     [self.scanLoginInterface scanLoginSystem:self.scanResult];
-    
 }
 
 - (IBAction)btnCancelAction:(UIButton *)sender {

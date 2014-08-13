@@ -93,18 +93,31 @@
 -(void)getFinishedForUploadScanResultInterface:(NSString *)status system:(SystemModel *)systemModel account:(AccountModel *)accountModel{
     [self.uploadResultHub hide:YES];
     
-    if (!accountModel) {
-        //首次使用，没有绑定过账号
-        ConnecteDiscountViewController *vc = [[ConnecteDiscountViewController alloc]initWithNibName:@"ConnecteDiscountViewController" bundle:nil];
-//        vc.hidesBottomBarWhenPushed = YES;
-        vc.systemModel = systemModel;
-        [self.navigationController pushViewController:vc animated:YES];
+    if ([status isEqualToString:@"ok"]) {
+        //成功
+        if (!accountModel.account) {
+            //首次使用，没有绑定过账号
+            ConnecteDiscountViewController *vc = [[ConnecteDiscountViewController alloc]initWithNibName:@"ConnecteDiscountViewController" bundle:nil];
+            vc.systemModel = systemModel;
+            vc.scanResult = self.scanResult;
+            [self.navigationController pushViewController:vc animated:YES];
+        }else{
+            LogInSystemViewController *vc = [[LogInSystemViewController alloc]initWithNibName:@"LogInSystemViewController" bundle:nil];
+            vc.accountModel = accountModel;
+            vc.systemModel = systemModel;
+            vc.scanResult = self.scanResult;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
     }else{
-        LogInSystemViewController *vc = [[LogInSystemViewController alloc]initWithNibName:@"LogInSystemViewController" bundle:nil];
-        vc.accountModel = accountModel;
-        vc.systemModel = systemModel;
-        vc.scanResult = self.scanResult;
-        [self.navigationController pushViewController:vc animated:YES];
+        //二维码已过期
+        MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+        [self.navigationController.view addSubview:HUD];
+        HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark_wrong.png"]];
+        HUD.mode = MBProgressHUDModeCustomView;
+        HUD.delegate = self;
+        HUD.labelText = @"登录失败，二维码已过期";
+        [HUD show:YES];
+        [HUD hide:YES afterDelay:2];
     }
 }
 -(void)getFailedForUploadScanResultInterface:(NSString *)str{
