@@ -32,8 +32,6 @@
 		043DA67D198F3E4C000421B9 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043DA67B198F3E4C000421B9 /* StartViewController.xib */; };
 		043DA682198F693C000421B9 /* InputQuestionAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043DA680198F693C000421B9 /* InputQuestionAnswerViewController.m */; };
 		043DA683198F693C000421B9 /* InputQuestionAnswerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043DA681198F693C000421B9 /* InputQuestionAnswerViewController.xib */; };
-		04EE0EEB1999BD7B00ADC63D /* DiscountViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0EE91999BD7B00ADC63D /* DiscountViewCell.m */; };
-		04EE0EEC1999BD7B00ADC63D /* DiscountViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0EEA1999BD7B00ADC63D /* DiscountViewCell.xib */; };
 		04EE0EF21999BE8800ADC63D /* DiscountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0EF11999BE8800ADC63D /* DiscountModel.m */; };
 		04EE0EFC1999C08F00ADC63D /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0EF51999C08F00ADC63D /* EGOCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		04EE0EFD1999C08F00ADC63D /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0EF71999C08F00ADC63D /* EGOImageLoadConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -94,6 +92,17 @@
 		04F4C441199B5A1A00FCBC6F /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4C43A199B5A1A00FCBC6F /* AsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		04F4C442199B5A1A00FCBC6F /* NetAssociation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4C43D199B5A1A00FCBC6F /* NetAssociation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		04F4C443199B5A1A00FCBC6F /* NetworkClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4C43F199B5A1A00FCBC6F /* NetworkClock.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		04F4C446199B5EA800FCBC6F /* ScanLoginCancelInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4C445199B5EA800FCBC6F /* ScanLoginCancelInterface.m */; };
+		04F4C489199B648000FCBC6F /* OneClickInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4C488199B648000FCBC6F /* OneClickInterface.m */; };
+		04F4C490199B6D1400FCBC6F /* OneClickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4C48E199B6D1400FCBC6F /* OneClickViewController.m */; };
+		04F4C491199B6D1400FCBC6F /* OneClickViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F4C48F199B6D1400FCBC6F /* OneClickViewController.xib */; };
+		04F4C494199B6D2F00FCBC6F /* AccountAndSystemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4C493199B6D2F00FCBC6F /* AccountAndSystemModel.m */; };
+		04F4C498199B6E4500FCBC6F /* OneClickListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4C496199B6E4500FCBC6F /* OneClickListViewController.m */; };
+		04F4C499199B6E4500FCBC6F /* OneClickListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F4C497199B6E4500FCBC6F /* OneClickListViewController.xib */; };
+		04F4C49E199B6F6000FCBC6F /* DiscountViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4C49C199B6F6000FCBC6F /* DiscountViewCell.m */; };
+		04F4C49F199B6F6000FCBC6F /* DiscountViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F4C49D199B6F6000FCBC6F /* DiscountViewCell.xib */; };
+		04F4C4A3199B6F9600FCBC6F /* OneClickListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4C4A1199B6F9600FCBC6F /* OneClickListViewCell.m */; };
+		04F4C4A4199B6F9600FCBC6F /* OneClickListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F4C4A2199B6F9600FCBC6F /* OneClickListViewCell.xib */; };
 		04FAE31C1993970100EAFFFF /* base32.c in Sources */ = {isa = PBXBuildFile; fileRef = 04FAE3131993970100EAFFFF /* base32.c */; };
 		04FAE31D1993970100EAFFFF /* tempOTPImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FAE3151993970100EAFFFF /* tempOTPImage.png */; };
 		04FAE31E1993970100EAFFFF /* Token.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FAE3171993970100EAFFFF /* Token.m */; };
@@ -167,9 +176,6 @@
 		043DA67F198F693C000421B9 /* InputQuestionAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputQuestionAnswerViewController.h; path = Controller/InputQuestionAnswerViewController.h; sourceTree = "<group>"; };
 		043DA680198F693C000421B9 /* InputQuestionAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputQuestionAnswerViewController.m; path = Controller/InputQuestionAnswerViewController.m; sourceTree = "<group>"; };
 		043DA681198F693C000421B9 /* InputQuestionAnswerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InputQuestionAnswerViewController.xib; path = Controller/InputQuestionAnswerViewController.xib; sourceTree = "<group>"; };
-		04EE0EE81999BD7B00ADC63D /* DiscountViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscountViewCell.h; path = View/DiscountViewCell.h; sourceTree = "<group>"; };
-		04EE0EE91999BD7B00ADC63D /* DiscountViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscountViewCell.m; path = View/DiscountViewCell.m; sourceTree = "<group>"; };
-		04EE0EEA1999BD7B00ADC63D /* DiscountViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DiscountViewCell.xib; path = View/DiscountViewCell.xib; sourceTree = "<group>"; };
 		04EE0EF01999BE8800ADC63D /* DiscountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscountModel.h; path = Model/DiscountModel.h; sourceTree = "<group>"; };
 		04EE0EF11999BE8800ADC63D /* DiscountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscountModel.m; path = Model/DiscountModel.m; sourceTree = "<group>"; };
 		04EE0EF41999C08F00ADC63D /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
@@ -274,6 +280,24 @@
 		04F4C43E199B5A1A00FCBC6F /* NetworkClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkClock.h; sourceTree = "<group>"; };
 		04F4C43F199B5A1A00FCBC6F /* NetworkClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkClock.m; sourceTree = "<group>"; };
 		04F4C440199B5A1A00FCBC6F /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		04F4C444199B5EA800FCBC6F /* ScanLoginCancelInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanLoginCancelInterface.h; sourceTree = "<group>"; };
+		04F4C445199B5EA800FCBC6F /* ScanLoginCancelInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanLoginCancelInterface.m; sourceTree = "<group>"; };
+		04F4C487199B648000FCBC6F /* OneClickInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneClickInterface.h; sourceTree = "<group>"; };
+		04F4C488199B648000FCBC6F /* OneClickInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneClickInterface.m; sourceTree = "<group>"; };
+		04F4C48D199B6D1400FCBC6F /* OneClickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OneClickViewController.h; path = Controller/OneClickViewController.h; sourceTree = "<group>"; };
+		04F4C48E199B6D1400FCBC6F /* OneClickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OneClickViewController.m; path = Controller/OneClickViewController.m; sourceTree = "<group>"; };
+		04F4C48F199B6D1400FCBC6F /* OneClickViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OneClickViewController.xib; path = Controller/OneClickViewController.xib; sourceTree = "<group>"; };
+		04F4C492199B6D2F00FCBC6F /* AccountAndSystemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountAndSystemModel.h; path = Model/AccountAndSystemModel.h; sourceTree = "<group>"; };
+		04F4C493199B6D2F00FCBC6F /* AccountAndSystemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountAndSystemModel.m; path = Model/AccountAndSystemModel.m; sourceTree = "<group>"; };
+		04F4C495199B6E4500FCBC6F /* OneClickListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OneClickListViewController.h; path = Controller/OneClickListViewController.h; sourceTree = "<group>"; };
+		04F4C496199B6E4500FCBC6F /* OneClickListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OneClickListViewController.m; path = Controller/OneClickListViewController.m; sourceTree = "<group>"; };
+		04F4C497199B6E4500FCBC6F /* OneClickListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OneClickListViewController.xib; path = Controller/OneClickListViewController.xib; sourceTree = "<group>"; };
+		04F4C49B199B6F6000FCBC6F /* DiscountViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscountViewCell.h; sourceTree = "<group>"; };
+		04F4C49C199B6F6000FCBC6F /* DiscountViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscountViewCell.m; sourceTree = "<group>"; };
+		04F4C49D199B6F6000FCBC6F /* DiscountViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscountViewCell.xib; sourceTree = "<group>"; };
+		04F4C4A0199B6F9600FCBC6F /* OneClickListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneClickListViewCell.h; sourceTree = "<group>"; };
+		04F4C4A1199B6F9600FCBC6F /* OneClickListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneClickListViewCell.m; sourceTree = "<group>"; };
+		04F4C4A2199B6F9600FCBC6F /* OneClickListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneClickListViewCell.xib; sourceTree = "<group>"; };
 		04FAE3131993970100EAFFFF /* base32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base32.c; sourceTree = "<group>"; };
 		04FAE3141993970100EAFFFF /* base32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base32.h; sourceTree = "<group>"; };
 		04FAE3151993970100EAFFFF /* tempOTPImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tempOTPImage.png; sourceTree = "<group>"; };
@@ -393,6 +417,8 @@
 				04EE0FC2199A2C9700ADC63D /* AccountModel.m */,
 				04EE0FBE199A298600ADC63D /* SystemModel.h */,
 				04EE0FBF199A298600ADC63D /* SystemModel.m */,
+				04F4C492199B6D2F00FCBC6F /* AccountAndSystemModel.h */,
+				04F4C493199B6D2F00FCBC6F /* AccountAndSystemModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -418,6 +444,8 @@
 			children = (
 				04EE0F0C199A07CF00ADC63D /* BaseInterface.h */,
 				04EE0F0D199A07CF00ADC63D /* BaseInterface.m */,
+				04F4C487199B648000FCBC6F /* OneClickInterface.h */,
+				04F4C488199B648000FCBC6F /* OneClickInterface.m */,
 				04EE0FB5199A233300ADC63D /* BindPhoneInterface.h */,
 				04EE0FB6199A233300ADC63D /* BindPhoneInterface.m */,
 				04EE0F32199A0ABB00ADC63D /* UploadScanResultInterface.h */,
@@ -426,6 +454,8 @@
 				04F4C3E2199B45B300FCBC6F /* ScanBindAccountInterface.m */,
 				04F4C3DE199B16BC00FCBC6F /* ScanLoginInterface.h */,
 				04F4C3DF199B16BC00FCBC6F /* ScanLoginInterface.m */,
+				04F4C444199B5EA800FCBC6F /* ScanLoginCancelInterface.h */,
+				04F4C445199B5EA800FCBC6F /* ScanLoginCancelInterface.m */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -542,7 +572,14 @@
 				04F025B2198CD59F0017665A /* SettingViewController.m */,
 				04F025B3198CD59F0017665A /* SettingViewController.xib */,
 				04F0259F198CCF3C0017665A /* Setting */,
+				04F4C495199B6E4500FCBC6F /* OneClickListViewController.h */,
+				04F4C496199B6E4500FCBC6F /* OneClickListViewController.m */,
+				04F4C497199B6E4500FCBC6F /* OneClickListViewController.xib */,
+				04F4C48D199B6D1400FCBC6F /* OneClickViewController.h */,
+				04F4C48E199B6D1400FCBC6F /* OneClickViewController.m */,
+				04F4C48F199B6D1400FCBC6F /* OneClickViewController.xib */,
 				04EE0EEF1999BE3400ADC63D /* Model */,
+				04F4C49A199B6F6000FCBC6F /* View */,
 				04EE0F0B199A07CF00ADC63D /* Interface */,
 				04F025A0198CCF780017665A /* Third */,
 				04F0255A198CC6600017665A /* Supporting Files */,
@@ -600,9 +637,6 @@
 		04F02599198CCF210017665A /* Discount */ = {
 			isa = PBXGroup;
 			children = (
-				04EE0EE81999BD7B00ADC63D /* DiscountViewCell.h */,
-				04EE0EE91999BD7B00ADC63D /* DiscountViewCell.m */,
-				04EE0EEA1999BD7B00ADC63D /* DiscountViewCell.xib */,
 			);
 			name = Discount;
 			sourceTree = "<group>";
@@ -685,6 +719,19 @@
 				04F025D3198CDA5C0017665A /* setting_startsetpassword_img@2x.png */,
 			);
 			path = tempImage;
+			sourceTree = "<group>";
+		};
+		04F4C49A199B6F6000FCBC6F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04F4C49B199B6F6000FCBC6F /* DiscountViewCell.h */,
+				04F4C49C199B6F6000FCBC6F /* DiscountViewCell.m */,
+				04F4C49D199B6F6000FCBC6F /* DiscountViewCell.xib */,
+				04F4C4A0199B6F9600FCBC6F /* OneClickListViewCell.h */,
+				04F4C4A1199B6F9600FCBC6F /* OneClickListViewCell.m */,
+				04F4C4A2199B6F9600FCBC6F /* OneClickListViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		04FAE3121993970100EAFFFF /* OTP */ = {
@@ -830,17 +877,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F025B5198CD59F0017665A /* SettingViewController.xib in Resources */,
+				04F4C499199B6E4500FCBC6F /* OneClickListViewController.xib in Resources */,
 				040E50101990F0B00023FD80 /* AboutViewController.xib in Resources */,
 				04FAE31D1993970100EAFFFF /* tempOTPImage.png in Resources */,
 				040E50151990F0C70023FD80 /* CalibrationTimeViewController.xib in Resources */,
 				043DA683198F693C000421B9 /* InputQuestionAnswerViewController.xib in Resources */,
 				042D44201991DE5800AA0A0A /* ResetStartPasswordViewController.xib in Resources */,
 				04FE1F51198F244900F41BE0 /* dot_off.png in Resources */,
-				04EE0EEC1999BD7B00ADC63D /* DiscountViewCell.xib in Resources */,
 				04FE1F52198F244900F41BE0 /* dot_on.png in Resources */,
 				04F025B0198CD58D0017665A /* DiscountViewController.xib in Resources */,
 				04F025D4198CDA5C0017665A /* setting_startsetpassword_img@2x.png in Resources */,
 				04F0255E198CC6600017665A /* InfoPlist.strings in Resources */,
+				04F4C49F199B6F6000FCBC6F /* DiscountViewCell.xib in Resources */,
 				04F025CB198CD7680017665A /* SetStartPasswordViewController.xib in Resources */,
 				042D4442199211AD00AA0A0A /* LogInSystemViewController.xib in Resources */,
 				04F025AB198CD5770017665A /* VerificationViewController.xib in Resources */,
@@ -852,9 +900,11 @@
 				042D44381992023D00AA0A0A /* ConnecteDiscountViewController.xib in Resources */,
 				04F0258D198CCE2C0017665A /* FirstViewController.xib in Resources */,
 				04F025D0198CD7AB0017665A /* SetQuestionViewController.xib in Resources */,
+				04F4C4A4199B6F9600FCBC6F /* OneClickListViewCell.xib in Resources */,
 				04F4C3DB199B048300FCBC6F /* 37x-Checkmark_wrong@2x.png in Resources */,
 				04F025A6198CD5490017665A /* ImportPhoneNumberViewController.xib in Resources */,
 				04F02566198CC6600017665A /* Images.xcassets in Resources */,
+				04F4C491199B6D1400FCBC6F /* OneClickViewController.xib in Resources */,
 				04FE1F5B198F2CB500F41BE0 /* 37x-Checkmark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -875,6 +925,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				04EE0EFE1999C08F00ADC63D /* EGOImageLoader.m in Sources */,
+				04F4C489199B648000FCBC6F /* OneClickInterface.m in Sources */,
+				04F4C498199B6E4500FCBC6F /* OneClickListViewController.m in Sources */,
 				04EE0FC7199A2F0B00ADC63D /* ConnecteSuccessViewController.m in Sources */,
 				04FAE3201993970100EAFFFF /* TokenStore.m in Sources */,
 				04F4C3E3199B45B300FCBC6F /* ScanBindAccountInterface.m in Sources */,
@@ -882,6 +934,7 @@
 				04EE0EF21999BE8800ADC63D /* DiscountModel.m in Sources */,
 				04FE1F54198F244900F41BE0 /* LockViewController.m in Sources */,
 				04F4C3E0199B16BC00FCBC6F /* ScanLoginInterface.m in Sources */,
+				04F4C446199B5EA800FCBC6F /* ScanLoginCancelInterface.m in Sources */,
 				04FAE31E1993970100EAFFFF /* Token.m in Sources */,
 				04F025CF198CD7AB0017665A /* SetQuestionViewController.m in Sources */,
 				04EE0EFF1999C08F00ADC63D /* EGOImageView.m in Sources */,
@@ -903,6 +956,7 @@
 				04EE0EFC1999C08F00ADC63D /* EGOCache.m in Sources */,
 				042D441F1991DE5800AA0A0A /* ResetStartPasswordViewController.m in Sources */,
 				04EE0F0E199A07CF00ADC63D /* BaseInterface.m in Sources */,
+				04F4C4A3199B6F9600FCBC6F /* OneClickListViewCell.m in Sources */,
 				04F025C5198CD6F90017665A /* StartSetPasswordViewController.m in Sources */,
 				04F025CA198CD7680017665A /* SetStartPasswordViewController.m in Sources */,
 				04EE0FB7199A233300ADC63D /* BindPhoneInterface.m in Sources */,
@@ -912,15 +966,17 @@
 				04F025AA198CD5770017665A /* VerificationViewController.mm in Sources */,
 				04EE0F28199A07E200ADC63D /* ASIFormDataRequest.m in Sources */,
 				04EE0F34199A0ABB00ADC63D /* UploadScanResultInterface.m in Sources */,
+				04F4C49E199B6F6000FCBC6F /* DiscountViewCell.m in Sources */,
 				043DA67C198F3E4C000421B9 /* StartViewController.m in Sources */,
 				04EE0F3A199A0E8E00ADC63D /* Reachability.m in Sources */,
-				04EE0EEB1999BD7B00ADC63D /* DiscountViewCell.m in Sources */,
+				04F4C494199B6D2F00FCBC6F /* AccountAndSystemModel.m in Sources */,
 				043DA682198F693C000421B9 /* InputQuestionAnswerViewController.m in Sources */,
 				04EE0FC3199A2C9700ADC63D /* AccountModel.m in Sources */,
 				042D4441199211AD00AA0A0A /* LogInSystemViewController.m in Sources */,
 				04EE0F25199A07E200ADC63D /* ASIDataCompressor.m in Sources */,
 				042D44371992023D00AA0A0A /* ConnecteDiscountViewController.m in Sources */,
 				040E50191990F0EB0023FD80 /* NowBindPhoneStateViewController.m in Sources */,
+				04F4C490199B6D1400FCBC6F /* OneClickViewController.m in Sources */,
 				04EE0F2B199A07E200ADC63D /* ASINetworkQueue.m in Sources */,
 				04F4C443199B5A1A00FCBC6F /* NetworkClock.m in Sources */,
 				04F025A5198CD5490017665A /* ImportPhoneNumberViewController.m in Sources */,

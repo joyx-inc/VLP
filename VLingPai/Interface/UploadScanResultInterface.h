@@ -6,6 +6,9 @@
 //  Copyright (c) 2014年 zhcpeng. All rights reserved.
 //
 
+
+//上传扫描结果
+
 #import "BaseInterface.h"
 
 //#import "DiscountModel.h"

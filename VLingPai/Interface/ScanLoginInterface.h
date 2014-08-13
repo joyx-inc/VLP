@@ -6,6 +6,9 @@
 //  Copyright (c) 2014年 zhcpeng. All rights reserved.
 //
 
+
+//扫描后确认登录
+
 #import "BaseInterface.h"
 
 @protocol ScanLoginInterfaceDelegate <NSObject>

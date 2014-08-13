@@ -1,25 +1,24 @@
 //
-//  LogInSystemViewController.m
+//  OneClickViewController.m
 //  VLingPai
 //
-//  Created by Mac on 14-8-6.
+//  Created by Mac on 14-8-13.
 //  Copyright (c) 2014年 zhcpeng. All rights reserved.
 //
 
-#import "LogInSystemViewController.h"
-#import "MBProgressHUD.h"
-
+#import "OneClickViewController.h"
 #import "ScanLoginInterface.h"
 #import "ScanLoginCancelInterface.h"
+#import "MBProgressHUD.h"
 
-@interface LogInSystemViewController ()<MBProgressHUDDelegate,ScanLoginInterfaceDelegate>
+@interface OneClickViewController ()<ScanLoginInterfaceDelegate,MBProgressHUDDelegate>
 
 @property (strong, nonatomic) ScanLoginInterface *scanLoginInterface;
 @property (strong, nonatomic) ScanLoginCancelInterface *scanLoginCancelInterface;
 
 @end
 
-@implementation LogInSystemViewController
+@implementation OneClickViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,47 +34,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    NSString *accountName = self.accountModel.displayName;
-    NSString *account = self.accountModel.account;
-    if (accountName.length == 1){
-        self.labUserName.text = [NSString stringWithFormat:@"%@(%@)",account,accountName];
-    }else if (accountName.length == 2){
-        NSString *str = [accountName substringWithRange:NSMakeRange(0, 1)];
-        self.labUserName.text = [NSString stringWithFormat:@"%@(%@*)",account,str];
-    }else if(accountName.length > 2){
-        NSString *str1 = [accountName substringWithRange:NSMakeRange(0, 1)];
-        NSString *str2 = [accountName substringWithRange:NSMakeRange(accountName.length - 1, 1)];
-        self.labUserName.text = [NSString stringWithFormat:@"%@(%@*%@)",account,str1,str2];
-    }else{
-        self.labUserName.text = account;
-    }
-    
-    self.labSystemName.text = [NSString stringWithFormat:@"登录:%@",self.systemModel.systemName];
-    
+    self.logInURL = [NSString stringWithFormat:@"%@vlp/api/qrscan/%@/login?%@",BASE_INTERFACE_DOMAIN,self.asModel.code,[[NSUserDefaults standardUserDefaults] objectForKey:IDFV]];
+    self.cancelURL = [NSString stringWithFormat:@"%@/vlp/api/qrscan/%@/cancel?%@",BASE_INTERFACE_DOMAIN,self.asModel.code,[[NSUserDefaults standardUserDefaults] objectForKey:IDFV]];
     
     self.scanLoginInterface = [[ScanLoginInterface alloc]init];
     self.scanLoginInterface.delegate = self;
     
     self.scanLoginCancelInterface = [[ScanLoginCancelInterface alloc]init];
     
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)btnLogInAction:(UIButton *)sender {
-    [self.scanLoginInterface scanLoginSystem:self.scanResult];
-}
-
-- (IBAction)btnCancelAction:(UIButton *)sender {
-    [self.scanLoginCancelInterface scanCancelLoginAction:self.scanResult];
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}
--(void)dismissView{
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    
 }
 
 #pragma mark - ScanLoginInterfaceDelegate <NSObject>
@@ -115,12 +82,29 @@
 
 - (void)dealloc
 {
-    self.accountModel = nil;
-    self.systemModel = nil;
-    self.scanResult = nil;
-    
+    self.asModel = nil;
+    self.logInURL = nil;
+    self.cancelURL = nil;
     self.scanLoginInterface.delegate = nil;
     self.scanLoginInterface = nil;
     self.scanLoginCancelInterface = nil;
+}
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)btnLogInAction:(UIButton *)sender {
+    [self.scanLoginInterface scanLoginSystem:self.logInURL];
+}
+
+- (IBAction)btnCancelAction:(UIButton *)sender {
+    [self.scanLoginCancelInterface scanCancelLoginAction:self.cancelURL];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+-(void)dismissView{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end

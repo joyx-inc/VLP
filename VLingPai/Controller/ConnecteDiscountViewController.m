@@ -102,6 +102,7 @@
             //成功
             [self showSuccessView];
             [timer invalidate];
+            timer = nil;
         }else if ([status isEqualToString:@"waiting"]){
             //等待
             DebugLog(@"等待中...");
@@ -132,6 +133,11 @@
     self.scanBindAccountInterface.delegate = nil;
     self.scanBindAccountInterface = nil;
     self.method = nil;
+    if (timer) {
+        [timer invalidate];
+        timer = nil;
+    }
+    
 }
 
 

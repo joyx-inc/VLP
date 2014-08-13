@@ -12,6 +12,18 @@
 #import "DiscountViewController.h"
 #import "SettingViewController.h"
 #import "StartViewController.h"
+#import "OneClickInterface.h"               //一键认证接口，暂时是循环重复发送消息
+#import "OneClickListViewController.h"      //一键认证列表
+
+@interface AppDelegate()<OneClickInterfaceDelegate,UIAlertViewDelegate>{
+    NSTimer *timer;
+    NSArray *oneClickList;
+    UIAlertView *alert;
+}
+
+@property (strong, nonatomic) OneClickInterface *oneClickInterface;
+
+@end
 
 @implementation AppDelegate
 
@@ -26,6 +38,11 @@
         NSString *idfv = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
         [[NSUserDefaults standardUserDefaults] setObject:idfv forKey:IDFV];
     }
+    
+    self.oneClickInterface = [[OneClickInterface alloc]init];
+    self.oneClickInterface.delegate = self;
+    timer = [[NSTimer alloc]initWithFireDate:[NSDate date] interval:20.0 target:self selector:@selector(startOneClickInterface) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
 
     
     StartViewController *vc = [[StartViewController alloc]initWithNibName:@"StartViewController" bundle:nil];
@@ -116,6 +133,56 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - OneClickInterfaceDelegate <NSObject>
+-(void)getFinishedOneClickInterface:(NSString *)status count:(NSInteger)count list:(NSArray *)list{
+    if (count == 0) {
+        return;
+    }
+    
+    if ([status isEqualToString:@"ok"]) {
+        //成功
+        if (!alert) {
+            alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"收到一键认证信息" delegate:self cancelButtonTitle:@"关闭" otherButtonTitles:@"查看", nil];
+            [alert show];
+        }
+        
+        oneClickList = list;
+    }else{
+        //用户不存在
+        
+    }
+}
+-(void)getFailedOneClickInterface:(NSString *)error{
+    DebugLog(@"%@",error);
+}
+
+-(void)startOneClickInterface{
+    [self.oneClickInterface startOneClick];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+//    DebugLog(@"查看一键认证信息");
+    if (buttonIndex == 1) {
+        OneClickListViewController *vc = [[OneClickListViewController alloc]initWithNibName:@"OneClickListViewController" bundle:nil];
+        vc.list = oneClickList;
+        
+        if ([self.window.rootViewController isKindOfClass:[UINavigationController class]]) {
+            [self.startViewNav pushViewController:vc animated:YES];
+        }else{
+            UINavigationController *nav = (UINavigationController *)self.tabBarController.selectedViewController;
+            [nav pushViewController:vc animated:YES];
+        }
+        
+    }
+    alert = nil;
+}
+
+-(void)dealloc{
+    self.oneClickInterface.delegate = nil;
+    self.oneClickInterface = nil;
+    
 }
 
 @end

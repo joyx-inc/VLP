@@ -68,11 +68,10 @@
 
 -(void)lockEntered:(NSString *)key{
     self.inputCount++;
-    NSLog(@"密码为：%@",key);
+    DebugLog(@"密码为：%@",key);
     NSString *password = [[NSUserDefaults standardUserDefaults] objectForKey:StartPassword];
     if ([key isEqualToString:password]) {
         if (self.isStart) {
-//            StartSetPasswordViewController *vc = [[StartSetPasswordViewController alloc]initWithNibName:@"StartSetPasswordViewController" bundle:nil];
             ResetStartPasswordViewController *vc = [[ResetStartPasswordViewController alloc]initWithNibName:@"ResetStartPasswordViewController" bundle:nil];
             [self.navigationController pushViewController:vc animated:YES];
         }else{

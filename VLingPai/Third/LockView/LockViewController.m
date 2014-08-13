@@ -36,7 +36,7 @@
     // Do any additional setup after loading the view.
     
     
-    self.view.backgroundColor = [UIColor darkGrayColor];
+    self.view.backgroundColor = [UIColor lightGrayColor];
     
     for (int i=0; i<MATRIX_SIZE; i++) {
         for (int j=0; j<MATRIX_SIZE; j++) {
