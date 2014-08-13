@@ -27,8 +27,6 @@
 		042D44201991DE5800AA0A0A /* ResetStartPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042D441E1991DE5800AA0A0A /* ResetStartPasswordViewController.xib */; };
 		042D44371992023D00AA0A0A /* ConnecteDiscountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D44351992023D00AA0A0A /* ConnecteDiscountViewController.m */; };
 		042D44381992023D00AA0A0A /* ConnecteDiscountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042D44361992023D00AA0A0A /* ConnecteDiscountViewController.xib */; };
-		042D443C1992044900AA0A0A /* ConnecteSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D443A1992044900AA0A0A /* ConnecteSuccessViewController.m */; };
-		042D443D1992044900AA0A0A /* ConnecteSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042D443B1992044900AA0A0A /* ConnecteSuccessViewController.xib */; };
 		042D4441199211AD00AA0A0A /* LogInSystemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D443F199211AD00AA0A0A /* LogInSystemViewController.m */; };
 		042D4442199211AD00AA0A0A /* LogInSystemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042D4440199211AD00AA0A0A /* LogInSystemViewController.xib */; };
 		043DA67C198F3E4C000421B9 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043DA67A198F3E4C000421B9 /* StartViewController.m */; };
@@ -60,6 +58,8 @@
 		04EE0FB7199A233300ADC63D /* BindPhoneInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0FB6199A233300ADC63D /* BindPhoneInterface.m */; };
 		04EE0FC0199A298600ADC63D /* SystemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0FBF199A298600ADC63D /* SystemModel.m */; };
 		04EE0FC3199A2C9700ADC63D /* AccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0FC2199A2C9700ADC63D /* AccountModel.m */; };
+		04EE0FC7199A2F0B00ADC63D /* ConnecteSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0FC5199A2F0B00ADC63D /* ConnecteSuccessViewController.m */; };
+		04EE0FC8199A2F0B00ADC63D /* ConnecteSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0FC6199A2F0B00ADC63D /* ConnecteSuccessViewController.xib */; };
 		04F02554198CC6600017665A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F02553198CC6600017665A /* Foundation.framework */; };
 		04F02556198CC6600017665A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F02555198CC6600017665A /* CoreGraphics.framework */; };
 		04F02558198CC6600017665A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F02557198CC6600017665A /* UIKit.framework */; };
@@ -89,6 +89,8 @@
 		04F025CF198CD7AB0017665A /* SetQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F025CD198CD7AB0017665A /* SetQuestionViewController.m */; };
 		04F025D0198CD7AB0017665A /* SetQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F025CE198CD7AB0017665A /* SetQuestionViewController.xib */; };
 		04F025D4198CDA5C0017665A /* setting_startsetpassword_img@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F025D3198CDA5C0017665A /* setting_startsetpassword_img@2x.png */; };
+		04F4C3DB199B048300FCBC6F /* 37x-Checkmark_wrong@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F4C3DA199B048300FCBC6F /* 37x-Checkmark_wrong@2x.png */; };
+		04F4C3E0199B16BC00FCBC6F /* ScanLoginInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4C3DF199B16BC00FCBC6F /* ScanLoginInterface.m */; };
 		04FAE31C1993970100EAFFFF /* base32.c in Sources */ = {isa = PBXBuildFile; fileRef = 04FAE3131993970100EAFFFF /* base32.c */; };
 		04FAE31D1993970100EAFFFF /* tempOTPImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FAE3151993970100EAFFFF /* tempOTPImage.png */; };
 		04FAE31E1993970100EAFFFF /* Token.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FAE3171993970100EAFFFF /* Token.m */; };
@@ -154,9 +156,6 @@
 		042D44341992023D00AA0A0A /* ConnecteDiscountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnecteDiscountViewController.h; path = Controller/ConnecteDiscountViewController.h; sourceTree = "<group>"; };
 		042D44351992023D00AA0A0A /* ConnecteDiscountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnecteDiscountViewController.m; path = Controller/ConnecteDiscountViewController.m; sourceTree = "<group>"; };
 		042D44361992023D00AA0A0A /* ConnecteDiscountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ConnecteDiscountViewController.xib; path = Controller/ConnecteDiscountViewController.xib; sourceTree = "<group>"; };
-		042D44391992044900AA0A0A /* ConnecteSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnecteSuccessViewController.h; sourceTree = "<group>"; };
-		042D443A1992044900AA0A0A /* ConnecteSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnecteSuccessViewController.m; sourceTree = "<group>"; };
-		042D443B1992044900AA0A0A /* ConnecteSuccessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnecteSuccessViewController.xib; sourceTree = "<group>"; };
 		042D443E199211AD00AA0A0A /* LogInSystemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogInSystemViewController.h; path = Controller/LogInSystemViewController.h; sourceTree = "<group>"; };
 		042D443F199211AD00AA0A0A /* LogInSystemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogInSystemViewController.m; path = Controller/LogInSystemViewController.m; sourceTree = "<group>"; };
 		042D4440199211AD00AA0A0A /* LogInSystemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LogInSystemViewController.xib; path = Controller/LogInSystemViewController.xib; sourceTree = "<group>"; };
@@ -216,6 +215,9 @@
 		04EE0FBF199A298600ADC63D /* SystemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SystemModel.m; path = Model/SystemModel.m; sourceTree = "<group>"; };
 		04EE0FC1199A2C9700ADC63D /* AccountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountModel.h; path = Model/AccountModel.h; sourceTree = "<group>"; };
 		04EE0FC2199A2C9700ADC63D /* AccountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountModel.m; path = Model/AccountModel.m; sourceTree = "<group>"; };
+		04EE0FC4199A2F0B00ADC63D /* ConnecteSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnecteSuccessViewController.h; path = Controller/ConnecteSuccessViewController.h; sourceTree = "<group>"; };
+		04EE0FC5199A2F0B00ADC63D /* ConnecteSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnecteSuccessViewController.m; path = Controller/ConnecteSuccessViewController.m; sourceTree = "<group>"; };
+		04EE0FC6199A2F0B00ADC63D /* ConnecteSuccessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ConnecteSuccessViewController.xib; path = Controller/ConnecteSuccessViewController.xib; sourceTree = "<group>"; };
 		04F02550198CC6600017665A /* VLingPai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VLingPai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F02553198CC6600017665A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		04F02555198CC6600017665A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -257,6 +259,9 @@
 		04F025CD198CD7AB0017665A /* SetQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetQuestionViewController.m; path = Controller/SetQuestionViewController.m; sourceTree = "<group>"; };
 		04F025CE198CD7AB0017665A /* SetQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SetQuestionViewController.xib; path = Controller/SetQuestionViewController.xib; sourceTree = "<group>"; };
 		04F025D3198CDA5C0017665A /* setting_startsetpassword_img@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting_startsetpassword_img@2x.png"; sourceTree = "<group>"; };
+		04F4C3DA199B048300FCBC6F /* 37x-Checkmark_wrong@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark_wrong@2x.png"; sourceTree = "<group>"; };
+		04F4C3DE199B16BC00FCBC6F /* ScanLoginInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanLoginInterface.h; sourceTree = "<group>"; };
+		04F4C3DF199B16BC00FCBC6F /* ScanLoginInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanLoginInterface.m; sourceTree = "<group>"; };
 		04FAE3131993970100EAFFFF /* base32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base32.c; sourceTree = "<group>"; };
 		04FAE3141993970100EAFFFF /* base32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base32.h; sourceTree = "<group>"; };
 		04FAE3151993970100EAFFFF /* tempOTPImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tempOTPImage.png; sourceTree = "<group>"; };
@@ -399,6 +404,8 @@
 				04EE0F33199A0ABB00ADC63D /* UploadScanResultInterface.m */,
 				04EE0FB5199A233300ADC63D /* BindPhoneInterface.h */,
 				04EE0FB6199A233300ADC63D /* BindPhoneInterface.m */,
+				04F4C3DE199B16BC00FCBC6F /* ScanLoginInterface.h */,
+				04F4C3DF199B16BC00FCBC6F /* ScanLoginInterface.m */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -560,9 +567,9 @@
 				042D44341992023D00AA0A0A /* ConnecteDiscountViewController.h */,
 				042D44351992023D00AA0A0A /* ConnecteDiscountViewController.m */,
 				042D44361992023D00AA0A0A /* ConnecteDiscountViewController.xib */,
-				042D44391992044900AA0A0A /* ConnecteSuccessViewController.h */,
-				042D443A1992044900AA0A0A /* ConnecteSuccessViewController.m */,
-				042D443B1992044900AA0A0A /* ConnecteSuccessViewController.xib */,
+				04EE0FC4199A2F0B00ADC63D /* ConnecteSuccessViewController.h */,
+				04EE0FC5199A2F0B00ADC63D /* ConnecteSuccessViewController.m */,
+				04EE0FC6199A2F0B00ADC63D /* ConnecteSuccessViewController.xib */,
 				042D443E199211AD00AA0A0A /* LogInSystemViewController.h */,
 				042D443F199211AD00AA0A0A /* LogInSystemViewController.m */,
 				042D4440199211AD00AA0A0A /* LogInSystemViewController.xib */,
@@ -694,6 +701,7 @@
 		04FE1F55198F2BF100F41BE0 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				04F4C3DA199B048300FCBC6F /* 37x-Checkmark_wrong@2x.png */,
 				04FE1F59198F2CB500F41BE0 /* 37x-Checkmark.png */,
 				04FE1F5A198F2CB500F41BE0 /* 37x-Checkmark@2x.png */,
 				04FE1F56198F2BF100F41BE0 /* MBProgressHUD.h */,
@@ -816,6 +824,7 @@
 				04F025CB198CD7680017665A /* SetStartPasswordViewController.xib in Resources */,
 				042D4442199211AD00AA0A0A /* LogInSystemViewController.xib in Resources */,
 				04F025AB198CD5770017665A /* VerificationViewController.xib in Resources */,
+				04EE0FC8199A2F0B00ADC63D /* ConnecteSuccessViewController.xib in Resources */,
 				043DA67D198F3E4C000421B9 /* StartViewController.xib in Resources */,
 				04F025C6198CD6F90017665A /* StartSetPasswordViewController.xib in Resources */,
 				04FE1F5C198F2CB500F41BE0 /* 37x-Checkmark@2x.png in Resources */,
@@ -823,7 +832,7 @@
 				042D44381992023D00AA0A0A /* ConnecteDiscountViewController.xib in Resources */,
 				04F0258D198CCE2C0017665A /* FirstViewController.xib in Resources */,
 				04F025D0198CD7AB0017665A /* SetQuestionViewController.xib in Resources */,
-				042D443D1992044900AA0A0A /* ConnecteSuccessViewController.xib in Resources */,
+				04F4C3DB199B048300FCBC6F /* 37x-Checkmark_wrong@2x.png in Resources */,
 				04F025A6198CD5490017665A /* ImportPhoneNumberViewController.xib in Resources */,
 				04F02566198CC6600017665A /* Images.xcassets in Resources */,
 				04FE1F5B198F2CB500F41BE0 /* 37x-Checkmark.png in Resources */,
@@ -846,15 +855,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				04EE0EFE1999C08F00ADC63D /* EGOImageLoader.m in Sources */,
+				04EE0FC7199A2F0B00ADC63D /* ConnecteSuccessViewController.m in Sources */,
 				04FAE3201993970100EAFFFF /* TokenStore.m in Sources */,
 				04EE0F2A199A07E200ADC63D /* ASIInputStream.m in Sources */,
 				04EE0EF21999BE8800ADC63D /* DiscountModel.m in Sources */,
 				04FE1F54198F244900F41BE0 /* LockViewController.m in Sources */,
+				04F4C3E0199B16BC00FCBC6F /* ScanLoginInterface.m in Sources */,
 				04FAE31E1993970100EAFFFF /* Token.m in Sources */,
 				04F025CF198CD7AB0017665A /* SetQuestionViewController.m in Sources */,
 				04EE0EFF1999C08F00ADC63D /* EGOImageView.m in Sources */,
 				04F025AF198CD58D0017665A /* DiscountViewController.m in Sources */,
-				042D443C1992044900AA0A0A /* ConnecteSuccessViewController.m in Sources */,
 				040E50141990F0C70023FD80 /* CalibrationTimeViewController.m in Sources */,
 				04F02564198CC6600017665A /* AppDelegate.m in Sources */,
 				040E500F1990F0B00023FD80 /* AboutViewController.m in Sources */,

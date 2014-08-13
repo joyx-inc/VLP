@@ -17,6 +17,13 @@
 #define DeviceHeight [UIScreen mainScreen].bounds.size.height
 #define DeviceWidth [UIScreen mainScreen].bounds.size.width
 
+#ifdef DEBUG
+#define DebugLog(...) NSLog(@"method:%s,%@", __PRETTY_FUNCTION__, [NSString stringWithFormat:__VA_ARGS__])
+#else
+#define DebugLog(...)
+#endif
+
+
 #define StartPassword               @"StartPassword"                //启动解锁密码
 #define TheQuestion                 @"TheQuestion"                  //密保问题
 #define TheQuestionAnswer           @"TheQuestionAnswer"            //密保答案

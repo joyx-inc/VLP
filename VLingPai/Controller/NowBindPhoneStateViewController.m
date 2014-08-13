@@ -50,7 +50,7 @@
 }
 
 - (IBAction)btnResetPhoneNumber:(UIButton *)sender {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"警告" message:@"重新绑定手机后，当前手机关联账号会请客，请谨慎操作，确定要重新绑定？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"警告" message:@"重新绑定手机后，当前手机关联账号会清空，请谨慎操作，确定要重新绑定？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
     [alert show];
     alert.tag = 100;
 }

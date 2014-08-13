@@ -14,6 +14,7 @@
 
 @interface VerificationViewController : UIViewController
 
+@property (strong, nonatomic) NSString *scanResult;
 //@property (assign, nonatomic) BOOL isScanView;
 
 - (IBAction)btnScanQRCodeAction:(UIButton *)sender;

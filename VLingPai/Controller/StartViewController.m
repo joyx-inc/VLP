@@ -60,9 +60,9 @@
         
         [self loadLockView];
     }else{
-            //没有启动密码，直接到令牌界面
-            AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-            [appDelegate initTabBarController];
+        //没有启动密码，直接到令牌界面
+        AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        [appDelegate initTabBarController];
     }
 }
 

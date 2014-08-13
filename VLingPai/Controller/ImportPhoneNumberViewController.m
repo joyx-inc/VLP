@@ -44,7 +44,7 @@
 
 - (IBAction)btnGoNextAction:(UIButton *)sender {
     if ([self.textFieldVericationCode.text isEqualToString:@"123456"]) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"绑定成功" message:@"是否设置启动密码" delegate:self cancelButtonTitle:@"直接使用" otherButtonTitles:@"去设置", nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"绑定成功" message:@"是否设置启动密码" delegate:self cancelButtonTitle:@"跳过" otherButtonTitles:@"去设置", nil];
         [alert show];
         alert.tag = 100;
         
@@ -54,7 +54,7 @@
         MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
         [self.navigationController.view addSubview:HUD];
         
-        HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+        HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark_wrong.png"]];
         
         HUD.mode = MBProgressHUDModeCustomView;
         
@@ -103,7 +103,7 @@
             MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
             [self.navigationController.view addSubview:HUD];
             
-            HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+            HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark_wrong.png"]];
             
             HUD.mode = MBProgressHUDModeCustomView;
             
@@ -119,7 +119,7 @@
         MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
         [self.navigationController.view addSubview:HUD];
         
-        HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+        HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark_wrong.png"]];
         
         HUD.mode = MBProgressHUDModeCustomView;
         

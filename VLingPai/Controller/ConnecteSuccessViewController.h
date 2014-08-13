@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+//#import "AccountModel.h"
+//#import "SystemModel.h"
+
 @interface ConnecteSuccessViewController : UIViewController
+
+//@property (strong, nonatomic) AccountModel *accountModel;
+//@property (strong, nonatomic) SystemModel *systemModel;
 
 - (IBAction)btnGoBackAction:(UIButton *)sender;
 @end

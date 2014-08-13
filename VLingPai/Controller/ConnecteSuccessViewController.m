@@ -1,18 +1,18 @@
 //
-//  ConnecteDiscountViewController.m
+//  ConnecteSuccessViewController.m
 //  VLingPai
 //
 //  Created by Mac on 14-8-6.
 //  Copyright (c) 2014年 zhcpeng. All rights reserved.
 //
 
-#import "ConnecteDiscountViewController.h"
+#import "ConnecteSuccessViewController.h"
 
-@interface ConnecteDiscountViewController ()
+@interface ConnecteSuccessViewController ()
 
 @end
 
-@implementation ConnecteDiscountViewController
+@implementation ConnecteSuccessViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,4 +35,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnGoBackAction:(UIButton *)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+-(void)dealloc{
+//    self.accountModel = nil;
+//    self.systemModel = nil;
+}
 @end

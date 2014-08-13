@@ -10,6 +10,8 @@
 #import "MBProgressHUD.h"
 #import "ConnecteSuccessViewController.h"
 
+
+
 @interface ConnecteDiscountViewController ()<MBProgressHUDDelegate>
 
 @end
@@ -29,6 +31,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.labSystemName.text = self.systemModel.systemName;
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,5 +75,9 @@
 }
 - (IBAction)btnCancelAction:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)dealloc{
+    self.systemModel = nil;
 }
 @end
