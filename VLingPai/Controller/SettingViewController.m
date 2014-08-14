@@ -63,7 +63,8 @@
                 StartViewController *vc = [[StartViewController alloc]initWithNibName:@"StartViewController" bundle:nil];
                 vc.isStart = YES;
                 vc.hidesBottomBarWhenPushed = YES;
-                [self.navigationController pushViewController:vc animated:YES];                
+                [self.navigationController pushViewController:vc animated:YES];
+//                vc.hidesBottomBarWhenPushed = NO;
             }else{
                 //没有启动密码，直接设置密码
                 StartSetPasswordViewController *vc = [[StartSetPasswordViewController alloc]initWithNibName:@"StartSetPasswordViewController" bundle:nil];

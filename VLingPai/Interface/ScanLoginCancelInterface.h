@@ -11,7 +11,7 @@
 
 #import "BaseInterface.h"
 
-@interface ScanLoginCancelInterface : BaseInterface
+@interface ScanLoginCancelInterface : BaseInterface<BaseInterfaceDelegate>
 
 -(void)scanCancelLoginAction:(NSString *)result;
 

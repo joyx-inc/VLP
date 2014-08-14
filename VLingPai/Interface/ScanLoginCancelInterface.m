@@ -16,4 +16,12 @@
     [self connect];
 }
 
+-(void)parseResult:(ASIHTTPRequest *)request{
+    NSString *jsonStr = [[NSString alloc]initWithData:[request responseData] encoding:NSUTF8StringEncoding];
+    DebugLog(@"%@",jsonStr);
+}
+-(void)requestIsFailed:(NSError *)error{
+
+}
+
 @end

@@ -20,7 +20,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *secondView;
 
-@property (strong, nonatomic) NSTimer *timer;
+//@property (strong, nonatomic) NSTimer *timer;
 @property (assign, nonatomic) NSInteger timeCount;
 @property (assign, nonatomic) BOOL isTimeing;
 

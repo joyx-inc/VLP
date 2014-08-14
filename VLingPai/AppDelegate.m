@@ -13,7 +13,8 @@
 #import "SettingViewController.h"
 #import "StartViewController.h"
 #import "OneClickInterface.h"               //一键认证接口，暂时是循环重复发送消息
-#import "OneClickListViewController.h"      //一键认证列表
+//#import "OneClickListViewController.h"      //一键认证列表
+#import "OneClickViewController.h"
 
 @interface AppDelegate()<OneClickInterfaceDelegate,UIAlertViewDelegate>{
     NSTimer *timer;
@@ -41,7 +42,7 @@
     
     self.oneClickInterface = [[OneClickInterface alloc]init];
     self.oneClickInterface.delegate = self;
-    timer = [[NSTimer alloc]initWithFireDate:[NSDate date] interval:20.0 target:self selector:@selector(startOneClickInterface) userInfo:nil repeats:YES];
+    timer = [[NSTimer alloc]initWithFireDate:[NSDate date] interval:5.0 target:self selector:@selector(startOneClickInterface) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
 
     
@@ -143,12 +144,25 @@
     
     if ([status isEqualToString:@"ok"]) {
         //成功
-        if (!alert) {
-            alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"收到一键认证信息" delegate:self cancelButtonTitle:@"关闭" otherButtonTitles:@"查看", nil];
-            [alert show];
+//        if (!alert) {
+//            alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"收到一键认证信息" delegate:self cancelButtonTitle:@"关闭" otherButtonTitles:@"查看", nil];
+//            [alert show];
+////            [timer setFireDate:[NSDate distantFuture]];
+//        }
+//        oneClickList = list;
+        
+        
+        OneClickViewController *vc = [[OneClickViewController alloc]initWithNibName:@"OneClickViewController" bundle:nil];
+        vc.asModel = [list objectAtIndex:0];
+        if ([self.window.rootViewController isKindOfClass:[UINavigationController class]]) {
+            [self.startViewNav pushViewController:vc animated:YES];
+        }else{
+            UINavigationController *nav = (UINavigationController *)self.tabBarController.selectedViewController;
+            [nav pushViewController:vc animated:YES];
         }
         
-        oneClickList = list;
+        
+        
     }else{
         //用户不存在
         
@@ -162,22 +176,24 @@
     [self.oneClickInterface startOneClick];
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-//    DebugLog(@"查看一键认证信息");
-    if (buttonIndex == 1) {
-        OneClickListViewController *vc = [[OneClickListViewController alloc]initWithNibName:@"OneClickListViewController" bundle:nil];
-        vc.list = oneClickList;
-        
-        if ([self.window.rootViewController isKindOfClass:[UINavigationController class]]) {
-            [self.startViewNav pushViewController:vc animated:YES];
-        }else{
-            UINavigationController *nav = (UINavigationController *)self.tabBarController.selectedViewController;
-            [nav pushViewController:vc animated:YES];
-        }
-        
-    }
-    alert = nil;
-}
+//- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+////    DebugLog(@"查看一键认证信息");
+//    if (buttonIndex == 1) {
+//        OneClickListViewController *vc = [[OneClickListViewController alloc]initWithNibName:@"OneClickListViewController" bundle:nil];
+//        vc.list = oneClickList;
+//        
+//        if ([self.window.rootViewController isKindOfClass:[UINavigationController class]]) {
+//            [self.startViewNav pushViewController:vc animated:YES];
+//        }else{
+//            UINavigationController *nav = (UINavigationController *)self.tabBarController.selectedViewController;
+//            [nav pushViewController:vc animated:YES];
+//        }
+//        
+////        [timer setFireDate:[NSDate date]];
+//        
+//    }
+//    alert = nil;
+//}
 
 -(void)dealloc{
     self.oneClickInterface.delegate = nil;

@@ -130,6 +130,9 @@
 }
 
 -(void)goVericationView{
+    self.navigationController.hidesBottomBarWhenPushed = NO;
+    [self.navigationController popToRootViewControllerAnimated:NO];
+    
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     [appDelegate initTabBarController];
     appDelegate.tabBarController.selectedIndex = 0;

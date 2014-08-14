@@ -34,8 +34,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.logInURL = [NSString stringWithFormat:@"%@vlp/api/qrscan/%@/login?%@",BASE_INTERFACE_DOMAIN,self.asModel.code,[[NSUserDefaults standardUserDefaults] objectForKey:IDFV]];
-    self.cancelURL = [NSString stringWithFormat:@"%@/vlp/api/qrscan/%@/cancel?%@",BASE_INTERFACE_DOMAIN,self.asModel.code,[[NSUserDefaults standardUserDefaults] objectForKey:IDFV]];
+    self.logInURL = [NSString stringWithFormat:@"%@vlp/api/qrscan/%@",BASE_INTERFACE_DOMAIN,self.asModel.code];
+    self.cancelURL = [NSString stringWithFormat:@"%@vlp/api/qrscan/%@",BASE_INTERFACE_DOMAIN,self.asModel.code];
+    
+    self.labSystemName.text = self.asModel.systemModel.systemName;
+    self.labAccount.text = self.asModel.accountModel.account;
     
     self.scanLoginInterface = [[ScanLoginInterface alloc]init];
     self.scanLoginInterface.delegate = self;

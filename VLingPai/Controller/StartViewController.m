@@ -73,7 +73,9 @@
     if ([key isEqualToString:password]) {
         if (self.isStart) {
             ResetStartPasswordViewController *vc = [[ResetStartPasswordViewController alloc]initWithNibName:@"ResetStartPasswordViewController" bundle:nil];
+//            vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
+//            vc.hidesBottomBarWhenPushed = NO;
         }else{
             AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
             [appDelegate initTabBarController];
