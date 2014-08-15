@@ -15,6 +15,7 @@
 #import "OneClickInterface.h"               //一键认证接口，暂时是循环重复发送消息
 //#import "OneClickListViewController.h"      //一键认证列表
 #import "OneClickViewController.h"
+#import "TokenStore.h"
 
 @interface AppDelegate()<OneClickInterfaceDelegate,UIAlertViewDelegate>{
     NSTimer *timer;
@@ -57,6 +58,19 @@
         UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
         self.window.rootViewController = nav;
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isFirst"];
+        
+        NSURLComponents *urlc = [[NSURLComponents alloc] init];
+        urlc.scheme = @"otpauth";
+        urlc.host = 0 ? @"totp" : @"hotp";
+        urlc.path = [NSString stringWithFormat:@"/%@:%@", ISSuer, ID];
+        urlc.query = [NSString stringWithFormat:@"algorithm=%s&digits=%lu&secret=%@&%s=%lu",
+                      "md5", (unsigned long)8, Secret,  0 ? "period" : "counter",(unsigned long)30];
+        
+        // Make token
+        Token* tokenAlloc = [[Token alloc] initWithURL:[urlc URL]];
+        if (tokenAlloc != nil)
+            [[[TokenStore alloc] init] add:tokenAlloc];
+        
     }else{
         self.window.rootViewController = self.startViewNav;
     }

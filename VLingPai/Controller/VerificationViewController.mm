@@ -16,11 +16,18 @@
 #import "UploadScanResultInterface.h"
 #import "MBProgressHUD.h"
 
+//#import "DigitalTokenView.h"
+#import "DigitalTokenViewController.h"
+
+//#import "TokenStore.h"
+
 @interface VerificationViewController ()<ZXingDelegate,UploadScanResultInterfaceDelegate,MBProgressHUDDelegate>
 
 @property (strong, nonatomic) UploadScanResultInterface *uploadScanResultInterface;
 
 @property (strong, nonatomic) MBProgressHUD *uploadResultHub;
+
+@property (strong, nonatomic) DigitalTokenViewController *digitalVC;
 
 @end
 
@@ -47,6 +54,28 @@
     
     
 //    self.isScanView = YES;
+    
+//    DigitalTokenView *digitalView = [[[NSBundle mainBundle] loadNibNamed:@"DigitalTokenView" owner:self options:nil]objectAtIndex:0];
+
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    BOOL isOpen = [[NSUserDefaults standardUserDefaults] boolForKey:isOpenOTP];
+    if (isOpen) {
+        if (!self.digitalVC) {
+            self.digitalVC = [[DigitalTokenViewController alloc]initWithNibName:@"DigitalTokenViewController" bundle:nil];
+//            self.digitalVC = [[DigitalTokenView alloc]initWithFrame:CGRectMake(32, 300, 256, 100)];
+//            digitalView.code = @"01234567";
+            self.digitalVC.view.frame = CGRectMake(32, 300, 256, 100);
+            [self.view addSubview:self.digitalVC.view];
+        }
+        self.digitalVC.view.hidden = NO;
+    }else{
+        if (self.digitalVC) {
+            self.digitalVC.view.hidden = YES;
+        }
+    }
 }
 
 #pragma mark - ZXingDelegate
