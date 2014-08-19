@@ -13,4 +13,5 @@
 
 @property (assign, nonatomic) BOOL hidesBackButton;  //no 不隐藏  YES 隐藏
 
+@property (weak, nonatomic) IBOutlet UIButton *btnSetPassword;
 @end

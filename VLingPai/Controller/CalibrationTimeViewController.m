@@ -43,6 +43,12 @@
     self.title = @"数字令牌";
     self.hidesBottomBarWhenPushed = YES;
     
+    self.labTime.layer.masksToBounds = YES;
+    self.labTime.layer.cornerRadius = 6.0;
+    
+    self.btnClibrateTime.layer.masksToBounds = YES;
+    self.btnClibrateTime.layer.cornerRadius = 1.5f;
+    
     
     //开始调用令牌前必须执行并且只能执行一次
     [self initVidAndOTP];

@@ -34,6 +34,9 @@
     if (self.hidesBackButton) {
         self.navigationItem.hidesBackButton = YES;
     }
+    
+    self.btnSetPassword.layer.masksToBounds = YES;
+    self.btnSetPassword.layer.cornerRadius = 1.5;
 }
 
 - (void)didReceiveMemoryWarning

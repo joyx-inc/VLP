@@ -21,6 +21,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
+        
     }
     return self;
 }
@@ -29,6 +31,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.title = @"绑定手机";
+    
+    self.btnStart.layer.masksToBounds = YES;
+    self.btnStart.layer.cornerRadius = 1.5f;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,13 +46,7 @@
 }
 
 - (IBAction)startAction:(UIButton *)sender {
-//    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-//    [appDelegate initTabBarController];
-//    
-////    UINavigationController *nav = (UINavigationController *)appDelegate.tabBarController.selectedViewController;
-    
     ImportPhoneNumberViewController *vc = [[ImportPhoneNumberViewController alloc]initWithNibName:@"ImportPhoneNumberViewController" bundle:nil];
     [self.navigationController pushViewController:vc animated:YES];
-    
 }
 @end

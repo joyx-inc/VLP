@@ -34,6 +34,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.title = @"一键身份认证";
+    
     self.logInURL = [NSString stringWithFormat:@"%@vlp/api/qrscan/%@",BASE_INTERFACE_DOMAIN,self.asModel.code];
     self.cancelURL = [NSString stringWithFormat:@"%@vlp/api/qrscan/%@",BASE_INTERFACE_DOMAIN,self.asModel.code];
     
@@ -45,7 +47,10 @@
     
     self.scanLoginCancelInterface = [[ScanLoginCancelInterface alloc]init];
     
-    
+    self.btnLogin.layer.masksToBounds = YES;
+    self.btnLogin.layer.cornerRadius = 1.5f;
+    self.btnCancel.layer.masksToBounds = YES;
+    self.btnCancel.layer.cornerRadius = 1.5f;
 }
 
 #pragma mark - ScanLoginInterfaceDelegate <NSObject>

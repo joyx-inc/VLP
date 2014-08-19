@@ -10,7 +10,7 @@
 #import "MBProgressHUD.h"
 #import "ConnecteSuccessViewController.h"
 #import "ScanBindAccountInterface.h"
-
+#import "UIColor+GetColorFromString.h"
 
 @interface ConnecteDiscountViewController ()<MBProgressHUDDelegate,ScanBindAccountInterfaceDelegate>{
     NSTimer *timer;
@@ -43,11 +43,18 @@
     self.scanBindAccountInterface.delegate = self;
     self.method = @"POST";
     
+    self.btnConnecteAccount.layer.masksToBounds = YES;
+    self.btnConnecteAccount.layer.cornerRadius = 1.5f;
+    
+    self.btnCancel.layer.masksToBounds = YES;
+    self.btnCancel.layer.cornerRadius = 1.5f;
+    
 }
 
 - (IBAction)btnConnectDiscountAction:(UIButton *)sender {
     [sender setTitle:@"等待电脑关联完成" forState:UIControlStateNormal];
-
+    sender.userInteractionEnabled = NO;
+    sender.backgroundColor = [UIColor getColorFromString:@"#a4c7f4ff"];
     [self.scanBindAccountInterface scanBindAccount:self.scanResult withMethod:self.method];
 }
 
@@ -113,7 +120,7 @@
             HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark_wrong.png"]];
             HUD.mode = MBProgressHUDModeCustomView;
             HUD.delegate = self;
-            HUD.labelText = @"绑定超时";
+            HUD.labelText = @"关联超时";
             [HUD show:YES];
             [HUD hide:YES afterDelay:2];
         }

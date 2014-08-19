@@ -52,10 +52,6 @@
     self.uploadScanResultInterface = [[UploadScanResultInterface alloc]init];
     self.uploadScanResultInterface.delegate = self;
     
-    
-//    self.isScanView = YES;
-    
-//    DigitalTokenView *digitalView = [[[NSBundle mainBundle] loadNibNamed:@"DigitalTokenView" owner:self options:nil]objectAtIndex:0];
 
 }
 -(void)viewWillAppear:(BOOL)animated{
@@ -64,11 +60,9 @@
     BOOL isOpen = [[NSUserDefaults standardUserDefaults] boolForKey:isOpenOTP];
     if (isOpen) {
         if (!self.digitalVC) {
-            self.digitalVC = [[DigitalTokenViewController alloc]initWithNibName:@"DigitalTokenViewController" bundle:nil];
-//            self.digitalVC = [[DigitalTokenView alloc]initWithFrame:CGRectMake(32, 300, 256, 100)];
-//            digitalView.code = @"01234567";
-            self.digitalVC.view.frame = CGRectMake(32, 300, 256, 100);
+            self.digitalVC = [[DigitalTokenViewController alloc]initWithNibName:@"DigitalTokenViewController" bundle:nil];            
             [self.view addSubview:self.digitalVC.view];
+            self.digitalVC.view.frame = CGRectMake(0, DeviceHeight - 120 - 49, 320, 120);
         }
         self.digitalVC.view.hidden = NO;
     }else{
@@ -84,9 +78,7 @@
     [controller dismissModalViewControllerAnimated:NO];
     
     self.scanResult = result;
-    
-    //TODO:结果处理
-    
+        
     [self.uploadScanResultInterface uploadScanResult:result];
     
     self.uploadResultHub = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
@@ -94,16 +86,7 @@
 	self.uploadResultHub.delegate = self;
 	self.uploadResultHub.labelText = @"正在处理中，请稍后";
     [self.uploadResultHub show:YES];
-    
-    
-//    if ([result isEqualToString:@"123456"]) {
-//        ConnecteDiscountViewController *vc = [[ConnecteDiscountViewController alloc]initWithNibName:@"ConnecteDiscountViewController" bundle:nil];
-////        vc.hidesBottomBarWhenPushed = YES;
-//        [self.navigationController pushViewController:vc animated:YES];
-//    }else{
-//        LogInSystemViewController *vc = [[LogInSystemViewController alloc]initWithNibName:@"LogInSystemViewController" bundle:nil];
-//        [self.navigationController pushViewController:vc animated:YES];
-//    }
+
 }
 - (void)zxingControllerDidCancel:(ZXingWidgetController*)controller{
     [controller dismissModalViewControllerAnimated:YES];

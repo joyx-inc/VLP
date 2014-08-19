@@ -16,6 +16,7 @@
 
 - (IBAction)btnSaveAction:(UIButton *)sender;
 - (IBAction)btnCancelAction:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *btnSave;
 
 - (IBAction)btnHiddenPickerView:(UIButton *)sender;
 - (IBAction)btnChooesePickerData:(UIButton *)sender;

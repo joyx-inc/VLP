@@ -18,7 +18,10 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labSystemName;
 @property (weak, nonatomic) IBOutlet UILabel *labAccount;
+
 - (IBAction)btnLogInAction:(UIButton *)sender;
 - (IBAction)btnCancelAction:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *btnLogin;
+@property (weak, nonatomic) IBOutlet UIButton *btnCancel;
 
 @end

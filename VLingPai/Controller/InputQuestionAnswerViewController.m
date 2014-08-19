@@ -12,7 +12,10 @@
 #import "StartSetPasswordViewController.h"
 #import "AppDelegate.h"
 
-@interface InputQuestionAnswerViewController ()<MBProgressHUDDelegate>
+@interface InputQuestionAnswerViewController ()<MBProgressHUDDelegate>{
+    UIImage *imageActive;
+    UIImage *imageNormal;
+}
 
 @end
 
@@ -34,6 +37,8 @@
     
     self.labQuestion.text = [[NSUserDefaults standardUserDefaults] objectForKey:TheQuestion];
     
+    self.btnGoNext.layer.masksToBounds = YES;
+    self.btnGoNext.layer.cornerRadius = 1.5;
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,21 +57,7 @@
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:StartPassword];
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:TheQuestion];
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:TheQuestionAnswer];
-        
-//        MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
-//        [self.navigationController.view addSubview:HUD];
-//        
-//        HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
-//        
-//        HUD.mode = MBProgressHUDModeCustomView;
-//        
-//        HUD.delegate = self;
-//        HUD.labelText = @"密码删除成功，请重新设置密码";
-//        
-//        [HUD show:YES];
-//        [HUD hide:YES afterDelay:2];
-//        
-//        [self performSelector:@selector(goNext) withObject:nil afterDelay:2];
+
     }else{
         MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
         [self.navigationController.view addSubview:HUD];
@@ -77,13 +68,9 @@
         HUD.labelText = @"您输入的答案不正确";
         [HUD show:YES];
         [HUD hide:YES afterDelay:2];
-    }
-    
+    }    
 }
--(void)goNext{
-//    SetStartPasswordViewController *vc = [[SetStartPasswordViewController alloc]initWithNibName:@"SetStartPasswordViewController" bundle:nil];
-//    [self.navigationController pushViewController:vc animated:YES];
-}
+
 #pragma mark - UIAlertViewDelegate <NSObject>
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (alertView.tag == 100) {
@@ -96,16 +83,19 @@
             [nav popToRootViewControllerAnimated:YES];
         }else{
             //更新密码
-//            SetStartPasswordViewController *vc = [[SetStartPasswordViewController alloc]initWithNibName:@"SetStartPasswordViewController" bundle:nil];
-//            [self.navigationController pushViewController:vc animated:YES];
             StartSetPasswordViewController *vc = [[StartSetPasswordViewController alloc]initWithNibName:@"StartSetPasswordViewController" bundle:nil];
             [self.navigationController pushViewController:vc animated:YES];
         }
     }
 }
 
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    textField.background = imageActive;
+    return YES;
+}
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
+    textField.background = imageNormal;
     return YES;
 }
 @end

@@ -17,4 +17,11 @@
 //@property (strong, nonatomic) SystemModel *systemModel;
 
 - (IBAction)btnGoBackAction:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *btnGoBack;
+
+@property (weak, nonatomic) IBOutlet UILabel *labSystemName;
+@property (weak, nonatomic) IBOutlet UILabel *labAccount;
+@property (weak, nonatomic) IBOutlet UILabel *labAccountName;
+
+
 @end

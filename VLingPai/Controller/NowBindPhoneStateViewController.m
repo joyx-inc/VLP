@@ -29,6 +29,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.title = @"当前绑定的手机号码";
+    
     NSString *phoneNumber = [[NSUserDefaults standardUserDefaults] objectForKey:UserBindPhoneNumber];
     
     NSRange range1 = NSMakeRange(0, phoneNumber.length - 8);
@@ -40,6 +42,9 @@
     NSString *text = [NSString stringWithFormat:@"%@****%@",str1,str2];
 //    NSLog(@"%@",text);
     self.labPhoneNumber.text = text;
+    
+    self.btnResetPhoneNumber.layer.masksToBounds = YES;
+    self.btnResetPhoneNumber.layer.cornerRadius = 1.5;
     
 }
 

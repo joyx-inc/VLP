@@ -16,6 +16,9 @@
 
 @property (strong, nonatomic) UINavigationController *startViewNav;  //如果开启了启动密码，这是验证密码的rootViewController
 
+@property (unsafe_unretained, nonatomic) UIBackgroundTaskIdentifier myTask;
+
+
 -(void)initTabBarController;
 
 @end

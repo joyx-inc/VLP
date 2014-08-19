@@ -16,6 +16,22 @@
 		040E50151990F0C70023FD80 /* CalibrationTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040E50131990F0C70023FD80 /* CalibrationTimeViewController.xib */; };
 		040E50191990F0EB0023FD80 /* NowBindPhoneStateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E50171990F0EB0023FD80 /* NowBindPhoneStateViewController.m */; };
 		040E501A1990F0EB0023FD80 /* NowBindPhoneStateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040E50181990F0EB0023FD80 /* NowBindPhoneStateViewController.xib */; };
+		0423799419A3059B005F80E1 /* about_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423798F19A3059B005F80E1 /* about_icon@2x.png */; };
+		0423799519A3059B005F80E1 /* set_about@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423799019A3059B005F80E1 /* set_about@2x.png */; };
+		0423799619A3059B005F80E1 /* set_bindPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423799119A3059B005F80E1 /* set_bindPhone@2x.png */; };
+		0423799719A3059B005F80E1 /* set_digitalCode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423799219A3059B005F80E1 /* set_digitalCode@2x.png */; };
+		0423799819A3059B005F80E1 /* set_startPassword@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423799319A3059B005F80E1 /* set_startPassword@2x.png */; };
+		0423799F19A324B4005F80E1 /* password_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423799D19A324B4005F80E1 /* password_normal@2x.png */; };
+		042379A019A324B4005F80E1 /* password_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423799E19A324B4005F80E1 /* password_selected@2x.png */; };
+		042379A219A338FF005F80E1 /* image_rightmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042379A119A338FF005F80E1 /* image_rightmark@2x.png */; };
+		042379A419A33ACC005F80E1 /* image_phone-pc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042379A319A33ACC005F80E1 /* image_phone-pc@2x.png */; };
+		042379A619A33F04005F80E1 /* connect_success_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042379A519A33F04005F80E1 /* connect_success_image@2x.png */; };
+		042379AC19A341E2005F80E1 /* scanQRCode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042379AB19A341E2005F80E1 /* scanQRCode@2x.png */; };
+		042379B319A35699005F80E1 /* scanQRCode_bg-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042379B119A35699005F80E1 /* scanQRCode_bg-568h@2x.png */; };
+		042379B419A35699005F80E1 /* scanQRCode_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042379B219A35699005F80E1 /* scanQRCode_bg@2x.png */; };
+		042379B619A35997005F80E1 /* scanQRCode_btnCancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042379B519A35997005F80E1 /* scanQRCode_btnCancel@2x.png */; };
+		042494CD19A202950087D9D1 /* statr_setpassword_startimagr@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042494CC19A202950087D9D1 /* statr_setpassword_startimagr@2x.png */; };
+		042494D119A203390087D9D1 /* first_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042494D019A203390087D9D1 /* first_image@2x.png */; };
 		042D44001991CE2D00AA0A0A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D43FF1991CE2D00AA0A0A /* AVFoundation.framework */; };
 		042D44021991CE3500AA0A0A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D44011991CE3500AA0A0A /* AudioToolbox.framework */; };
 		042D44041991CE3C00AA0A0A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D44031991CE3C00AA0A0A /* CoreVideo.framework */; };
@@ -71,6 +87,7 @@
 		04EE0FC3199A2C9700ADC63D /* AccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0FC2199A2C9700ADC63D /* AccountModel.m */; };
 		04EE0FC7199A2F0B00ADC63D /* ConnecteSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0FC5199A2F0B00ADC63D /* ConnecteSuccessViewController.m */; };
 		04EE0FC8199A2F0B00ADC63D /* ConnecteSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0FC6199A2F0B00ADC63D /* ConnecteSuccessViewController.xib */; };
+		04EFD1E219A2137A0018482A /* UIColor+GetColorFromString.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EFD1E119A2137A0018482A /* UIColor+GetColorFromString.m */; };
 		04F02554198CC6600017665A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F02553198CC6600017665A /* Foundation.framework */; };
 		04F02556198CC6600017665A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F02555198CC6600017665A /* CoreGraphics.framework */; };
 		04F02558198CC6600017665A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F02557198CC6600017665A /* UIKit.framework */; };
@@ -111,12 +128,15 @@
 		04F4C490199B6D1400FCBC6F /* OneClickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4C48E199B6D1400FCBC6F /* OneClickViewController.m */; };
 		04F4C491199B6D1400FCBC6F /* OneClickViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F4C48F199B6D1400FCBC6F /* OneClickViewController.xib */; };
 		04F4C494199B6D2F00FCBC6F /* AccountAndSystemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4C493199B6D2F00FCBC6F /* AccountAndSystemModel.m */; };
-		04F4C498199B6E4500FCBC6F /* OneClickListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4C496199B6E4500FCBC6F /* OneClickListViewController.m */; };
-		04F4C499199B6E4500FCBC6F /* OneClickListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F4C497199B6E4500FCBC6F /* OneClickListViewController.xib */; };
 		04F4C49E199B6F6000FCBC6F /* DiscountViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4C49C199B6F6000FCBC6F /* DiscountViewCell.m */; };
 		04F4C49F199B6F6000FCBC6F /* DiscountViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F4C49D199B6F6000FCBC6F /* DiscountViewCell.xib */; };
 		04F4C4A3199B6F9600FCBC6F /* OneClickListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4C4A1199B6F9600FCBC6F /* OneClickListViewCell.m */; };
 		04F4C4A4199B6F9600FCBC6F /* OneClickListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F4C4A2199B6F9600FCBC6F /* OneClickListViewCell.xib */; };
+		04F4D6D919A2F0FF001E4524 /* progress_progressImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F4D6D719A2F0FF001E4524 /* progress_progressImage@2x.png */; };
+		04F4D6DA19A2F0FF001E4524 /* progress_trackImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F4D6D819A2F0FF001E4524 /* progress_trackImage@2x.png */; };
+		04F4D6E019A2F3D8001E4524 /* MCProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D6DF19A2F3D8001E4524 /* MCProgressBarView.m */; };
+		04FA409219A20E0D00E6148F /* textField_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FA409019A20E0D00E6148F /* textField_bg@2x.png */; };
+		04FA409319A20E0D00E6148F /* textField_bg_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FA409119A20E0D00E6148F /* textField_bg_active@2x.png */; };
 		04FAE31C1993970100EAFFFF /* base32.c in Sources */ = {isa = PBXBuildFile; fileRef = 04FAE3131993970100EAFFFF /* base32.c */; };
 		04FAE31D1993970100EAFFFF /* tempOTPImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FAE3151993970100EAFFFF /* tempOTPImage.png */; };
 		04FAE31E1993970100EAFFFF /* Token.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FAE3171993970100EAFFFF /* Token.m */; };
@@ -169,6 +189,22 @@
 		040E50161990F0EB0023FD80 /* NowBindPhoneStateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NowBindPhoneStateViewController.h; path = Controller/NowBindPhoneStateViewController.h; sourceTree = "<group>"; };
 		040E50171990F0EB0023FD80 /* NowBindPhoneStateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NowBindPhoneStateViewController.m; path = Controller/NowBindPhoneStateViewController.m; sourceTree = "<group>"; };
 		040E50181990F0EB0023FD80 /* NowBindPhoneStateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NowBindPhoneStateViewController.xib; path = Controller/NowBindPhoneStateViewController.xib; sourceTree = "<group>"; };
+		0423798F19A3059B005F80E1 /* about_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_icon@2x.png"; sourceTree = "<group>"; };
+		0423799019A3059B005F80E1 /* set_about@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set_about@2x.png"; sourceTree = "<group>"; };
+		0423799119A3059B005F80E1 /* set_bindPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set_bindPhone@2x.png"; sourceTree = "<group>"; };
+		0423799219A3059B005F80E1 /* set_digitalCode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set_digitalCode@2x.png"; sourceTree = "<group>"; };
+		0423799319A3059B005F80E1 /* set_startPassword@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set_startPassword@2x.png"; sourceTree = "<group>"; };
+		0423799D19A324B4005F80E1 /* password_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password_normal@2x.png"; sourceTree = "<group>"; };
+		0423799E19A324B4005F80E1 /* password_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password_selected@2x.png"; sourceTree = "<group>"; };
+		042379A119A338FF005F80E1 /* image_rightmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_rightmark@2x.png"; sourceTree = "<group>"; };
+		042379A319A33ACC005F80E1 /* image_phone-pc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_phone-pc@2x.png"; sourceTree = "<group>"; };
+		042379A519A33F04005F80E1 /* connect_success_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connect_success_image@2x.png"; sourceTree = "<group>"; };
+		042379AB19A341E2005F80E1 /* scanQRCode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scanQRCode@2x.png"; sourceTree = "<group>"; };
+		042379B119A35699005F80E1 /* scanQRCode_bg-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scanQRCode_bg-568h@2x.png"; sourceTree = "<group>"; };
+		042379B219A35699005F80E1 /* scanQRCode_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scanQRCode_bg@2x.png"; sourceTree = "<group>"; };
+		042379B519A35997005F80E1 /* scanQRCode_btnCancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scanQRCode_btnCancel@2x.png"; sourceTree = "<group>"; };
+		042494CC19A202950087D9D1 /* statr_setpassword_startimagr@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "statr_setpassword_startimagr@2x.png"; sourceTree = "<group>"; };
+		042494D019A203390087D9D1 /* first_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first_image@2x.png"; sourceTree = "<group>"; };
 		042D43FF1991CE2D00AA0A0A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		042D44011991CE3500AA0A0A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		042D44031991CE3C00AA0A0A /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -256,6 +292,8 @@
 		04EE0FC4199A2F0B00ADC63D /* ConnecteSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnecteSuccessViewController.h; path = Controller/ConnecteSuccessViewController.h; sourceTree = "<group>"; };
 		04EE0FC5199A2F0B00ADC63D /* ConnecteSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnecteSuccessViewController.m; path = Controller/ConnecteSuccessViewController.m; sourceTree = "<group>"; };
 		04EE0FC6199A2F0B00ADC63D /* ConnecteSuccessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ConnecteSuccessViewController.xib; path = Controller/ConnecteSuccessViewController.xib; sourceTree = "<group>"; };
+		04EFD1E019A2137A0018482A /* UIColor+GetColorFromString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GetColorFromString.h"; sourceTree = "<group>"; };
+		04EFD1E119A2137A0018482A /* UIColor+GetColorFromString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GetColorFromString.m"; sourceTree = "<group>"; };
 		04F02550198CC6600017665A /* VLingPai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VLingPai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F02553198CC6600017665A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		04F02555198CC6600017665A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -319,15 +357,18 @@
 		04F4C48F199B6D1400FCBC6F /* OneClickViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OneClickViewController.xib; path = Controller/OneClickViewController.xib; sourceTree = "<group>"; };
 		04F4C492199B6D2F00FCBC6F /* AccountAndSystemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountAndSystemModel.h; path = Model/AccountAndSystemModel.h; sourceTree = "<group>"; };
 		04F4C493199B6D2F00FCBC6F /* AccountAndSystemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountAndSystemModel.m; path = Model/AccountAndSystemModel.m; sourceTree = "<group>"; };
-		04F4C495199B6E4500FCBC6F /* OneClickListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OneClickListViewController.h; path = Controller/OneClickListViewController.h; sourceTree = "<group>"; };
-		04F4C496199B6E4500FCBC6F /* OneClickListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OneClickListViewController.m; path = Controller/OneClickListViewController.m; sourceTree = "<group>"; };
-		04F4C497199B6E4500FCBC6F /* OneClickListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OneClickListViewController.xib; path = Controller/OneClickListViewController.xib; sourceTree = "<group>"; };
 		04F4C49B199B6F6000FCBC6F /* DiscountViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscountViewCell.h; sourceTree = "<group>"; };
 		04F4C49C199B6F6000FCBC6F /* DiscountViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscountViewCell.m; sourceTree = "<group>"; };
 		04F4C49D199B6F6000FCBC6F /* DiscountViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscountViewCell.xib; sourceTree = "<group>"; };
 		04F4C4A0199B6F9600FCBC6F /* OneClickListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneClickListViewCell.h; sourceTree = "<group>"; };
 		04F4C4A1199B6F9600FCBC6F /* OneClickListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneClickListViewCell.m; sourceTree = "<group>"; };
 		04F4C4A2199B6F9600FCBC6F /* OneClickListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneClickListViewCell.xib; sourceTree = "<group>"; };
+		04F4D6D719A2F0FF001E4524 /* progress_progressImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "progress_progressImage@2x.png"; sourceTree = "<group>"; };
+		04F4D6D819A2F0FF001E4524 /* progress_trackImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "progress_trackImage@2x.png"; sourceTree = "<group>"; };
+		04F4D6DE19A2F3D8001E4524 /* MCProgressBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCProgressBarView.h; sourceTree = "<group>"; };
+		04F4D6DF19A2F3D8001E4524 /* MCProgressBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCProgressBarView.m; sourceTree = "<group>"; };
+		04FA409019A20E0D00E6148F /* textField_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "textField_bg@2x.png"; sourceTree = "<group>"; };
+		04FA409119A20E0D00E6148F /* textField_bg_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "textField_bg_active@2x.png"; sourceTree = "<group>"; };
 		04FAE3131993970100EAFFFF /* base32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base32.c; sourceTree = "<group>"; };
 		04FAE3141993970100EAFFFF /* base32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base32.h; sourceTree = "<group>"; };
 		04FAE3151993970100EAFFFF /* tempOTPImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tempOTPImage.png; sourceTree = "<group>"; };
@@ -409,6 +450,15 @@
 			);
 			name = NTP;
 			path = Third/NTP;
+			sourceTree = "<group>";
+		};
+		042494D419A208410087D9D1 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				04EFD1E019A2137A0018482A /* UIColor+GetColorFromString.h */,
+				04EFD1E119A2137A0018482A /* UIColor+GetColorFromString.m */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		042D41DE1991CDE000AA0A0A /* Zxing */ = {
@@ -621,15 +671,13 @@
 				04F025B2198CD59F0017665A /* SettingViewController.m */,
 				04F025B3198CD59F0017665A /* SettingViewController.xib */,
 				04F0259F198CCF3C0017665A /* Setting */,
-				04F4C495199B6E4500FCBC6F /* OneClickListViewController.h */,
-				04F4C496199B6E4500FCBC6F /* OneClickListViewController.m */,
-				04F4C497199B6E4500FCBC6F /* OneClickListViewController.xib */,
 				04F4C48D199B6D1400FCBC6F /* OneClickViewController.h */,
 				04F4C48E199B6D1400FCBC6F /* OneClickViewController.m */,
 				04F4C48F199B6D1400FCBC6F /* OneClickViewController.xib */,
 				0464098B199CCB7300E8BA09 /* DigitalTokenViewController.h */,
 				0464098C199CCB7300E8BA09 /* DigitalTokenViewController.m */,
 				0464098D199CCB7300E8BA09 /* DigitalTokenViewController.xib */,
+				042494D419A208410087D9D1 /* Other */,
 				04EE0EEF1999BE3400ADC63D /* Model */,
 				04F4C49A199B6F6000FCBC6F /* View */,
 				04EE0F0B199A07CF00ADC63D /* Interface */,
@@ -711,6 +759,7 @@
 		04F025A0198CCF780017665A /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				04F4D6DD19A2F3D8001E4524 /* MyProgress */,
 				04EE0F37199A0E8E00ADC63D /* Reachability */,
 				04EE0F2C199A081100ADC63D /* JSONKIT */,
 				04EE0F0F199A07E200ADC63D /* ASIHTTPRequest */,
@@ -760,6 +809,26 @@
 		04F025D1198CD9D10017665A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				042494D019A203390087D9D1 /* first_image@2x.png */,
+				042494CC19A202950087D9D1 /* statr_setpassword_startimagr@2x.png */,
+				04FA409019A20E0D00E6148F /* textField_bg@2x.png */,
+				04FA409119A20E0D00E6148F /* textField_bg_active@2x.png */,
+				042379AB19A341E2005F80E1 /* scanQRCode@2x.png */,
+				042379B519A35997005F80E1 /* scanQRCode_btnCancel@2x.png */,
+				042379B119A35699005F80E1 /* scanQRCode_bg-568h@2x.png */,
+				042379B219A35699005F80E1 /* scanQRCode_bg@2x.png */,
+				04F4D6D819A2F0FF001E4524 /* progress_trackImage@2x.png */,
+				04F4D6D719A2F0FF001E4524 /* progress_progressImage@2x.png */,
+				0423798F19A3059B005F80E1 /* about_icon@2x.png */,
+				0423799019A3059B005F80E1 /* set_about@2x.png */,
+				0423799119A3059B005F80E1 /* set_bindPhone@2x.png */,
+				0423799219A3059B005F80E1 /* set_digitalCode@2x.png */,
+				0423799319A3059B005F80E1 /* set_startPassword@2x.png */,
+				0423799D19A324B4005F80E1 /* password_normal@2x.png */,
+				0423799E19A324B4005F80E1 /* password_selected@2x.png */,
+				042379A119A338FF005F80E1 /* image_rightmark@2x.png */,
+				042379A319A33ACC005F80E1 /* image_phone-pc@2x.png */,
+				042379A519A33F04005F80E1 /* connect_success_image@2x.png */,
 				04640976199CC58200E8BA09 /* 0-9 */,
 				04F025D2198CD9D10017665A /* tempImage */,
 			);
@@ -787,6 +856,16 @@
 				04640972199CBCB000E8BA09 /* DigitalTokenView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		04F4D6DD19A2F3D8001E4524 /* MyProgress */ = {
+			isa = PBXGroup;
+			children = (
+				04F4D6DE19A2F3D8001E4524 /* MCProgressBarView.h */,
+				04F4D6DF19A2F3D8001E4524 /* MCProgressBarView.m */,
+			);
+			name = MyProgress;
+			path = Third/MyProgress;
 			sourceTree = "<group>";
 		};
 		04FAE3121993970100EAFFFF /* OTP */ = {
@@ -933,21 +1012,30 @@
 			files = (
 				04640983199CC58200E8BA09 /* 2@2x.png in Resources */,
 				04F025B5198CD59F0017665A /* SettingViewController.xib in Resources */,
-				04F4C499199B6E4500FCBC6F /* OneClickListViewController.xib in Resources */,
+				042379A619A33F04005F80E1 /* connect_success_image@2x.png in Resources */,
 				04640984199CC58200E8BA09 /* 3@2x.png in Resources */,
 				040E50101990F0B00023FD80 /* AboutViewController.xib in Resources */,
+				0423799F19A324B4005F80E1 /* password_normal@2x.png in Resources */,
+				0423799619A3059B005F80E1 /* set_bindPhone@2x.png in Resources */,
 				04FAE31D1993970100EAFFFF /* tempOTPImage.png in Resources */,
 				040E50151990F0C70023FD80 /* CalibrationTimeViewController.xib in Resources */,
 				043DA683198F693C000421B9 /* InputQuestionAnswerViewController.xib in Resources */,
 				04640985199CC58200E8BA09 /* 4@2x.png in Resources */,
 				04640989199CC58200E8BA09 /* 8@2x.png in Resources */,
 				042D44201991DE5800AA0A0A /* ResetStartPasswordViewController.xib in Resources */,
+				042379AC19A341E2005F80E1 /* scanQRCode@2x.png in Resources */,
 				04FE1F51198F244900F41BE0 /* dot_off.png in Resources */,
+				042379A419A33ACC005F80E1 /* image_phone-pc@2x.png in Resources */,
 				04FE1F52198F244900F41BE0 /* dot_on.png in Resources */,
 				04640987199CC58200E8BA09 /* 6@2x.png in Resources */,
+				042379A019A324B4005F80E1 /* password_selected@2x.png in Resources */,
+				042379A219A338FF005F80E1 /* image_rightmark@2x.png in Resources */,
 				04640982199CC58200E8BA09 /* 1@2x.png in Resources */,
+				04F4D6DA19A2F0FF001E4524 /* progress_trackImage@2x.png in Resources */,
 				04F025B0198CD58D0017665A /* DiscountViewController.xib in Resources */,
+				0423799419A3059B005F80E1 /* about_icon@2x.png in Resources */,
 				04F025D4198CDA5C0017665A /* setting_startsetpassword_img@2x.png in Resources */,
+				0423799719A3059B005F80E1 /* set_digitalCode@2x.png in Resources */,
 				04F0255E198CC6600017665A /* InfoPlist.strings in Resources */,
 				04F4C49F199B6F6000FCBC6F /* DiscountViewCell.xib in Resources */,
 				04F025CB198CD7680017665A /* SetStartPasswordViewController.xib in Resources */,
@@ -956,20 +1044,30 @@
 				04EE0FC8199A2F0B00ADC63D /* ConnecteSuccessViewController.xib in Resources */,
 				043DA67D198F3E4C000421B9 /* StartViewController.xib in Resources */,
 				04F025C6198CD6F90017665A /* StartSetPasswordViewController.xib in Resources */,
+				042494CD19A202950087D9D1 /* statr_setpassword_startimagr@2x.png in Resources */,
 				04FE1F5C198F2CB500F41BE0 /* 37x-Checkmark@2x.png in Resources */,
 				040E501A1990F0EB0023FD80 /* NowBindPhoneStateViewController.xib in Resources */,
+				04FA409219A20E0D00E6148F /* textField_bg@2x.png in Resources */,
 				04640981199CC58200E8BA09 /* 0@2x.png in Resources */,
 				042D44381992023D00AA0A0A /* ConnecteDiscountViewController.xib in Resources */,
 				04F0258D198CCE2C0017665A /* FirstViewController.xib in Resources */,
 				04F025D0198CD7AB0017665A /* SetQuestionViewController.xib in Resources */,
 				0464098F199CCB7300E8BA09 /* DigitalTokenViewController.xib in Resources */,
+				04F4D6D919A2F0FF001E4524 /* progress_progressImage@2x.png in Resources */,
+				042379B619A35997005F80E1 /* scanQRCode_btnCancel@2x.png in Resources */,
+				04FA409319A20E0D00E6148F /* textField_bg_active@2x.png in Resources */,
+				042494D119A203390087D9D1 /* first_image@2x.png in Resources */,
 				04F4C4A4199B6F9600FCBC6F /* OneClickListViewCell.xib in Resources */,
 				04F4C3DB199B048300FCBC6F /* 37x-Checkmark_wrong@2x.png in Resources */,
+				0423799519A3059B005F80E1 /* set_about@2x.png in Resources */,
 				0464098A199CC58200E8BA09 /* 9@2x.png in Resources */,
+				042379B419A35699005F80E1 /* scanQRCode_bg@2x.png in Resources */,
 				04F025A6198CD5490017665A /* ImportPhoneNumberViewController.xib in Resources */,
 				04F02566198CC6600017665A /* Images.xcassets in Resources */,
 				04640986199CC58200E8BA09 /* 5@2x.png in Resources */,
 				04F4C491199B6D1400FCBC6F /* OneClickViewController.xib in Resources */,
+				0423799819A3059B005F80E1 /* set_startPassword@2x.png in Resources */,
+				042379B319A35699005F80E1 /* scanQRCode_bg-568h@2x.png in Resources */,
 				04FE1F5B198F2CB500F41BE0 /* 37x-Checkmark.png in Resources */,
 				04640988199CC58200E8BA09 /* 7@2x.png in Resources */,
 			);
@@ -992,7 +1090,7 @@
 			files = (
 				04EE0EFE1999C08F00ADC63D /* EGOImageLoader.m in Sources */,
 				04F4C489199B648000FCBC6F /* OneClickInterface.m in Sources */,
-				04F4C498199B6E4500FCBC6F /* OneClickListViewController.m in Sources */,
+				04EFD1E219A2137A0018482A /* UIColor+GetColorFromString.m in Sources */,
 				04EE0FC7199A2F0B00ADC63D /* ConnecteSuccessViewController.m in Sources */,
 				04FAE3201993970100EAFFFF /* TokenStore.m in Sources */,
 				04F4C3E3199B45B300FCBC6F /* ScanBindAccountInterface.m in Sources */,
@@ -1046,6 +1144,7 @@
 				040E50191990F0EB0023FD80 /* NowBindPhoneStateViewController.m in Sources */,
 				04F4C490199B6D1400FCBC6F /* OneClickViewController.m in Sources */,
 				04EE0F2B199A07E200ADC63D /* ASINetworkQueue.m in Sources */,
+				04F4D6E019A2F3D8001E4524 /* MCProgressBarView.m in Sources */,
 				04F4C443199B5A1A00FCBC6F /* NetworkClock.m in Sources */,
 				04F025A5198CD5490017665A /* ImportPhoneNumberViewController.m in Sources */,
 				04FE1F58198F2BF100F41BE0 /* MBProgressHUD.m in Sources */,

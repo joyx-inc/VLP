@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface CalibrationTimeViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *labDate;
+
+//@property (weak, nonatomic) IBOutlet UILabel *labDate;
 @property (weak, nonatomic) IBOutlet UILabel *labTime;
 - (IBAction)bntClibrateTimeAction:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UISwitch *mySwitch;
+@property (weak, nonatomic) IBOutlet UIButton *btnClibrateTime;
 
 - (IBAction)switchAction:(UISwitch *)sender;
 

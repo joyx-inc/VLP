@@ -45,7 +45,7 @@
 
 
 -(void)lockEntered:(NSString *)key{
-    NSLog(@"密码为：%@",key);
+    DebugLog(@"密码为：%@",key);
     if (self.OneOrTwo == NO) {
         self.passwordFirst = key;
         self.labAdvise.text = @"请再次绘制您所设置的启动密码";

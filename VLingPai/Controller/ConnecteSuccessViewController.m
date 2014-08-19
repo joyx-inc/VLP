@@ -27,6 +27,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.title = @"关联成功";
+    
+    self.btnGoBack.layer.masksToBounds = YES;
+    self.btnGoBack.layer.cornerRadius = 1.5f;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

@@ -21,6 +21,8 @@
 - (IBAction)btnConnectDiscountAction:(UIButton *)sender;
 - (IBAction)btnCancelAction:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *btnConnecteAccount;
+@property (weak, nonatomic) IBOutlet UIButton *btnCancel;
+
 
 @property (strong, nonatomic) SystemModel *systemModel;
 @property (weak, nonatomic) IBOutlet UILabel *labSystemName;

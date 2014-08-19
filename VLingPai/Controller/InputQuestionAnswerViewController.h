@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labQuestion;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldAnswer;
 - (IBAction)goNextAction:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *btnGoNext;
 
 @end

@@ -16,6 +16,8 @@
 
 @interface SettingViewController ()
 
+@property (strong, nonatomic) NSArray *imageList;
+
 @end
 
 @implementation SettingViewController
@@ -36,10 +38,15 @@
     
     self.title = @"设置";
     self.list = @[@"启动密码",@"手机绑定",@"数字令牌",@"关于"];
+    
+    self.imageList = @[[UIImage imageNamed:@"set_startPassword.png"],[UIImage imageNamed:@"set_bindPhone.png"],[UIImage imageNamed:@"set_digitalCode.png"],[UIImage imageNamed:@"set_about.png"]];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.list.count;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"Cell";
@@ -47,7 +54,10 @@
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.textLabel.textColor = [UIColor getColorFromString:@"#4d4d4dff"];
+        cell.textLabel.font = [UIFont systemFontOfSize:14];
     }
+    cell.imageView.image = [self.imageList objectAtIndex:indexPath.row];
     cell.textLabel.text = [self.list objectAtIndex:indexPath.row];
     
     return cell;
@@ -55,6 +65,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     switch (indexPath.row) {
         case 0:{
+            //启动密码
             NSString *password = [[NSUserDefaults standardUserDefaults]objectForKey:StartPassword];
             NSString *theQuestion = [[NSUserDefaults standardUserDefaults] objectForKey:TheQuestion];
             NSString *theAnwser = [[NSUserDefaults standardUserDefaults] objectForKey:TheQuestionAnswer];
@@ -96,6 +107,10 @@
         default:
             break;
     }
+}
+
+-(void)dealloc{
+    self.list = nil;
 }
 
 - (void)didReceiveMemoryWarning

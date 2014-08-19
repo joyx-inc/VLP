@@ -36,13 +36,17 @@
     // Do any additional setup after loading the view.
     
     
-    self.view.backgroundColor = [UIColor lightGrayColor];
+//    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = [UIColor clearColor];
     
     for (int i=0; i<MATRIX_SIZE; i++) {
         for (int j=0; j<MATRIX_SIZE; j++) {
-            UIImage *dotImage = [UIImage imageNamed:@"dot_off.png"];
+//            UIImage *dotImage = [UIImage imageNamed:@"dot_off.png"];
+//            UIImageView *imageView = [[UIImageView alloc] initWithImage:dotImage
+//                                                       highlightedImage:[UIImage imageNamed:@"dot_on.png"]];
+            UIImage *dotImage = [UIImage imageNamed:@"password_normal.png"];
             UIImageView *imageView = [[UIImageView alloc] initWithImage:dotImage
-                                                       highlightedImage:[UIImage imageNamed:@"dot_on.png"]];
+                                                       highlightedImage:[UIImage imageNamed:@"password_selected.png"]];
             imageView.frame = CGRectMake(0, 0, dotImage.size.width, dotImage.size.height);
             imageView.userInteractionEnabled = YES;
             imageView.tag = j*MATRIX_SIZE + i + 1;

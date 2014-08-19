@@ -15,6 +15,7 @@
 - (IBAction)btnGoNextAction:(UIButton *)sender;
 - (IBAction)btnGetVerificationCode:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *btnGetVerificationCode;
+@property (weak, nonatomic) IBOutlet UIButton *btnGoNext;
 
 @property (weak, nonatomic) IBOutlet UITextField *textFieldVericationCode;
 
@@ -23,5 +24,7 @@
 //@property (strong, nonatomic) NSTimer *timer;
 @property (assign, nonatomic) NSInteger timeCount;
 @property (assign, nonatomic) BOOL isTimeing;
+
+
 
 @end

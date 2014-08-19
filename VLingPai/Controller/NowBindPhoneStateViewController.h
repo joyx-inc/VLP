@@ -12,4 +12,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labPhoneNumber;
 
 - (IBAction)btnResetPhoneNumber:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *btnResetPhoneNumber;
+
 @end

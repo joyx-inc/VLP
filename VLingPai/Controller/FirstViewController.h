@@ -11,5 +11,6 @@
 @interface FirstViewController : UIViewController
 
 - (IBAction)startAction:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *btnStart;
 
 @end

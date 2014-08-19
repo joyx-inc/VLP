@@ -7,7 +7,6 @@
 //
 
 #import "StartViewController.h"
-//#import "VerificationViewController.h"
 #import "AppDelegate.h"
 #import "InputQuestionAnswerViewController.h"
 
@@ -58,7 +57,10 @@
         //已经设置启动密码、密保
         self.title = @"请输入密码";
         
-        [self loadLockView];
+        lockVC = [[LockViewController alloc] init];
+        [lockVC setTarget:self withAction:@selector(lockEntered:)];
+        [self.view addSubview:lockVC.view];
+        lockVC.view.frame = CGRectMake(0, 120, 320, 320);
     }else{
         //没有启动密码，直接到令牌界面
         AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
@@ -104,13 +106,14 @@
     }
     self.labOutput.text = [NSString stringWithFormat:@"休息一会，%d秒后再重新输入",self.watingCount];
 }
--(void)loadLockView{
-    if (!lockVC) {
-        lockVC = [[LockViewController alloc] init];
-        [lockVC setTarget:self withAction:@selector(lockEntered:)];
-        [self.view addSubview:lockVC.view];
-        lockVC.view.frame = CGRectMake(0, 120, 320, 320);
-    }
+
+- (IBAction)btnForgetPasswordAction:(UIButton *)sender {
+    InputQuestionAnswerViewController *vc = [[InputQuestionAnswerViewController alloc]initWithNibName:@"InputQuestionAnswerViewController" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+-(void)dealloc{
+    self.lockVC = nil;
 }
 
 - (void)didReceiveMemoryWarning
@@ -119,8 +122,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)btnForgetPasswordAction:(UIButton *)sender {
-    InputQuestionAnswerViewController *vc = [[InputQuestionAnswerViewController alloc]initWithNibName:@"InputQuestionAnswerViewController" bundle:nil];
-    [self.navigationController pushViewController:vc animated:YES];
-}
+
 @end

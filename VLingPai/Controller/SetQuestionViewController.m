@@ -10,7 +10,10 @@
 #import "MBProgressHUD.h"
 #import "AppDelegate.h"
 
-@interface SetQuestionViewController ()<MBProgressHUDDelegate>
+@interface SetQuestionViewController ()<MBProgressHUDDelegate>{
+    UIImage *imageActive;
+    UIImage *imageNormal;
+}
 
 @end
 
@@ -37,6 +40,10 @@
     
     self.pickDataList = @[@"你父亲叫什么名字？",@"你爱人叫什么名字？",@"你高中班主任叫什么名字？",@"你最喜欢的电影叫什么？",@"你最喜欢的歌曲叫什么？"];
     
+    imageNormal = [[UIImage imageNamed:@"textField_bg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(1, 1, 1, 1)];
+    imageActive = [[UIImage imageNamed:@"textField_bg_active.png"]resizableImageWithCapInsets:UIEdgeInsetsMake(1, 1, 1, 1)];
+    
+    self.textFieldAnswer.background = imageNormal;
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
@@ -132,10 +139,20 @@
 -(void)goVericationView{
     self.navigationController.hidesBottomBarWhenPushed = NO;
     [self.navigationController popToRootViewControllerAnimated:NO];
+//
+//    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+//    [appDelegate initTabBarController];
+//    appDelegate.tabBarController.selectedIndex = 0;
+    
+    
+
     
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     [appDelegate initTabBarController];
-    appDelegate.tabBarController.selectedIndex = 0;
+    UINavigationController *nav = (UINavigationController *)appDelegate.tabBarController.selectedViewController;
+//    [nav popToRootViewControllerAnimated:NO];
+    nav.hidesBottomBarWhenPushed = NO;
+//    appDelegate.tabBarController.selectedIndex = 0;
 }
 
 -(void)showPickContentView{
@@ -165,7 +182,13 @@
     
 }
 
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    textField.background = imageActive;
+    return YES;
+}
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    textField.background = imageNormal;
     [textField resignFirstResponder];
     return YES;
 }

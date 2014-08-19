@@ -13,9 +13,13 @@
 #import "AppDelegate.h"
 
 #import "BindPhoneInterface.h"
+#import "UIColor+GetColorFromString.h"
 
-
-@interface ImportPhoneNumberViewController ()<MBProgressHUDDelegate,BindPhoneInterfaceDelegate>
+@interface ImportPhoneNumberViewController ()<MBProgressHUDDelegate,BindPhoneInterfaceDelegate>{
+    UIImage *imageActive;
+    UIImage *imageNormal;
+    CGSize keyboardSize;
+}
 
 @property (strong, nonatomic) BindPhoneInterface *bindPhoneInterface;
 
@@ -42,7 +46,26 @@
     self.bindPhoneInterface = [[BindPhoneInterface alloc]init];
     self.bindPhoneInterface.delegate = self;
     
+    imageNormal = [[UIImage imageNamed:@"textField_bg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(1, 1, 1, 1)];
     
+    imageActive = [[UIImage imageNamed:@"textField_bg_active.png"]resizableImageWithCapInsets:UIEdgeInsetsMake(1, 1, 1, 1)];
+
+    self.textFieldPhoneNumber.background = imageNormal;
+    self.textFieldVericationCode.background = imageNormal;
+    
+    self.btnGetVerificationCode.layer.masksToBounds = YES;
+    self.btnGetVerificationCode.layer.cornerRadius = 1.5f;
+    
+    self.btnGoNext.layer.masksToBounds = YES;
+    self.btnGoNext.layer.cornerRadius = 1.5f;
+    
+    
+    //键盘将要出现时的触发事件
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillShow:)name:UIKeyboardWillShowNotification object:nil];
+    
+    //键盘将要消失时的触发事件
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillBeHidden:)name:UIKeyboardWillHideNotification object:nil];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,6 +76,7 @@
 
 - (IBAction)btnGoNextAction:(UIButton *)sender {
     if ([self.textFieldVericationCode.text isEqualToString:@"123456"]) {
+        [self.textFieldVericationCode resignFirstResponder];
         [self.bindPhoneInterface bindPhoneNum:self.textFieldPhoneNumber.text];
     }else{
         [self.textFieldVericationCode resignFirstResponder];
@@ -150,6 +174,7 @@
                 //设置界面的按钮显示 根据自己需求设置
                 [_btnGetVerificationCode setTitle:@"重新发送验证码到手机" forState:UIControlStateNormal];
                 _btnGetVerificationCode.userInteractionEnabled = YES;
+                [_btnGetVerificationCode setBackgroundColor:[UIColor getColorFromString:@"#397ed3ff"]];
             });
         }else{
             //            int minutes = timeout / 60;
@@ -160,7 +185,7 @@
 //                NSLog(@"____%@",strTime);
                 [_btnGetVerificationCode setTitle:[NSString stringWithFormat:@"%@秒后重新发送",strTime] forState:UIControlStateNormal];
                 _btnGetVerificationCode.userInteractionEnabled = NO;
-                
+                [_btnGetVerificationCode setBackgroundColor:[UIColor getColorFromString:@"#a4c7f4ff"]];
             });
             timeout--;
             
@@ -169,21 +194,11 @@
     dispatch_resume(_timer);
 }
 
-//-(void)setBtnGetVerificationCodeTitle:(NSTimer *)timer{
-//    [self.btnGetVerificationCode setTitle:[NSString stringWithFormat:@"%d秒后重新发送",self.timeCount] forState:UIControlStateNormal];
-//    self.timeCount--;
-//    if (self.timeCount < 0) {
-//        [timer invalidate];
-//        [self.btnGetVerificationCode setTitle:@"重新发送验证码到手机" forState:UIControlStateNormal];
-//        self.isTimeing = NO;
-////        self.btnGetVerificationCode.backgroundColor = [UIColor colorWithRed:0 green:171/255.0 blue:1 alpha:1];
-//    }
-//}
-
-
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.textFieldPhoneNumber resignFirstResponder];
+    self.textFieldPhoneNumber.background = imageNormal;
     [self.textFieldVericationCode resignFirstResponder];
+    self.textFieldVericationCode.background = imageNormal;
 }
 
 -(void)textFieldBecomeFirstResponder{
@@ -192,8 +207,13 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    textField.background = imageNormal;
     [textField resignFirstResponder];
     return YES;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    textField.background = imageActive;
 }
 
 -(void)goSetQuestionVC{
@@ -241,6 +261,46 @@
 }
 -(void)getFailedBindPhoneInterface:(NSString *)error{
     DebugLog(@"%@",error);
+}
+
+-(void)keyboardWillShow:(NSNotification *)notification
+{
+    
+    if ([self.textFieldVericationCode isFirstResponder]) {
+        
+        NSDictionary *info = [notification userInfo];
+        NSValue *value = [info objectForKey:@"UIKeyboardFrameEndUserInfoKey"];
+        keyboardSize = [value CGRectValue].size;//获取键盘的size值
+        //    NSLog(@"value %@ %f",value,keyboardSize.height);
+        //获取键盘出现的动画时间
+        //    NSValue *animationDurationValue = [info objectForKey:UIKeyboardAnimationDurationUserInfoKey];
+        //    NSTimeInterval animationDuration;
+        //    [animationDurationValue getValue:&animationDuration];
+        //    CGFloat height =0 - keyboardSize.height +44;//加上导航栏的高度44
+        //    NSLog(@"height = %f",height);
+        //    NSTimeInterval animation = animationDuration;
+        
+        //视图移动的动画开始
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:0.3];
+        CGRect frame =CGRectMake(self.view.frame.origin.x, -keyboardSize.height, self.view.frame.size.width,self.view.frame.size.height);
+        self.view.frame = frame;
+        [UIView commitAnimations];
+    }
+
+}
+
+-(void)keyboardWillBeHidden:(NSNotification *)aNotification
+{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.3];
+    CGRect frame =CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width,self.view.frame.size.height);
+    self.view.frame = frame;
+    [UIView commitAnimations];
+    
+}
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

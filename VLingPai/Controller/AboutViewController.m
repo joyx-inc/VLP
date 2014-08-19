@@ -28,7 +28,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.title = @"关于我们";
+    self.title = @"关于";
+    
+    NSDictionary *infoDic = [[NSBundle mainBundle] infoDictionary];
+    NSString *currentVersion = [infoDic objectForKey:@"CFBundleShortVersionString"];
+    self.labVersion.text = currentVersion;
     
 }
 
@@ -38,4 +42,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnGoURLAction:(UIButton *)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.joyx.com.cn"]];
+}
 @end
