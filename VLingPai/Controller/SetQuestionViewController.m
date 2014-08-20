@@ -9,6 +9,7 @@
 #import "SetQuestionViewController.h"
 #import "MBProgressHUD.h"
 #import "AppDelegate.h"
+#import "UIColor+GetColorFromString.h"
 
 @interface SetQuestionViewController ()<MBProgressHUDDelegate>{
     UIImage *imageActive;
@@ -44,6 +45,8 @@
     imageActive = [[UIImage imageNamed:@"textField_bg_active.png"]resizableImageWithCapInsets:UIEdgeInsetsMake(1, 1, 1, 1)];
     
     self.textFieldAnswer.background = imageNormal;
+    
+    
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
@@ -63,7 +66,12 @@
 }
 
 - (IBAction)btnChooeseQuestionAction:(UIButton *)sender {
-    [self showPickContentView];
+//    [self showPickContentView];
+    if (!self.chooeseQuestionView) {
+        [self initChooeseQuestionView];
+    }
+    [self.view bringSubviewToFront:self.chooeseQuestionView];
+    self.chooeseQuestionView.hidden = NO;
 }
 
 - (IBAction)btnSaveAction:(UIButton *)sender {
@@ -125,27 +133,20 @@
 //    [alert show];
 }
 
-- (IBAction)btnHiddenPickerView:(UIButton *)sender {
-    [self hiddenPickContentView];
-}
-
-- (IBAction)btnChooesePickerData:(UIButton *)sender {
-    NSInteger row = [self.myPickerView selectedRowInComponent:0];
-    [self.btnChooeseQuestion setTitle:[self.pickDataList objectAtIndex:row] forState:UIControlStateNormal];
-    self.haveChooeseQuestion = YES;
-    [self hiddenPickContentView];
-}
+//- (IBAction)btnHiddenPickerView:(UIButton *)sender {
+//    [self hiddenPickContentView];
+//}
+//
+//- (IBAction)btnChooesePickerData:(UIButton *)sender {
+//    NSInteger row = [self.myPickerView selectedRowInComponent:0];
+//    [self.btnChooeseQuestion setTitle:[self.pickDataList objectAtIndex:row] forState:UIControlStateNormal];
+//    self.haveChooeseQuestion = YES;
+//    [self hiddenPickContentView];
+//}
 
 -(void)goVericationView{
     self.navigationController.hidesBottomBarWhenPushed = NO;
     [self.navigationController popToRootViewControllerAnimated:NO];
-//
-//    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-//    [appDelegate initTabBarController];
-//    appDelegate.tabBarController.selectedIndex = 0;
-    
-    
-
     
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     [appDelegate initTabBarController];
@@ -155,26 +156,26 @@
 //    appDelegate.tabBarController.selectedIndex = 0;
 }
 
--(void)showPickContentView{
-    if (self.myPickerContentView.frame.origin.y < DeviceHeight) {
-        return;
-    }
-    [UIView animateWithDuration:0.6 animations:^(void){
-        CGRect frame = self.myPickerContentView.frame;
-        frame.origin.y -= 192;
-        self.myPickerContentView.frame = frame;
-    }];
-}
--(void)hiddenPickContentView{
-    if (self.myPickerContentView.frame.origin.y >= DeviceHeight) {
-        return;
-    }
-    [UIView animateWithDuration:0.6 animations:^(void){
-        CGRect frame = self.myPickerContentView.frame;
-        frame.origin.y += 192;
-        self.myPickerContentView.frame = frame;
-    }];
-}
+//-(void)showPickContentView{
+//    if (self.myPickerContentView.frame.origin.y < DeviceHeight) {
+//        return;
+//    }
+//    [UIView animateWithDuration:0.6 animations:^(void){
+//        CGRect frame = self.myPickerContentView.frame;
+//        frame.origin.y -= 192;
+//        self.myPickerContentView.frame = frame;
+//    }];
+//}
+//-(void)hiddenPickContentView{
+//    if (self.myPickerContentView.frame.origin.y >= DeviceHeight) {
+//        return;
+//    }
+//    [UIView animateWithDuration:0.6 animations:^(void){
+//        CGRect frame = self.myPickerContentView.frame;
+//        frame.origin.y += 192;
+//        self.myPickerContentView.frame = frame;
+//    }];
+//}
 
 
 #pragma mark - UIAlertViewDelegate <NSObject>
@@ -191,5 +192,70 @@
     textField.background = imageNormal;
     [textField resignFirstResponder];
     return YES;
+}
+
+-(void)initChooeseQuestionView{
+    self.chooeseQuestionView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, DeviceHeight)];
+    _chooeseQuestionView.backgroundColor = [UIColor getColorFromString:@"#00000080"];
+    
+    UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 100, 280, self.pickDataList.count * 44)];
+    tableView.layer.masksToBounds = YES;
+    tableView.layer.cornerRadius = 5;
+    tableView.dataSource = self;
+    tableView.delegate = self;
+    [self.chooeseQuestionView addSubview:tableView];
+    tableView.center = self.chooeseQuestionView.center;
+    [tableView scrollRectToVisible:CGRectMake(0, 0, 280, 220) animated:NO];
+    
+    [self.view addSubview:self.chooeseQuestionView];
+    [self.view sendSubviewToBack:self.chooeseQuestionView];
+    self.chooeseQuestionView.hidden = YES;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.pickDataList.count;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.textLabel.textColor = [UIColor getColorFromString:@"#747474ff"];
+    }
+    
+    if (indexPath.row == self.oldIndexPath.row) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    if (self.oldIndexPath == nil) {
+        self.oldIndexPath = indexPath;
+    }
+    
+    cell.textLabel.text = [self.pickDataList objectAtIndex: indexPath.row];
+    
+    
+    return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    
+    UITableViewCell *cellOld = [tableView cellForRowAtIndexPath:self.oldIndexPath];
+    cellOld.accessoryType = UITableViewCellAccessoryNone;
+    
+    self.oldIndexPath = indexPath;
+    
+    [self.view sendSubviewToBack:self.chooeseQuestionView];
+    self.chooeseQuestionView.hidden = YES;
+    
+    [self.btnChooeseQuestion setTitle:[self.pickDataList objectAtIndex:indexPath.row] forState:UIControlStateNormal];
+    self.haveChooeseQuestion = YES;
+    
+}
+
+- (void)dealloc
+{
+    self.chooeseQuestionView = nil;
+    self.pickDataList = nil;
+    self.oldIndexPath = nil;
 }
 @end

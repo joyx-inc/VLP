@@ -15,11 +15,8 @@
 #import "LogInSystemViewController.h"
 #import "UploadScanResultInterface.h"
 #import "MBProgressHUD.h"
-
-//#import "DigitalTokenView.h"
 #import "DigitalTokenViewController.h"
-
-//#import "TokenStore.h"
+#import "UIColor+GetColorFromString.h"
 
 @interface VerificationViewController ()<ZXingDelegate,UploadScanResultInterfaceDelegate,MBProgressHUDDelegate>
 
@@ -47,12 +44,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.title = @"微令牌";
+//    self.title = @"微令牌";
+    self.navigationItem.title = @"微令牌";
     
     self.uploadScanResultInterface = [[UploadScanResultInterface alloc]init];
     self.uploadScanResultInterface.delegate = self;
     
-
+    self.btnScanQRCode.layer.masksToBounds = YES;
+    self.btnScanQRCode.layer.cornerRadius = 5;
+    self.btnScanQRCode.layer.borderColor = [UIColor getColorFromString:@"#949494FF"].CGColor;
+    self.btnScanQRCode.layer.borderWidth = 1;
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -62,7 +63,7 @@
         if (!self.digitalVC) {
             self.digitalVC = [[DigitalTokenViewController alloc]initWithNibName:@"DigitalTokenViewController" bundle:nil];            
             [self.view addSubview:self.digitalVC.view];
-            self.digitalVC.view.frame = CGRectMake(0, DeviceHeight - 120 - 49, 320, 120);
+            self.digitalVC.view.frame = CGRectMake(0, /*DeviceHeight - 120 - 49*/310, 320, 120);
         }
         self.digitalVC.view.hidden = NO;
     }else{

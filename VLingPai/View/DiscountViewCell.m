@@ -22,7 +22,9 @@
     
     _model = model;
     
-    self.imageLogo.imageURL = [NSURL URLWithString:model.logoURLStr];
+    if (model.logoURLStr.length != 0) {
+        self.imageLogo.imageURL = [NSURL URLWithString:model.logoURLStr];
+    }    
     self.labSystemName.text = model.systemName;
     self.labDiscount.text = model.discountStr;
     self.labUseCount.text = [NSString stringWithFormat:@"%d次",model.useCount];

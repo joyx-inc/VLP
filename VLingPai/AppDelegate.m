@@ -89,40 +89,53 @@
         //验证
         VerificationViewController *verificationVC = [[VerificationViewController alloc]initWithNibName:@"VerificationViewController" bundle:nil];
         UINavigationController *nav1 = [[UINavigationController alloc]initWithRootViewController:verificationVC];
-        nav1.title = @"验证";
+        nav1.navigationItem.title = @"验证";
         
         //账号
         DiscountViewController *discountVC = [[DiscountViewController alloc]initWithNibName:@"DiscountViewController" bundle:nil];
         UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:discountVC];
-        nav2.title = @"账号";
+        nav2.navigationItem.title = @"账号";
         
         //设置
         SettingViewController *settingVC = [[SettingViewController alloc]initWithNibName:@"SettingViewController" bundle:nil];
         UINavigationController *nav3 = [[UINavigationController alloc]initWithRootViewController:settingVC];
-        nav3.title = @"设置";
+        nav3.navigationItem.title = @"设置";
         
         
         self.tabBarController = [[UITabBarController alloc]init];
         self.tabBarController.viewControllers = @[nav1,nav2,nav3];
+        self.tabBarController.tabBar.backgroundColor = [UIColor getColorFromString:@"#F4F4F4FF"];
+        
         
         UITabBar *tabBar = self.tabBarController.tabBar;
         UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
         UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
         UITabBarItem *tabBarItem3 = [tabBar.items objectAtIndex:2];
+
         
-//        UITabBarItem *bar1 = [[UITabBarItem alloc]initWithTabBarSystemItem:UITabBarSystemItemContacts tag:0];
-//        UITabBarItem *bar2 = [[UITabBarItem alloc]initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:0];
-//        UITabBarItem *bar3 = [[UITabBarItem alloc]initWithTabBarSystemItem:UITabBarSystemItemTopRated tag:0];
-//        tabBar.items = @[bar1,bar2,bar3];
+//        tabBarItem1.title = @"验证";
+//        tabBarItem2.title = @"账号";
+//        tabBarItem3.title = @"设置";
         
-        tabBarItem1.title = @"验证";
-        tabBarItem2.title = @"账号";
-        tabBarItem3.title = @"设置";
+        [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"tabbar_verification_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"tabbar_verification.png"]];
+        [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"tabbar_account_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"tabbar_account.png"]];
+        [tabBarItem3 setFinishedSelectedImage:[UIImage imageNamed:@"tabbar_setting_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"tabbar_setting.png"]];
         
-        [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:229/255.0f green:63/255.0f blue:17/255.0f alpha:1], UITextAttributeTextColor,nil] forState:UIControlStateSelected];
-    
+        
+        
+//        tabBarItem1.image = [UIImage imageNamed:@"tabbar_verification.png"];
+//        tabBarItem1.selectedImage = [UIImage imageNamed:@"tabbar_verification_selected.png"];
+//        tabBarItem2.image = [UIImage imageNamed:@"tabbar_account.png"];
+//        tabBarItem2.selectedImage = [UIImage imageNamed:@"tabbar_account_selected.png"];
+//        tabBarItem3.image = [UIImage imageNamed:@"tabbar_setting.png"];
+//        tabBarItem3.selectedImage = [UIImage imageNamed:@"tabbar_setting_selected.png"];
+        
+        [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor getColorFromString:@"#18ae7bff"], UITextAttributeTextColor,nil] forState:UIControlStateSelected];
     }
     self.window.rootViewController = self.tabBarController;
+}
+-(void)toolBarLeftBarClicked{
+    self.tabBarController.selectedIndex = 2;
 }
 
 -(void)judgeTheCurrentPassword{

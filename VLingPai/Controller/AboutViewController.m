@@ -42,7 +42,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)btnGoURLAction:(UIButton *)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.joyx.com.cn"]];
-}
+//- (IBAction)btnGoURLAction:(UIButton *)sender {
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.joyx.com.cn"]];
+//}
 @end

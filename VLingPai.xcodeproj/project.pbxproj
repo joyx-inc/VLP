@@ -62,6 +62,8 @@
 		0464098A199CC58200E8BA09 /* 9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04640980199CC58200E8BA09 /* 9@2x.png */; };
 		0464098E199CCB7300E8BA09 /* DigitalTokenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0464098C199CCB7300E8BA09 /* DigitalTokenViewController.m */; };
 		0464098F199CCB7300E8BA09 /* DigitalTokenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0464098D199CCB7300E8BA09 /* DigitalTokenViewController.xib */; };
+		047BD36219A4BAAE00478E4C /* startImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 047BD36019A4BAAE00478E4C /* startImage@2x.png */; };
+		047BD36319A4BAAE00478E4C /* startImage-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 047BD36119A4BAAE00478E4C /* startImage-568h@2x.png */; };
 		04EE0EF21999BE8800ADC63D /* DiscountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0EF11999BE8800ADC63D /* DiscountModel.m */; };
 		04EE0EFC1999C08F00ADC63D /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0EF51999C08F00ADC63D /* EGOCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		04EE0EFD1999C08F00ADC63D /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0EF71999C08F00ADC63D /* EGOImageLoadConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -149,6 +151,26 @@
 		04FE1F58198F2BF100F41BE0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE1F57198F2BF100F41BE0 /* MBProgressHUD.m */; };
 		04FE1F5B198F2CB500F41BE0 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FE1F59198F2CB500F41BE0 /* 37x-Checkmark.png */; };
 		04FE1F5C198F2CB500F41BE0 /* 37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FE1F5A198F2CB500F41BE0 /* 37x-Checkmark@2x.png */; };
+		04FEDAF119A43AF40000CEA2 /* DiscountDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FEDAEF19A43AF40000CEA2 /* DiscountDetailViewController.m */; };
+		04FEDAF219A43AF40000CEA2 /* DiscountDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FEDAF019A43AF40000CEA2 /* DiscountDetailViewController.xib */; };
+		04FEDAF619A43B780000CEA2 /* DiscountDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FEDAF419A43B780000CEA2 /* DiscountDetailViewCell.m */; };
+		04FEDAF719A43B780000CEA2 /* DiscountDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FEDAF519A43B780000CEA2 /* DiscountDetailViewCell.xib */; };
+		04FEDB0019A440E70000CEA2 /* DiscountDetail_cell_header.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FEDAFF19A440E70000CEA2 /* DiscountDetail_cell_header.m */; };
+		04FEDB0219A441050000CEA2 /* DiscountDetail_cell_header.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FEDB0119A441050000CEA2 /* DiscountDetail_cell_header.xib */; };
+		04FEDB0519A446AA0000CEA2 /* DiscountDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FEDB0419A446AA0000CEA2 /* DiscountDetailModel.m */; };
+		04FEDB0719A44CD30000CEA2 /* discountDetail_cell_image2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEDB0619A44CD30000CEA2 /* discountDetail_cell_image2@2x.png */; };
+		04FEDB0919A452EA0000CEA2 /* discountDetail_cell_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEDB0819A452EA0000CEA2 /* discountDetail_cell_image@2x.png */; };
+		04FEDB0D19A4793B0000CEA2 /* discount_userIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEDB0C19A4793B0000CEA2 /* discount_userIcon@2x.png */; };
+		04FEDB0F19A47CCC0000CEA2 /* verification_scanqrcode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEDB0E19A47CCC0000CEA2 /* verification_scanqrcode@2x.png */; };
+		04FEDB7E19A49F950000CEA2 /* icon_58@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEDB7B19A49F950000CEA2 /* icon_58@2x.png */; };
+		04FEDB7F19A49F950000CEA2 /* icon_80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEDB7C19A49F950000CEA2 /* icon_80@2x.png */; };
+		04FEDB8019A49F950000CEA2 /* icon_120@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEDB7D19A49F950000CEA2 /* icon_120@2x.png */; };
+		04FEDBCB19A4B5D40000CEA2 /* tabbar_setting_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEDBC519A4B5D40000CEA2 /* tabbar_setting_selected@2x.png */; };
+		04FEDBCC19A4B5D40000CEA2 /* tabbar_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEDBC619A4B5D40000CEA2 /* tabbar_setting@2x.png */; };
+		04FEDBCD19A4B5D40000CEA2 /* tabbar_verification_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEDBC719A4B5D40000CEA2 /* tabbar_verification_selected@2x.png */; };
+		04FEDBCE19A4B5D40000CEA2 /* tabbar_verification@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEDBC819A4B5D40000CEA2 /* tabbar_verification@2x.png */; };
+		04FEDBCF19A4B5D40000CEA2 /* tabbar_account_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEDBC919A4B5D40000CEA2 /* tabbar_account_selected@2x.png */; };
+		04FEDBD019A4B5D40000CEA2 /* tabbar_account@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FEDBCA19A4B5D40000CEA2 /* tabbar_account@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -242,6 +264,8 @@
 		0464098B199CCB7300E8BA09 /* DigitalTokenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DigitalTokenViewController.h; path = Controller/DigitalTokenViewController.h; sourceTree = "<group>"; };
 		0464098C199CCB7300E8BA09 /* DigitalTokenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DigitalTokenViewController.m; path = Controller/DigitalTokenViewController.m; sourceTree = "<group>"; };
 		0464098D199CCB7300E8BA09 /* DigitalTokenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DigitalTokenViewController.xib; path = Controller/DigitalTokenViewController.xib; sourceTree = "<group>"; };
+		047BD36019A4BAAE00478E4C /* startImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startImage@2x.png"; sourceTree = "<group>"; };
+		047BD36119A4BAAE00478E4C /* startImage-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startImage-568h@2x.png"; sourceTree = "<group>"; };
 		04EE0EF01999BE8800ADC63D /* DiscountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscountModel.h; path = Model/DiscountModel.h; sourceTree = "<group>"; };
 		04EE0EF11999BE8800ADC63D /* DiscountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscountModel.m; path = Model/DiscountModel.m; sourceTree = "<group>"; };
 		04EE0EF41999C08F00ADC63D /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
@@ -388,6 +412,30 @@
 		04FE1F57198F2BF100F41BE0 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		04FE1F59198F2CB500F41BE0 /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
 		04FE1F5A198F2CB500F41BE0 /* 37x-Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark@2x.png"; sourceTree = "<group>"; };
+		04FEDAEE19A43AF40000CEA2 /* DiscountDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscountDetailViewController.h; path = Controller/DiscountDetailViewController.h; sourceTree = "<group>"; };
+		04FEDAEF19A43AF40000CEA2 /* DiscountDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscountDetailViewController.m; path = Controller/DiscountDetailViewController.m; sourceTree = "<group>"; };
+		04FEDAF019A43AF40000CEA2 /* DiscountDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DiscountDetailViewController.xib; path = Controller/DiscountDetailViewController.xib; sourceTree = "<group>"; };
+		04FEDAF319A43B780000CEA2 /* DiscountDetailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscountDetailViewCell.h; sourceTree = "<group>"; };
+		04FEDAF419A43B780000CEA2 /* DiscountDetailViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscountDetailViewCell.m; sourceTree = "<group>"; };
+		04FEDAF519A43B780000CEA2 /* DiscountDetailViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscountDetailViewCell.xib; sourceTree = "<group>"; };
+		04FEDAFE19A440E70000CEA2 /* DiscountDetail_cell_header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscountDetail_cell_header.h; sourceTree = "<group>"; };
+		04FEDAFF19A440E70000CEA2 /* DiscountDetail_cell_header.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscountDetail_cell_header.m; sourceTree = "<group>"; };
+		04FEDB0119A441050000CEA2 /* DiscountDetail_cell_header.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscountDetail_cell_header.xib; sourceTree = "<group>"; };
+		04FEDB0319A446AA0000CEA2 /* DiscountDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscountDetailModel.h; path = Model/DiscountDetailModel.h; sourceTree = "<group>"; };
+		04FEDB0419A446AA0000CEA2 /* DiscountDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscountDetailModel.m; path = Model/DiscountDetailModel.m; sourceTree = "<group>"; };
+		04FEDB0619A44CD30000CEA2 /* discountDetail_cell_image2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "discountDetail_cell_image2@2x.png"; sourceTree = "<group>"; };
+		04FEDB0819A452EA0000CEA2 /* discountDetail_cell_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "discountDetail_cell_image@2x.png"; sourceTree = "<group>"; };
+		04FEDB0C19A4793B0000CEA2 /* discount_userIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "discount_userIcon@2x.png"; sourceTree = "<group>"; };
+		04FEDB0E19A47CCC0000CEA2 /* verification_scanqrcode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "verification_scanqrcode@2x.png"; sourceTree = "<group>"; };
+		04FEDB7B19A49F950000CEA2 /* icon_58@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_58@2x.png"; sourceTree = "<group>"; };
+		04FEDB7C19A49F950000CEA2 /* icon_80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_80@2x.png"; sourceTree = "<group>"; };
+		04FEDB7D19A49F950000CEA2 /* icon_120@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_120@2x.png"; sourceTree = "<group>"; };
+		04FEDBC519A4B5D40000CEA2 /* tabbar_setting_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_setting_selected@2x.png"; sourceTree = "<group>"; };
+		04FEDBC619A4B5D40000CEA2 /* tabbar_setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_setting@2x.png"; sourceTree = "<group>"; };
+		04FEDBC719A4B5D40000CEA2 /* tabbar_verification_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_verification_selected@2x.png"; sourceTree = "<group>"; };
+		04FEDBC819A4B5D40000CEA2 /* tabbar_verification@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_verification@2x.png"; sourceTree = "<group>"; };
+		04FEDBC919A4B5D40000CEA2 /* tabbar_account_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_account_selected@2x.png"; sourceTree = "<group>"; };
+		04FEDBCA19A4B5D40000CEA2 /* tabbar_account@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_account@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -450,6 +498,16 @@
 			);
 			name = NTP;
 			path = Third/NTP;
+			sourceTree = "<group>";
+		};
+		042379B719A36456005F80E1 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				04FEDB7B19A49F950000CEA2 /* icon_58@2x.png */,
+				04FEDB7C19A49F950000CEA2 /* icon_80@2x.png */,
+				04FEDB7D19A49F950000CEA2 /* icon_120@2x.png */,
+			);
+			path = icon;
 			sourceTree = "<group>";
 		};
 		042494D419A208410087D9D1 /* Other */ = {
@@ -517,6 +575,8 @@
 				04EE0FBF199A298600ADC63D /* SystemModel.m */,
 				04F4C492199B6D2F00FCBC6F /* AccountAndSystemModel.h */,
 				04F4C493199B6D2F00FCBC6F /* AccountAndSystemModel.m */,
+				04FEDB0319A446AA0000CEA2 /* DiscountDetailModel.h */,
+				04FEDB0419A446AA0000CEA2 /* DiscountDetailModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -737,6 +797,9 @@
 		04F02599198CCF210017665A /* Discount */ = {
 			isa = PBXGroup;
 			children = (
+				04FEDAEE19A43AF40000CEA2 /* DiscountDetailViewController.h */,
+				04FEDAEF19A43AF40000CEA2 /* DiscountDetailViewController.m */,
+				04FEDAF019A43AF40000CEA2 /* DiscountDetailViewController.xib */,
 			);
 			name = Discount;
 			sourceTree = "<group>";
@@ -809,7 +872,14 @@
 		04F025D1198CD9D10017665A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				042379B719A36456005F80E1 /* icon */,
 				042494D019A203390087D9D1 /* first_image@2x.png */,
+				04FEDBC719A4B5D40000CEA2 /* tabbar_verification_selected@2x.png */,
+				04FEDBC819A4B5D40000CEA2 /* tabbar_verification@2x.png */,
+				04FEDBC919A4B5D40000CEA2 /* tabbar_account_selected@2x.png */,
+				04FEDBCA19A4B5D40000CEA2 /* tabbar_account@2x.png */,
+				04FEDBC519A4B5D40000CEA2 /* tabbar_setting_selected@2x.png */,
+				04FEDBC619A4B5D40000CEA2 /* tabbar_setting@2x.png */,
 				042494CC19A202950087D9D1 /* statr_setpassword_startimagr@2x.png */,
 				04FA409019A20E0D00E6148F /* textField_bg@2x.png */,
 				04FA409119A20E0D00E6148F /* textField_bg_active@2x.png */,
@@ -829,6 +899,12 @@
 				042379A119A338FF005F80E1 /* image_rightmark@2x.png */,
 				042379A319A33ACC005F80E1 /* image_phone-pc@2x.png */,
 				042379A519A33F04005F80E1 /* connect_success_image@2x.png */,
+				04FEDB0819A452EA0000CEA2 /* discountDetail_cell_image@2x.png */,
+				04FEDB0619A44CD30000CEA2 /* discountDetail_cell_image2@2x.png */,
+				04FEDB0C19A4793B0000CEA2 /* discount_userIcon@2x.png */,
+				04FEDB0E19A47CCC0000CEA2 /* verification_scanqrcode@2x.png */,
+				047BD36019A4BAAE00478E4C /* startImage@2x.png */,
+				047BD36119A4BAAE00478E4C /* startImage-568h@2x.png */,
 				04640976199CC58200E8BA09 /* 0-9 */,
 				04F025D2198CD9D10017665A /* tempImage */,
 			);
@@ -854,6 +930,12 @@
 				04F4C4A2199B6F9600FCBC6F /* OneClickListViewCell.xib */,
 				04640971199CBCB000E8BA09 /* DigitalTokenView.h */,
 				04640972199CBCB000E8BA09 /* DigitalTokenView.m */,
+				04FEDAF319A43B780000CEA2 /* DiscountDetailViewCell.h */,
+				04FEDAF419A43B780000CEA2 /* DiscountDetailViewCell.m */,
+				04FEDAF519A43B780000CEA2 /* DiscountDetailViewCell.xib */,
+				04FEDAFE19A440E70000CEA2 /* DiscountDetail_cell_header.h */,
+				04FEDAFF19A440E70000CEA2 /* DiscountDetail_cell_header.m */,
+				04FEDB0119A441050000CEA2 /* DiscountDetail_cell_header.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1013,16 +1095,20 @@
 				04640983199CC58200E8BA09 /* 2@2x.png in Resources */,
 				04F025B5198CD59F0017665A /* SettingViewController.xib in Resources */,
 				042379A619A33F04005F80E1 /* connect_success_image@2x.png in Resources */,
+				04FEDAF219A43AF40000CEA2 /* DiscountDetailViewController.xib in Resources */,
 				04640984199CC58200E8BA09 /* 3@2x.png in Resources */,
 				040E50101990F0B00023FD80 /* AboutViewController.xib in Resources */,
 				0423799F19A324B4005F80E1 /* password_normal@2x.png in Resources */,
 				0423799619A3059B005F80E1 /* set_bindPhone@2x.png in Resources */,
 				04FAE31D1993970100EAFFFF /* tempOTPImage.png in Resources */,
+				04FEDB0D19A4793B0000CEA2 /* discount_userIcon@2x.png in Resources */,
 				040E50151990F0C70023FD80 /* CalibrationTimeViewController.xib in Resources */,
 				043DA683198F693C000421B9 /* InputQuestionAnswerViewController.xib in Resources */,
 				04640985199CC58200E8BA09 /* 4@2x.png in Resources */,
 				04640989199CC58200E8BA09 /* 8@2x.png in Resources */,
+				04FEDBCB19A4B5D40000CEA2 /* tabbar_setting_selected@2x.png in Resources */,
 				042D44201991DE5800AA0A0A /* ResetStartPasswordViewController.xib in Resources */,
+				04FEDBD019A4B5D40000CEA2 /* tabbar_account@2x.png in Resources */,
 				042379AC19A341E2005F80E1 /* scanQRCode@2x.png in Resources */,
 				04FE1F51198F244900F41BE0 /* dot_off.png in Resources */,
 				042379A419A33ACC005F80E1 /* image_phone-pc@2x.png in Resources */,
@@ -1032,17 +1118,24 @@
 				042379A219A338FF005F80E1 /* image_rightmark@2x.png in Resources */,
 				04640982199CC58200E8BA09 /* 1@2x.png in Resources */,
 				04F4D6DA19A2F0FF001E4524 /* progress_trackImage@2x.png in Resources */,
+				04FEDB7F19A49F950000CEA2 /* icon_80@2x.png in Resources */,
 				04F025B0198CD58D0017665A /* DiscountViewController.xib in Resources */,
 				0423799419A3059B005F80E1 /* about_icon@2x.png in Resources */,
 				04F025D4198CDA5C0017665A /* setting_startsetpassword_img@2x.png in Resources */,
+				04FEDB0719A44CD30000CEA2 /* discountDetail_cell_image2@2x.png in Resources */,
 				0423799719A3059B005F80E1 /* set_digitalCode@2x.png in Resources */,
+				04FEDBCC19A4B5D40000CEA2 /* tabbar_setting@2x.png in Resources */,
 				04F0255E198CC6600017665A /* InfoPlist.strings in Resources */,
 				04F4C49F199B6F6000FCBC6F /* DiscountViewCell.xib in Resources */,
+				04FEDB0219A441050000CEA2 /* DiscountDetail_cell_header.xib in Resources */,
 				04F025CB198CD7680017665A /* SetStartPasswordViewController.xib in Resources */,
 				042D4442199211AD00AA0A0A /* LogInSystemViewController.xib in Resources */,
 				04F025AB198CD5770017665A /* VerificationViewController.xib in Resources */,
+				04FEDB0919A452EA0000CEA2 /* discountDetail_cell_image@2x.png in Resources */,
 				04EE0FC8199A2F0B00ADC63D /* ConnecteSuccessViewController.xib in Resources */,
+				04FEDBCE19A4B5D40000CEA2 /* tabbar_verification@2x.png in Resources */,
 				043DA67D198F3E4C000421B9 /* StartViewController.xib in Resources */,
+				04FEDAF719A43B780000CEA2 /* DiscountDetailViewCell.xib in Resources */,
 				04F025C6198CD6F90017665A /* StartSetPasswordViewController.xib in Resources */,
 				042494CD19A202950087D9D1 /* statr_setpassword_startimagr@2x.png in Resources */,
 				04FE1F5C198F2CB500F41BE0 /* 37x-Checkmark@2x.png in Resources */,
@@ -1052,23 +1145,30 @@
 				042D44381992023D00AA0A0A /* ConnecteDiscountViewController.xib in Resources */,
 				04F0258D198CCE2C0017665A /* FirstViewController.xib in Resources */,
 				04F025D0198CD7AB0017665A /* SetQuestionViewController.xib in Resources */,
+				04FEDB7E19A49F950000CEA2 /* icon_58@2x.png in Resources */,
 				0464098F199CCB7300E8BA09 /* DigitalTokenViewController.xib in Resources */,
+				047BD36219A4BAAE00478E4C /* startImage@2x.png in Resources */,
 				04F4D6D919A2F0FF001E4524 /* progress_progressImage@2x.png in Resources */,
+				04FEDBCD19A4B5D40000CEA2 /* tabbar_verification_selected@2x.png in Resources */,
 				042379B619A35997005F80E1 /* scanQRCode_btnCancel@2x.png in Resources */,
 				04FA409319A20E0D00E6148F /* textField_bg_active@2x.png in Resources */,
 				042494D119A203390087D9D1 /* first_image@2x.png in Resources */,
 				04F4C4A4199B6F9600FCBC6F /* OneClickListViewCell.xib in Resources */,
+				04FEDB0F19A47CCC0000CEA2 /* verification_scanqrcode@2x.png in Resources */,
 				04F4C3DB199B048300FCBC6F /* 37x-Checkmark_wrong@2x.png in Resources */,
 				0423799519A3059B005F80E1 /* set_about@2x.png in Resources */,
+				04FEDBCF19A4B5D40000CEA2 /* tabbar_account_selected@2x.png in Resources */,
 				0464098A199CC58200E8BA09 /* 9@2x.png in Resources */,
 				042379B419A35699005F80E1 /* scanQRCode_bg@2x.png in Resources */,
 				04F025A6198CD5490017665A /* ImportPhoneNumberViewController.xib in Resources */,
 				04F02566198CC6600017665A /* Images.xcassets in Resources */,
 				04640986199CC58200E8BA09 /* 5@2x.png in Resources */,
 				04F4C491199B6D1400FCBC6F /* OneClickViewController.xib in Resources */,
+				04FEDB8019A49F950000CEA2 /* icon_120@2x.png in Resources */,
 				0423799819A3059B005F80E1 /* set_startPassword@2x.png in Resources */,
 				042379B319A35699005F80E1 /* scanQRCode_bg-568h@2x.png in Resources */,
 				04FE1F5B198F2CB500F41BE0 /* 37x-Checkmark.png in Resources */,
+				047BD36319A4BAAE00478E4C /* startImage-568h@2x.png in Resources */,
 				04640988199CC58200E8BA09 /* 7@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1088,11 +1188,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FEDB0019A440E70000CEA2 /* DiscountDetail_cell_header.m in Sources */,
 				04EE0EFE1999C08F00ADC63D /* EGOImageLoader.m in Sources */,
 				04F4C489199B648000FCBC6F /* OneClickInterface.m in Sources */,
 				04EFD1E219A2137A0018482A /* UIColor+GetColorFromString.m in Sources */,
 				04EE0FC7199A2F0B00ADC63D /* ConnecteSuccessViewController.m in Sources */,
 				04FAE3201993970100EAFFFF /* TokenStore.m in Sources */,
+				04FEDAF119A43AF40000CEA2 /* DiscountDetailViewController.m in Sources */,
 				04F4C3E3199B45B300FCBC6F /* ScanBindAccountInterface.m in Sources */,
 				04EE0F2A199A07E200ADC63D /* ASIInputStream.m in Sources */,
 				04EE0EF21999BE8800ADC63D /* DiscountModel.m in Sources */,
@@ -1125,10 +1227,12 @@
 				04F025C5198CD6F90017665A /* StartSetPasswordViewController.m in Sources */,
 				04F025CA198CD7680017665A /* SetStartPasswordViewController.m in Sources */,
 				04EE0FB7199A233300ADC63D /* BindPhoneInterface.m in Sources */,
+				04FEDB0519A446AA0000CEA2 /* DiscountDetailModel.m in Sources */,
 				04F02560198CC6600017665A /* main.mm in Sources */,
 				04FE1F53198F244900F41BE0 /* LockView.m in Sources */,
 				040E4F6C199075E20023FD80 /* RegexKitLite.m in Sources */,
 				0464098E199CCB7300E8BA09 /* DigitalTokenViewController.m in Sources */,
+				04FEDAF619A43B780000CEA2 /* DiscountDetailViewCell.m in Sources */,
 				04F025AA198CD5770017665A /* VerificationViewController.mm in Sources */,
 				04EE0F28199A07E200ADC63D /* ASIFormDataRequest.m in Sources */,
 				04EE0F34199A0ABB00ADC63D /* UploadScanResultInterface.m in Sources */,

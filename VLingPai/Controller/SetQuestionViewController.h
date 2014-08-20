@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SetQuestionViewController : UIViewController<UIAlertViewDelegate,UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
+@interface SetQuestionViewController : UIViewController<UIAlertViewDelegate,UITextFieldDelegate,/*UIPickerViewDataSource,UIPickerViewDelegate,*/UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *btnChooeseQuestion;
 - (IBAction)btnChooeseQuestionAction:(UIButton *)sender;
@@ -26,6 +26,9 @@
 
 @property (strong, nonatomic) NSArray *pickDataList;
 @property (assign, nonatomic) BOOL haveChooeseQuestion;
+
+@property (strong, nonatomic) UIView *chooeseQuestionView;
+@property (strong, nonatomic) NSIndexPath *oldIndexPath;
 
 
 @end

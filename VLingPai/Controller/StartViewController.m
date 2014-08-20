@@ -73,6 +73,7 @@
     DebugLog(@"密码为：%@",key);
     NSString *password = [[NSUserDefaults standardUserDefaults] objectForKey:StartPassword];
     if ([key isEqualToString:password]) {
+        self.inputCount = 0;
         if (self.isStart) {
             ResetStartPasswordViewController *vc = [[ResetStartPasswordViewController alloc]initWithNibName:@"ResetStartPasswordViewController" bundle:nil];
 //            vc.hidesBottomBarWhenPushed = YES;
@@ -99,6 +100,7 @@
 -(void)setLabelText:(NSTimer *)timer{
     self.watingCount--;
     if (self.watingCount < 0) {
+        self.inputCount = 0;
         self.lockVC.view.userInteractionEnabled = YES;
         self.labOutput.text = @"请输入密码";
         [timer invalidate];

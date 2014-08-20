@@ -36,7 +36,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.title = @"设置";
+    self.navigationItem.title = @"设置";
     self.list = @[@"启动密码",@"手机绑定",@"数字令牌",@"关于"];
     
     self.imageList = @[[UIImage imageNamed:@"set_startPassword.png"],[UIImage imageNamed:@"set_bindPhone.png"],[UIImage imageNamed:@"set_digitalCode.png"],[UIImage imageNamed:@"set_about.png"]];

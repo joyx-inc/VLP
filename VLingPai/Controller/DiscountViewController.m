@@ -9,6 +9,7 @@
 #import "DiscountViewController.h"
 #import "DiscountModel.h"
 #import "DiscountViewCell.h"
+#import "DiscountDetailViewController.h"
 
 @interface DiscountViewController ()
 
@@ -30,14 +31,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.title = @"账号";
+    self.navigationItem.title = @"账号";
     
     
     NSMutableArray *array = [NSMutableArray array];
     for (int i = 0; i < 5; i++) {
         DiscountModel *model = [[DiscountModel alloc]init];
         model.logoURLStr = @"";
-        model.systemName = @"xx系统";
+        model.systemName = @"首创股份OA";
         model.discountStr = @"admin";
         model.useCount = i * 100;
         [array addObject:model];
@@ -63,9 +64,8 @@
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    switch (indexPath.row) {
-            
-    }
+    DiscountDetailViewController *vc = [[DiscountDetailViewController alloc]initWithNibName:@"DiscountDetailViewController" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

@@ -18,4 +18,6 @@
 //@property (assign, nonatomic) BOOL isScanView;
 
 - (IBAction)btnScanQRCodeAction:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *btnScanQRCode;
+
 @end
