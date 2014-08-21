@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0404078719A5A2AB00FE5749 /* UIViewController+TopBarMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0404078619A5A2AB00FE5749 /* UIViewController+TopBarMessage.m */; };
+		040407D119A5AC8E00FE5749 /* startImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 040407CF19A5AC8E00FE5749 /* startImage@2x.png */; };
+		040407D419A5ACD500FE5749 /* startImage-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 040407D319A5ACD500FE5749 /* startImage-568h@2x.png */; };
+		040407D619A5ADC000FE5749 /* about_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 040407D519A5ADC000FE5749 /* about_icon@2x.png */; };
+		040407DF19A5F15E00FE5749 /* tabBar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 040407DE19A5F15E00FE5749 /* tabBar_bg@2x.png */; };
 		040E4F6C199075E20023FD80 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E4F6B199075E20023FD80 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		040E4F6E199076FA0023FD80 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 040E4F6D199076FA0023FD80 /* libicucore.dylib */; };
 		040E50011990D6330023FD80 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040E50001990D6330023FD80 /* CFNetwork.framework */; };
@@ -16,7 +21,6 @@
 		040E50151990F0C70023FD80 /* CalibrationTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040E50131990F0C70023FD80 /* CalibrationTimeViewController.xib */; };
 		040E50191990F0EB0023FD80 /* NowBindPhoneStateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E50171990F0EB0023FD80 /* NowBindPhoneStateViewController.m */; };
 		040E501A1990F0EB0023FD80 /* NowBindPhoneStateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040E50181990F0EB0023FD80 /* NowBindPhoneStateViewController.xib */; };
-		0423799419A3059B005F80E1 /* about_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423798F19A3059B005F80E1 /* about_icon@2x.png */; };
 		0423799519A3059B005F80E1 /* set_about@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423799019A3059B005F80E1 /* set_about@2x.png */; };
 		0423799619A3059B005F80E1 /* set_bindPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423799119A3059B005F80E1 /* set_bindPhone@2x.png */; };
 		0423799719A3059B005F80E1 /* set_digitalCode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423799219A3059B005F80E1 /* set_digitalCode@2x.png */; };
@@ -62,8 +66,6 @@
 		0464098A199CC58200E8BA09 /* 9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04640980199CC58200E8BA09 /* 9@2x.png */; };
 		0464098E199CCB7300E8BA09 /* DigitalTokenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0464098C199CCB7300E8BA09 /* DigitalTokenViewController.m */; };
 		0464098F199CCB7300E8BA09 /* DigitalTokenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0464098D199CCB7300E8BA09 /* DigitalTokenViewController.xib */; };
-		047BD36219A4BAAE00478E4C /* startImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 047BD36019A4BAAE00478E4C /* startImage@2x.png */; };
-		047BD36319A4BAAE00478E4C /* startImage-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 047BD36119A4BAAE00478E4C /* startImage-568h@2x.png */; };
 		04EE0EF21999BE8800ADC63D /* DiscountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0EF11999BE8800ADC63D /* DiscountModel.m */; };
 		04EE0EFC1999C08F00ADC63D /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0EF51999C08F00ADC63D /* EGOCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		04EE0EFD1999C08F00ADC63D /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0EF71999C08F00ADC63D /* EGOImageLoadConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -198,6 +200,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0404078519A5A2AB00FE5749 /* UIViewController+TopBarMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TopBarMessage.h"; sourceTree = "<group>"; };
+		0404078619A5A2AB00FE5749 /* UIViewController+TopBarMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TopBarMessage.m"; sourceTree = "<group>"; };
+		040407CF19A5AC8E00FE5749 /* startImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startImage@2x.png"; sourceTree = "<group>"; };
+		040407D319A5ACD500FE5749 /* startImage-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startImage-568h@2x.png"; sourceTree = "<group>"; };
+		040407D519A5ADC000FE5749 /* about_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_icon@2x.png"; sourceTree = "<group>"; };
+		040407DE19A5F15E00FE5749 /* tabBar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar_bg@2x.png"; sourceTree = "<group>"; };
 		040E4F6A199075E20023FD80 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		040E4F6B199075E20023FD80 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		040E4F6D199076FA0023FD80 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
@@ -211,7 +219,6 @@
 		040E50161990F0EB0023FD80 /* NowBindPhoneStateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NowBindPhoneStateViewController.h; path = Controller/NowBindPhoneStateViewController.h; sourceTree = "<group>"; };
 		040E50171990F0EB0023FD80 /* NowBindPhoneStateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NowBindPhoneStateViewController.m; path = Controller/NowBindPhoneStateViewController.m; sourceTree = "<group>"; };
 		040E50181990F0EB0023FD80 /* NowBindPhoneStateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NowBindPhoneStateViewController.xib; path = Controller/NowBindPhoneStateViewController.xib; sourceTree = "<group>"; };
-		0423798F19A3059B005F80E1 /* about_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_icon@2x.png"; sourceTree = "<group>"; };
 		0423799019A3059B005F80E1 /* set_about@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set_about@2x.png"; sourceTree = "<group>"; };
 		0423799119A3059B005F80E1 /* set_bindPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set_bindPhone@2x.png"; sourceTree = "<group>"; };
 		0423799219A3059B005F80E1 /* set_digitalCode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set_digitalCode@2x.png"; sourceTree = "<group>"; };
@@ -264,8 +271,6 @@
 		0464098B199CCB7300E8BA09 /* DigitalTokenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DigitalTokenViewController.h; path = Controller/DigitalTokenViewController.h; sourceTree = "<group>"; };
 		0464098C199CCB7300E8BA09 /* DigitalTokenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DigitalTokenViewController.m; path = Controller/DigitalTokenViewController.m; sourceTree = "<group>"; };
 		0464098D199CCB7300E8BA09 /* DigitalTokenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DigitalTokenViewController.xib; path = Controller/DigitalTokenViewController.xib; sourceTree = "<group>"; };
-		047BD36019A4BAAE00478E4C /* startImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startImage@2x.png"; sourceTree = "<group>"; };
-		047BD36119A4BAAE00478E4C /* startImage-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startImage-568h@2x.png"; sourceTree = "<group>"; };
 		04EE0EF01999BE8800ADC63D /* DiscountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscountModel.h; path = Model/DiscountModel.h; sourceTree = "<group>"; };
 		04EE0EF11999BE8800ADC63D /* DiscountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscountModel.m; path = Model/DiscountModel.m; sourceTree = "<group>"; };
 		04EE0EF41999C08F00ADC63D /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
@@ -443,6 +448,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042D44021991CE3500AA0A0A /* AudioToolbox.framework in Frameworks */,
 				04640975199CC24300E8BA09 /* QuartzCore.framework in Frameworks */,
 				04EE0F09199A074F00ADC63D /* libz.1.2.5.dylib in Frameworks */,
 				04F02556198CC6600017665A /* CoreGraphics.framework in Frameworks */,
@@ -452,7 +458,6 @@
 				042D44081991CE5400AA0A0A /* libiconv.dylib in Frameworks */,
 				042D44061991CE4400AA0A0A /* CoreMedia.framework in Frameworks */,
 				042D44041991CE3C00AA0A0A /* CoreVideo.framework in Frameworks */,
-				042D44021991CE3500AA0A0A /* AudioToolbox.framework in Frameworks */,
 				042D44001991CE2D00AA0A0A /* AVFoundation.framework in Frameworks */,
 				040E50011990D6330023FD80 /* CFNetwork.framework in Frameworks */,
 				040E4F6E199076FA0023FD80 /* libicucore.dylib in Frameworks */,
@@ -474,6 +479,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0404078419A5A2AB00FE5749 /* TopBarMessage */ = {
+			isa = PBXGroup;
+			children = (
+				0404078519A5A2AB00FE5749 /* UIViewController+TopBarMessage.h */,
+				0404078619A5A2AB00FE5749 /* UIViewController+TopBarMessage.m */,
+			);
+			name = TopBarMessage;
+			path = Third/TopBarMessage;
+			sourceTree = "<group>";
+		};
 		040E4F69199075E20023FD80 /* RegexKitLite */ = {
 			isa = PBXGroup;
 			children = (
@@ -822,6 +837,7 @@
 		04F025A0198CCF780017665A /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				0404078419A5A2AB00FE5749 /* TopBarMessage */,
 				04F4D6DD19A2F3D8001E4524 /* MyProgress */,
 				04EE0F37199A0E8E00ADC63D /* Reachability */,
 				04EE0F2C199A081100ADC63D /* JSONKIT */,
@@ -872,6 +888,7 @@
 		04F025D1198CD9D10017665A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				040407DE19A5F15E00FE5749 /* tabBar_bg@2x.png */,
 				042379B719A36456005F80E1 /* icon */,
 				042494D019A203390087D9D1 /* first_image@2x.png */,
 				04FEDBC719A4B5D40000CEA2 /* tabbar_verification_selected@2x.png */,
@@ -889,11 +906,11 @@
 				042379B219A35699005F80E1 /* scanQRCode_bg@2x.png */,
 				04F4D6D819A2F0FF001E4524 /* progress_trackImage@2x.png */,
 				04F4D6D719A2F0FF001E4524 /* progress_progressImage@2x.png */,
-				0423798F19A3059B005F80E1 /* about_icon@2x.png */,
 				0423799019A3059B005F80E1 /* set_about@2x.png */,
 				0423799119A3059B005F80E1 /* set_bindPhone@2x.png */,
 				0423799219A3059B005F80E1 /* set_digitalCode@2x.png */,
 				0423799319A3059B005F80E1 /* set_startPassword@2x.png */,
+				040407D519A5ADC000FE5749 /* about_icon@2x.png */,
 				0423799D19A324B4005F80E1 /* password_normal@2x.png */,
 				0423799E19A324B4005F80E1 /* password_selected@2x.png */,
 				042379A119A338FF005F80E1 /* image_rightmark@2x.png */,
@@ -903,8 +920,8 @@
 				04FEDB0619A44CD30000CEA2 /* discountDetail_cell_image2@2x.png */,
 				04FEDB0C19A4793B0000CEA2 /* discount_userIcon@2x.png */,
 				04FEDB0E19A47CCC0000CEA2 /* verification_scanqrcode@2x.png */,
-				047BD36019A4BAAE00478E4C /* startImage@2x.png */,
-				047BD36119A4BAAE00478E4C /* startImage-568h@2x.png */,
+				040407CF19A5AC8E00FE5749 /* startImage@2x.png */,
+				040407D319A5ACD500FE5749 /* startImage-568h@2x.png */,
 				04640976199CC58200E8BA09 /* 0-9 */,
 				04F025D2198CD9D10017665A /* tempImage */,
 			);
@@ -1120,7 +1137,6 @@
 				04F4D6DA19A2F0FF001E4524 /* progress_trackImage@2x.png in Resources */,
 				04FEDB7F19A49F950000CEA2 /* icon_80@2x.png in Resources */,
 				04F025B0198CD58D0017665A /* DiscountViewController.xib in Resources */,
-				0423799419A3059B005F80E1 /* about_icon@2x.png in Resources */,
 				04F025D4198CDA5C0017665A /* setting_startsetpassword_img@2x.png in Resources */,
 				04FEDB0719A44CD30000CEA2 /* discountDetail_cell_image2@2x.png in Resources */,
 				0423799719A3059B005F80E1 /* set_digitalCode@2x.png in Resources */,
@@ -1132,7 +1148,9 @@
 				042D4442199211AD00AA0A0A /* LogInSystemViewController.xib in Resources */,
 				04F025AB198CD5770017665A /* VerificationViewController.xib in Resources */,
 				04FEDB0919A452EA0000CEA2 /* discountDetail_cell_image@2x.png in Resources */,
+				040407D419A5ACD500FE5749 /* startImage-568h@2x.png in Resources */,
 				04EE0FC8199A2F0B00ADC63D /* ConnecteSuccessViewController.xib in Resources */,
+				040407DF19A5F15E00FE5749 /* tabBar_bg@2x.png in Resources */,
 				04FEDBCE19A4B5D40000CEA2 /* tabbar_verification@2x.png in Resources */,
 				043DA67D198F3E4C000421B9 /* StartViewController.xib in Resources */,
 				04FEDAF719A43B780000CEA2 /* DiscountDetailViewCell.xib in Resources */,
@@ -1147,8 +1165,8 @@
 				04F025D0198CD7AB0017665A /* SetQuestionViewController.xib in Resources */,
 				04FEDB7E19A49F950000CEA2 /* icon_58@2x.png in Resources */,
 				0464098F199CCB7300E8BA09 /* DigitalTokenViewController.xib in Resources */,
-				047BD36219A4BAAE00478E4C /* startImage@2x.png in Resources */,
 				04F4D6D919A2F0FF001E4524 /* progress_progressImage@2x.png in Resources */,
+				040407D119A5AC8E00FE5749 /* startImage@2x.png in Resources */,
 				04FEDBCD19A4B5D40000CEA2 /* tabbar_verification_selected@2x.png in Resources */,
 				042379B619A35997005F80E1 /* scanQRCode_btnCancel@2x.png in Resources */,
 				04FA409319A20E0D00E6148F /* textField_bg_active@2x.png in Resources */,
@@ -1167,8 +1185,8 @@
 				04FEDB8019A49F950000CEA2 /* icon_120@2x.png in Resources */,
 				0423799819A3059B005F80E1 /* set_startPassword@2x.png in Resources */,
 				042379B319A35699005F80E1 /* scanQRCode_bg-568h@2x.png in Resources */,
+				040407D619A5ADC000FE5749 /* about_icon@2x.png in Resources */,
 				04FE1F5B198F2CB500F41BE0 /* 37x-Checkmark.png in Resources */,
-				047BD36319A4BAAE00478E4C /* startImage-568h@2x.png in Resources */,
 				04640988199CC58200E8BA09 /* 7@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1191,6 +1209,7 @@
 				04FEDB0019A440E70000CEA2 /* DiscountDetail_cell_header.m in Sources */,
 				04EE0EFE1999C08F00ADC63D /* EGOImageLoader.m in Sources */,
 				04F4C489199B648000FCBC6F /* OneClickInterface.m in Sources */,
+				0404078719A5A2AB00FE5749 /* UIViewController+TopBarMessage.m in Sources */,
 				04EFD1E219A2137A0018482A /* UIColor+GetColorFromString.m in Sources */,
 				04EE0FC7199A2F0B00ADC63D /* ConnecteSuccessViewController.m in Sources */,
 				04FAE3201993970100EAFFFF /* TokenStore.m in Sources */,

@@ -113,13 +113,17 @@
             ConnecteDiscountViewController *vc = [[ConnecteDiscountViewController alloc]initWithNibName:@"ConnecteDiscountViewController" bundle:nil];
             vc.systemModel = systemModel;
             vc.scanResult = self.scanResult;
+            vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
+            vc.hidesBottomBarWhenPushed = NO;
         }else{
             LogInSystemViewController *vc = [[LogInSystemViewController alloc]initWithNibName:@"LogInSystemViewController" bundle:nil];
             vc.accountModel = accountModel;
             vc.systemModel = systemModel;
             vc.scanResult = self.scanResult;
+            vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
+            vc.hidesBottomBarWhenPushed = NO;
         }
     }else{
         //二维码已过期

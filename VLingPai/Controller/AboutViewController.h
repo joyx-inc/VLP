@@ -11,5 +11,6 @@
 @interface AboutViewController : UIViewController
 //- (IBAction)btnGoURLAction:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UILabel *labVersion;
+@property (weak, nonatomic) IBOutlet UIImageView *imageIcon;
 
 @end

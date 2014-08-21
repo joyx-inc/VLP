@@ -32,28 +32,33 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.title = @"账号登录记录";
+    self.navigationItem.title = @"账号登录记录";
     
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    formatter.dateFormat = @"yyyy-MM-dd";
+    
+    NSDate *date3 = [NSDate dateWithTimeIntervalSinceNow:-1 * 60*60*24*2];
+    NSString *str3 = [formatter stringFromDate:date3];
+    NSDate *date4 = [NSDate dateWithTimeIntervalSinceNow:-1 * 60*60*24*3];
+    NSString *str4 = [formatter stringFromDate:date4];
+    NSDate *date5 = [NSDate dateWithTimeIntervalSinceNow:-1 * 60*60*24*4];
+    NSString *str5 = [formatter stringFromDate:date5];
     
     //Test Data
-    self.arraySection = @[@"今天",@"昨天",@"前天",@"2014-8-17",@"2014-8-16"];
+    self.arraySection = @[@"今天",@"昨天",str3,str4,str5];
     
     NSMutableArray *array = [NSMutableArray array];
     
-    for (int i = 0; i < 4; i++) {
-        DiscountDetailModel *model = [[DiscountDetailModel alloc]initWithDictionary:@{@"method":@"用户名密码登录",@"ip":@"10.0.0.1",@"time":@"12:12"}];
-        [array addObject:model];
-        DiscountDetailModel *model2 = [[DiscountDetailModel alloc]initWithDictionary:@{@"method":@"扫码登录",@"ip":@"10.0.0.1",@"time":@"12:12"}];
-        [array addObject:model2];
-        DiscountDetailModel *model3 = [[DiscountDetailModel alloc]initWithDictionary:@{@"method":@"一键登录",@"ip":@"10.0.0.1",@"time":@"12:12"}];
-        [array addObject:model3];
-    }
+    DiscountDetailModel *model0 = [[DiscountDetailModel alloc]initWithDictionary:@{@"method":@"用户名密码登录",@"ip":@"10.0.0.1",@"time":@"12:12"}];
+    [array addObject:model0];
     DiscountDetailModel *model2 = [[DiscountDetailModel alloc]initWithDictionary:@{@"method":@"扫码登录",@"ip":@"10.0.0.1",@"time":@"12:12"}];
     [array addObject:model2];
     DiscountDetailModel *model3 = [[DiscountDetailModel alloc]initWithDictionary:@{@"method":@"一键登录",@"ip":@"10.0.0.1",@"time":@"12:12"}];
     [array addObject:model3];
-    DiscountDetailModel *model = [[DiscountDetailModel alloc]initWithDictionary:@{@"method":@"账号绑定",@"ip":@"10.0.0.1",@"time":@"12:12"}];
+    DiscountDetailModel *model = [[DiscountDetailModel alloc]initWithDictionary:@{@"method":@"用户名密码登录",@"ip":@"10.0.0.1",@"time":@"12:12"}];
     [array addObject:model];
+    DiscountDetailModel *model1 = [[DiscountDetailModel alloc]initWithDictionary:@{@"method":@"账号绑定",@"ip":@"10.0.0.1",@"time":@"12:12"}];
+    [array addObject:model1];
     //END
     
     self.arrayModel = array;

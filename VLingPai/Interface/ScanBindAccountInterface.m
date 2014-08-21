@@ -25,9 +25,19 @@
     
     if (jsonObj) {
         NSString *status = [jsonObj objectForKey:@"status"];
+        AccountModel *accountModel;
+        SystemModel *systemModel;
+        NSDictionary *system = [jsonObj objectForKey:@"app"];
+        if (system) {
+            systemModel = [[SystemModel alloc]initWithJsonMap:system];
+        }
+        NSDictionary *account = [jsonObj objectForKey:@"account"];
+        if (account) {
+            accountModel = [[AccountModel alloc]initWithJsonMap:account];
+        }
         
-        if (_delegate && [_delegate respondsToSelector:@selector(getFinishedScanBindAccountInterfaceDelegate:)]) {
-            [_delegate getFinishedScanBindAccountInterfaceDelegate:status];
+        if (_delegate && [_delegate respondsToSelector:@selector(getFinishedScanBindAccountInterfaceDelegate:account:system:)]) {
+            [_delegate getFinishedScanBindAccountInterfaceDelegate:status account:accountModel system:systemModel];
         }
     }
 }

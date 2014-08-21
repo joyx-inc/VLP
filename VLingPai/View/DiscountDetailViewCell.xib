@@ -20,7 +20,7 @@
                         <color key="backgroundColor" red="0.82352941176470584" green="0.82352941176470584" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="discountDetail_cell_image.png" id="rqD-BR-NyK">
-                        <rect key="frame" x="23" y="31" width="14" height="14"/>
+                        <rect key="frame" x="27" y="34" width="7" height="7"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                     </imageView>
                     <view contentMode="scaleToFill" id="u3l-8W-ZPi">

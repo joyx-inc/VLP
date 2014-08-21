@@ -10,9 +10,12 @@
 
 #import "BaseInterface.h"
 
+#import "AccountModel.h"
+#import "SystemModel.h"
+
 @protocol ScanBindAccountInterfaceDelegate <NSObject>
 
--(void)getFinishedScanBindAccountInterfaceDelegate:(NSString *)status;
+-(void)getFinishedScanBindAccountInterfaceDelegate:(NSString *)status account:(AccountModel *)accountModel system:(SystemModel *)systemModel;
 -(void)getFailedScanBindAccountInterfaceDelegate:(NSString *)error;
 
 @end

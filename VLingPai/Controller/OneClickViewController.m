@@ -10,6 +10,7 @@
 #import "ScanLoginInterface.h"
 #import "ScanLoginCancelInterface.h"
 #import "MBProgressHUD.h"
+#import "AppDelegate.h"
 
 @interface OneClickViewController ()<ScanLoginInterfaceDelegate,MBProgressHUDDelegate>
 
@@ -83,6 +84,7 @@
         
         [self performSelector:@selector(dismissView) withObject:nil afterDelay:2];
     }
+    [self performSelector:@selector(startAppDelegateTimer) withObject:nil afterDelay:3];
 }
 -(void)getFailedScanLoginInterface:(NSString *)error{
     DebugLog(@"%@",error);
@@ -108,11 +110,22 @@
 }
 
 - (IBAction)btnCancelAction:(UIButton *)sender {
+    [self performSelector:@selector(startAppDelegateTimer) withObject:nil afterDelay:1];
     [self.scanLoginCancelInterface scanCancelLoginAction:self.cancelURL];
     [self.navigationController popToRootViewControllerAnimated:YES];
+}
+-(void)startAppDelegateTimer{
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [appDelegate setTimerStart];
 }
 
 -(void)dismissView{
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [self startAppDelegateTimer];
+}
+
+
 @end

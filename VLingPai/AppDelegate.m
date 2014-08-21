@@ -42,11 +42,11 @@
         [[NSUserDefaults standardUserDefaults] setObject:idfv forKey:IDFV];
     }
     DebugLog(@"设备ID：%@",idfvStr);
-    
+
     //一键认证接收，现在是循环请求
     self.oneClickInterface = [[OneClickInterface alloc]init];
     self.oneClickInterface.delegate = self;
-    timer = [[NSTimer alloc]initWithFireDate:[NSDate date] interval:5.0 target:self selector:@selector(startOneClickInterface) userInfo:nil repeats:YES];
+    timer = [[NSTimer alloc]initWithFireDate:[NSDate date] interval:2.0 target:self selector:@selector(startOneClickInterface) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
 
     //判断当前是不是有有效的密码
@@ -76,8 +76,24 @@
         if (tokenAlloc != nil)
             [[[TokenStore alloc] init] add:tokenAlloc];
     }else{
-        self.window.rootViewController = self.startViewNav;
+        NSString *phoneNum = [[NSUserDefaults standardUserDefaults] objectForKey:UserBindPhoneNumber];
+        if (phoneNum.length == 0) {
+            //设置密码
+            self.window.rootViewController = self.startViewNav;
+        }else{
+            NSString *password = [[NSUserDefaults standardUserDefaults]objectForKey:StartPassword];
+            NSString *theQuestion = [[NSUserDefaults standardUserDefaults] objectForKey:TheQuestion];
+            NSString *theAnwser = [[NSUserDefaults standardUserDefaults] objectForKey:TheQuestionAnswer];
+            if (password.length == 0 | theQuestion.length == 0 | theAnwser.length == 0) {
+                //没有设置密码
+                [self initTabBarController];
+            }else{
+                //设置密码
+                self.window.rootViewController = self.startViewNav;
+            }
+        }
     }
+    
     
     [self.window makeKeyAndVisible];
     return YES;
@@ -101,17 +117,21 @@
         UINavigationController *nav3 = [[UINavigationController alloc]initWithRootViewController:settingVC];
         nav3.navigationItem.title = @"设置";
         
-        
         self.tabBarController = [[UITabBarController alloc]init];
         self.tabBarController.viewControllers = @[nav1,nav2,nav3];
-        self.tabBarController.tabBar.backgroundColor = [UIColor getColorFromString:@"#F4F4F4FF"];
-        
+//        self.tabBarController.tabBar.backgroundColor = [UIColor whiteColor];
         
         UITabBar *tabBar = self.tabBarController.tabBar;
         UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
         UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
         UITabBarItem *tabBarItem3 = [tabBar.items objectAtIndex:2];
 
+        
+//        self.tabBarController.tabBar.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"whiteColorImage.png"]];
+        
+//        NSLog(@"%@",NSStringFromCGRect(self.tabBarController.tabBar.frame));
+        self.tabBarController.tabBar.backgroundImage = [UIImage imageNamed:@"tabBar_bg.png"];
+//        self.tabBarController.tabBar.backgroundColor = [UIColor whiteColor];
         
 //        tabBarItem1.title = @"验证";
 //        tabBarItem2.title = @"账号";
@@ -120,17 +140,9 @@
         [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"tabbar_verification_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"tabbar_verification.png"]];
         [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"tabbar_account_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"tabbar_account.png"]];
         [tabBarItem3 setFinishedSelectedImage:[UIImage imageNamed:@"tabbar_setting_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"tabbar_setting.png"]];
+   
         
-        
-        
-//        tabBarItem1.image = [UIImage imageNamed:@"tabbar_verification.png"];
-//        tabBarItem1.selectedImage = [UIImage imageNamed:@"tabbar_verification_selected.png"];
-//        tabBarItem2.image = [UIImage imageNamed:@"tabbar_account.png"];
-//        tabBarItem2.selectedImage = [UIImage imageNamed:@"tabbar_account_selected.png"];
-//        tabBarItem3.image = [UIImage imageNamed:@"tabbar_setting.png"];
-//        tabBarItem3.selectedImage = [UIImage imageNamed:@"tabbar_setting_selected.png"];
-        
-        [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor getColorFromString:@"#18ae7bff"], UITextAttributeTextColor,nil] forState:UIControlStateSelected];
+//        [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor getColorFromString:@"#18ae7bff"], UITextAttributeTextColor,nil] forState:UIControlStateSelected];
     }
     self.window.rootViewController = self.tabBarController;
 }
@@ -147,6 +159,7 @@
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:TheQuestion];
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:TheQuestionAnswer];
     }
+    DebugLog(@"StartPassWord:%@",password);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -200,6 +213,13 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+-(void)setTimerPause{
+    [timer setFireDate:[NSDate distantFuture]];
+}
+-(void)setTimerStart{
+    [timer setFireDate:[NSDate date]];
+}
+
 #pragma mark - OneClickInterfaceDelegate <NSObject>
 -(void)getFinishedOneClickInterface:(NSString *)status count:(NSInteger)count list:(NSArray *)list{
     if (count == 0) {
@@ -208,13 +228,19 @@
     
     if ([status isEqualToString:@"ok"]) {
         //成功
+       [self setTimerPause];
         OneClickViewController *vc = [[OneClickViewController alloc]initWithNibName:@"OneClickViewController" bundle:nil];
         vc.asModel = [list objectAtIndex:0];
-        if ([self.window.rootViewController isKindOfClass:[UINavigationController class]]) {
-            [self.startViewNav pushViewController:vc animated:YES];
-        }else{
+        if ([self.window.rootViewController isKindOfClass:[UITabBarController class]]) {            
             UINavigationController *nav = (UINavigationController *)self.tabBarController.selectedViewController;
+            vc.hidesBottomBarWhenPushed = YES;
             [nav pushViewController:vc animated:YES];
+            vc.hidesBottomBarWhenPushed = NO;
+        }else{
+            StartViewController *vc  = [self.startViewNav.viewControllers objectAtIndex:0];
+//            vc.labOutput.textColor = [UIColor redColor];
+//            vc.labOutput.text = @"收到新的验证请求";
+            [vc showMessage];
         }
     }else{
         //用户不存在
@@ -232,7 +258,10 @@
 -(void)dealloc{
     self.oneClickInterface.delegate = nil;
     self.oneClickInterface = nil;
-    
+}
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
+    DebugLog(@"%@",item.title);
 }
 
 @end

@@ -13,9 +13,7 @@
 @implementation UploadScanResultInterface
 
 -(void)uploadScanResult:(NSString *)result{
-//    self.interfaceUrl = [NSString stringWithFormat:@"%@/vlp/api/qrscan/%@",BASE_INTERFACE_DOMAIN,result];
     self.interfaceUrl = [NSString stringWithFormat:@"%@?deviceId=%@",result,[[NSUserDefaults standardUserDefaults] objectForKey:IDFV]];
-//    self.args = @{@"result": result};
     self.baseDelegate = self;
     [self connect];
 }

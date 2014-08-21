@@ -109,35 +109,22 @@
             [self.navigationController.view addSubview:HUD];
             
             HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
-            
             HUD.mode = MBProgressHUDModeCustomView;
-            
-            HUD.delegate = self;
-            HUD.labelText = @"发送成功";
+            HUD.delegate = self;            HUD.labelText = @"发送成功";
             
             [HUD show:YES];
             [HUD hide:YES afterDelay:2];
-            
             self.secondView.hidden = NO;
             
-            
             [self startTime];
-            
-//            self.isTimeing = YES;
-//            [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(setBtnGetVerificationCodeTitle:) userInfo:nil repeats:YES];
-//            self.timeCount = 60;
-
         }else{
             MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
             [self.navigationController.view addSubview:HUD];
             
             HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark_wrong.png"]];
-            
             HUD.mode = MBProgressHUDModeCustomView;
-            
             HUD.delegate = self;
             HUD.labelText = @"请输入正确的手机号";
-            
             [HUD show:YES];
             [HUD hide:YES afterDelay:2];
             
@@ -148,12 +135,9 @@
         [self.navigationController.view addSubview:HUD];
         
         HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark_wrong.png"]];
-        
         HUD.mode = MBProgressHUDModeCustomView;
-        
         HUD.delegate = self;
         HUD.labelText = @"手机号不能为空";
-        
         [HUD show:YES];
         [HUD hide:YES afterDelay:2];
         
@@ -225,6 +209,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (alertView.tag == 100) {
         if (buttonIndex == 0) {
+            //绑定手机后选项：跳过
             AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
             [appDelegate initTabBarController];
             appDelegate.tabBarController.selectedIndex = 0;

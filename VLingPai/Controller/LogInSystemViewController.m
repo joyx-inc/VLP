@@ -50,7 +50,7 @@
         self.labUserName.text = account;
     }
     
-    self.labSystemName.text = [NSString stringWithFormat:@"登录:%@",self.systemModel.systemName];
+    self.labSystemName.text = self.systemModel.systemName;
     
     
     self.scanLoginInterface = [[ScanLoginInterface alloc]init];

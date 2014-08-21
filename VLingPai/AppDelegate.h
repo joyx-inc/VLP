@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,UITabBarDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
@@ -20,5 +20,8 @@
 
 
 -(void)initTabBarController;
+
+-(void)setTimerPause;
+-(void)setTimerStart;
 
 @end

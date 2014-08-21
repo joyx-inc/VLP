@@ -14,6 +14,8 @@
 
 @interface ConnecteDiscountViewController ()<MBProgressHUDDelegate,ScanBindAccountInterfaceDelegate>{
     NSTimer *timer;
+    
+    
 }
 
 @property (strong, nonatomic) ScanBindAccountInterface *scanBindAccountInterface;
@@ -74,16 +76,17 @@
 
 -(void)goSuccessView{
     ConnecteSuccessViewController *vc = [[ConnecteSuccessViewController alloc]initWithNibName:@"ConnecteSuccessViewController" bundle:nil];
-    //TODO:绑定成功后的系统名称、账号信息 需要在vc里显示
-//    vc.
-//    vc.
+    vc.accountModel = self.accountModel;
+    vc.systemModel = self.systemModel;
+    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
+    vc.hidesBottomBarWhenPushed = NO;
 }
 - (IBAction)btnCancelAction:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
 #pragma mark - ScanBindAccountInterfaceDelegate <NSObject>
--(void)getFinishedScanBindAccountInterfaceDelegate:(NSString *)status{
+-(void)getFinishedScanBindAccountInterfaceDelegate:(NSString *)status account:(AccountModel *)accountModel system:(SystemModel *)systemModel{
     if ([self.method isEqualToString:@"POST"]) {
         if ([status isEqualToString:@"ok"]) {
             //成功
@@ -110,6 +113,9 @@
             [self showSuccessView];
             [timer invalidate];
             timer = nil;
+ 
+            self.accountModel = accountModel;
+            self.systemModel = systemModel;
         }else if ([status isEqualToString:@"waiting"]){
             //等待
             DebugLog(@"等待中...");
@@ -125,7 +131,6 @@
             [HUD hide:YES afterDelay:2];
         }
     }
-
 }
 -(void)getFailedScanBindAccountInterfaceDelegate:(NSString *)error{
     DebugLog(@"%@",error);
@@ -135,6 +140,7 @@
     [self.scanBindAccountInterface scanBindAccount:self.scanResult withMethod:self.method];
 }
 -(void)dealloc{
+    self.accountModel = nil;
     self.systemModel = nil;
     self.scanResult = nil;
     self.scanBindAccountInterface.delegate = nil;
@@ -143,8 +149,7 @@
     if (timer) {
         [timer invalidate];
         timer = nil;
-    }
-    
+    }    
 }
 
 

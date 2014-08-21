@@ -35,14 +35,14 @@
     
     
     NSMutableArray *array = [NSMutableArray array];
-    for (int i = 0; i < 5; i++) {
+//    for (int i = 0; i < 5; i++) {
         DiscountModel *model = [[DiscountModel alloc]init];
         model.logoURLStr = @"";
-        model.systemName = @"首创股份OA";
+        model.systemName = @"OA系统";
         model.discountStr = @"admin";
-        model.useCount = i * 100;
+        model.useCount = 100;
         [array addObject:model];
-    }
+//    }
     self.list = array;
 }
 

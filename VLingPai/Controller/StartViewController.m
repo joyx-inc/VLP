@@ -16,6 +16,9 @@
 #import "ImportPhoneNumberViewController.h"     //如果用户第一次运行没有绑定手机就停止应用，再次启动时要求绑定手机
 #import "MBProgressHUD.h"
 
+#import "UIViewController+TopBarMessage.h"
+#import <AudioToolbox/AudioToolbox.h>
+
 @interface StartViewController ()<MBProgressHUDDelegate>
 
 @end
@@ -39,28 +42,40 @@
     
     self.inputCount = 0;
     
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]){
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    
     NSString *userBindPhone = [[NSUserDefaults standardUserDefaults] objectForKey:UserBindPhoneNumber];
     if (!(userBindPhone.length > 0)) {
         //没有绑定手机
         ImportPhoneNumberViewController *vc = [[ImportPhoneNumberViewController alloc]initWithNibName:@"ImportPhoneNumberViewController" bundle:nil];
         
         [self.navigationController pushViewController:vc animated:NO];
-//        vc.navigationController.navigationBarHidden = YES;
         vc.navigationItem.hidesBackButton = YES;
         return;
     }
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     
     NSString *password = [[NSUserDefaults standardUserDefaults]objectForKey:StartPassword];
     NSString *theQuestion = [[NSUserDefaults standardUserDefaults] objectForKey:TheQuestion];
     NSString *theAnwser = [[NSUserDefaults standardUserDefaults] objectForKey:TheQuestionAnswer];
     if (password.length > 0 && theQuestion.length > 0 && theAnwser.length > 0) {
         //已经设置启动密码、密保
-        self.title = @"请输入密码";
-        
-        lockVC = [[LockViewController alloc] init];
-        [lockVC setTarget:self withAction:@selector(lockEntered:)];
-        [self.view addSubview:lockVC.view];
-        lockVC.view.frame = CGRectMake(0, 120, 320, 320);
+        self.navigationItem.title = @"启动密码";
+        if (!lockVC) {
+            lockVC = [[LockViewController alloc] init];
+            [lockVC setTarget:self withAction:@selector(lockEntered:)];
+            [self.view addSubview:lockVC.view];
+            if (DeviceHeight < 500) {
+                lockVC.view.frame = CGRectMake(0, 45, 320, 320);
+            }else{
+                lockVC.view.frame = CGRectMake(0, 45+50, 320, 320);
+            }
+            
+        }
     }else{
         //没有启动密码，直接到令牌界面
         AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
@@ -74,11 +89,16 @@
     NSString *password = [[NSUserDefaults standardUserDefaults] objectForKey:StartPassword];
     if ([key isEqualToString:password]) {
         self.inputCount = 0;
+        
+        AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        [appDelegate setTimerStart];
+        
+//        self.labOutput.textColor = [UIColor darkTextColor];
+//        self.labOutput.text = @"请输入启动密码";
+        
         if (self.isStart) {
             ResetStartPasswordViewController *vc = [[ResetStartPasswordViewController alloc]initWithNibName:@"ResetStartPasswordViewController" bundle:nil];
-//            vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
-//            vc.hidesBottomBarWhenPushed = NO;
         }else{
             AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
             [appDelegate initTabBarController];
@@ -114,6 +134,11 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+-(void)showMessage{
+    [self showTopMessage:@"收到新的验证请求" topBarConfig:nil dismissDelay:10.0 withTapBlock:nil];
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+}
+
 -(void)dealloc{
     self.lockVC = nil;
 }
@@ -123,6 +148,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end

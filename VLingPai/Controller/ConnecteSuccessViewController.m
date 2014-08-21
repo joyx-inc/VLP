@@ -8,6 +8,7 @@
 
 #import "ConnecteSuccessViewController.h"
 
+
 @interface ConnecteSuccessViewController ()
 
 @end
@@ -33,7 +34,9 @@
     self.btnGoBack.layer.masksToBounds = YES;
     self.btnGoBack.layer.cornerRadius = 1.5f;
     
-    
+    self.labSystemName.text = self.systemModel.systemName;
+    self.labAccount.text = self.accountModel.account;
+    self.labAccountName.text = self.accountModel.displayName;
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,7 +50,7 @@
 }
 
 -(void)dealloc{
-//    self.accountModel = nil;
-//    self.systemModel = nil;
+    self.accountModel = nil;
+    self.systemModel = nil;
 }
 @end

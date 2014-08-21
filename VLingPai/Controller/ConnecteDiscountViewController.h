@@ -10,7 +10,7 @@
 //首次使用关联账号界面
 #import <UIKit/UIKit.h>
 
-//#import "AccountModel.h"
+#import "AccountModel.h"
 #import "SystemModel.h"
 
 @interface ConnecteDiscountViewController : UIViewController<UIAlertViewDelegate>
@@ -23,7 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnConnecteAccount;
 @property (weak, nonatomic) IBOutlet UIButton *btnCancel;
 
-
+@property (strong, nonatomic) AccountModel *accountModel;
 @property (strong, nonatomic) SystemModel *systemModel;
 @property (weak, nonatomic) IBOutlet UILabel *labSystemName;
 @end
