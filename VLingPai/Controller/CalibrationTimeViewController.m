@@ -50,6 +50,9 @@
     self.btnClibrateTime.layer.cornerRadius = 1.5f;
     
     
+    NSString *str = [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults]objectForKey:IDFV]];
+    self.labVid.text = str;
+    
     //开始调用令牌前必须执行并且只能执行一次
     [self initVidAndOTP];
     
@@ -100,7 +103,7 @@
 -(void)whenSwitchIsOn{
     self.contentView.hidden = NO;
     [self setTime];
-    self.labVid.text = [[NSUserDefaults standardUserDefaults] objectForKey:Vid];
+    self.labVid.text = [[NSUserDefaults standardUserDefaults]objectForKey:IDFV];
     
 }
 
@@ -129,7 +132,7 @@
 -(void)getNTPDate:(NSDate *)date{
     NSDate *deviceDate = [NSDate date];
     outTime = [date timeIntervalSinceDate:deviceDate];
-    NSLog(@"时间差：%d",outTime);
+    DebugLog(@"时间差：%d",outTime);
     [self setTime];
     [NetworkClock sharedNetworkClock].getNTPDateDelegate = nil;
     

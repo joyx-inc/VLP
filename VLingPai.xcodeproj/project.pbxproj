@@ -12,6 +12,7 @@
 		040407D419A5ACD500FE5749 /* startImage-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 040407D319A5ACD500FE5749 /* startImage-568h@2x.png */; };
 		040407D619A5ADC000FE5749 /* about_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 040407D519A5ADC000FE5749 /* about_icon@2x.png */; };
 		040407DF19A5F15E00FE5749 /* tabBar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 040407DE19A5F15E00FE5749 /* tabBar_bg@2x.png */; };
+		040407EF19A60B2C00FE5749 /* icon_warn.png in Resources */ = {isa = PBXBuildFile; fileRef = 040407EE19A60B2C00FE5749 /* icon_warn.png */; };
 		040E4F6C199075E20023FD80 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E4F6B199075E20023FD80 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		040E4F6E199076FA0023FD80 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 040E4F6D199076FA0023FD80 /* libicucore.dylib */; };
 		040E50011990D6330023FD80 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040E50001990D6330023FD80 /* CFNetwork.framework */; };
@@ -206,6 +207,7 @@
 		040407D319A5ACD500FE5749 /* startImage-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startImage-568h@2x.png"; sourceTree = "<group>"; };
 		040407D519A5ADC000FE5749 /* about_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_icon@2x.png"; sourceTree = "<group>"; };
 		040407DE19A5F15E00FE5749 /* tabBar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar_bg@2x.png"; sourceTree = "<group>"; };
+		040407EE19A60B2C00FE5749 /* icon_warn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_warn.png; sourceTree = "<group>"; };
 		040E4F6A199075E20023FD80 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		040E4F6B199075E20023FD80 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		040E4F6D199076FA0023FD80 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
@@ -888,6 +890,7 @@
 		04F025D1198CD9D10017665A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				040407EE19A60B2C00FE5749 /* icon_warn.png */,
 				040407DE19A5F15E00FE5749 /* tabBar_bg@2x.png */,
 				042379B719A36456005F80E1 /* icon */,
 				042494D019A203390087D9D1 /* first_image@2x.png */,
@@ -1134,6 +1137,7 @@
 				042379A019A324B4005F80E1 /* password_selected@2x.png in Resources */,
 				042379A219A338FF005F80E1 /* image_rightmark@2x.png in Resources */,
 				04640982199CC58200E8BA09 /* 1@2x.png in Resources */,
+				040407EF19A60B2C00FE5749 /* icon_warn.png in Resources */,
 				04F4D6DA19A2F0FF001E4524 /* progress_trackImage@2x.png in Resources */,
 				04FEDB7F19A49F950000CEA2 /* icon_80@2x.png in Resources */,
 				04F025B0198CD58D0017665A /* DiscountViewController.xib in Resources */,

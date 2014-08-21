@@ -18,6 +18,7 @@
 
 #import "UIViewController+TopBarMessage.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import "UIColor+GetColorFromString.h"
 
 @interface StartViewController ()<MBProgressHUDDelegate>
 
@@ -135,8 +136,12 @@
 }
 
 -(void)showMessage{
-    [self showTopMessage:@"收到新的验证请求" topBarConfig:nil dismissDelay:10.0 withTapBlock:nil];
+//    [self showTopMessage:@"收到新的验证请求" topBarConfig:nil dismissDelay:10.0 withTapBlock:nil];
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    
+    NSDictionary *topBarConfig = @{kDXTopBarBackgroundColor:[UIColor getColorFromString:@"#4D4D4DFF"], kDXTopBarTextColor : [UIColor getColorFromString:@"#F5F5CFFF"], kDXTopBarIcon : [UIImage imageNamed:@"icon_warn.png"], kDXTopBarTextFont : [UIFont boldSystemFontOfSize:14.0]};
+    
+    [self showTopMessage:@"收到新的验证请求" topBarConfig:topBarConfig dismissDelay:10.0 withTapBlock:nil];
 }
 
 -(void)dealloc{
